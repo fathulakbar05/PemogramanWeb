@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Profile</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-black text-white">
+
+    <!-- Main container -->
+    <div class="flex h-screen">
+        <!-- Sidebar -->
+        <div class="w-1/4 bg-gray-900 p-5">
+            <nav>
+                <ul>
+                    <li class="mb-4">
+                        <a href="#" class="flex items-center p-2 text-gray-300 hover:bg-gray-800 rounded">
+                            <svg class="w-6 h-6 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5.121 19a9 9 0 1113.758 0M12 11a4 4 0 100-8 4 4 0 000 8z"></path>
+                            </svg>
+                            Profile
+                        </a>
+                    </li>
+                    <li class="mb-4">
+                        <a href="#" class="flex items-center p-2 text-gray-300 bg-gray-800 rounded">
+                            <svg class="w-6 h-6 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path>
+                            </svg>
+                            Edit Profile
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="flex items-center p-2 text-gray-300 hover:bg-gray-800 rounded">
+                            <svg class="w-6 h-6 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m0 0V9m6 4a2 2 0 11-4 0 2 2 0 014 0zm-6 4a6 6 0 1112 0H7z"></path>
+                            </svg>
+                            Notifikasi
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+
+        <!-- Profile Edit Form -->
+        <div class="w-3/4 p-10">
+            <h2 class="text-2xl mb-6">Edit Profile</h2>
+
+            <form class="space-y-6">
+                <!-- Profile Picture -->
+                <div class="flex items-center space-x-4">
+                    <div class="w-24 h-24 bg-gray-500 rounded-full"></div>
+                    <button type="button" class="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700">Edit Poto</button>
+                </div>
+
+                <!-- Name Field -->
+                <div>
+                    <label class="block text-sm font-medium mb-2">Nama</label>
+                    <input type="text" class="w-full p-2 bg-gray-700 text-white rounded" placeholder="Nama">
+                </div>
+
+                <!-- Email Field -->
+                <div>
+                    <label class="block text-sm font-medium mb-2">Email</label>
+                    <input type="email" class="w-full p-2 bg-gray-700 text-white rounded" placeholder="Email">
+                </div>
+            </form>
+        </div>
+    </div>
+
+</body>
+</html>
