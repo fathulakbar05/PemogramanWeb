@@ -3,11 +3,106 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script src="https://cdn.tailwindcss.com"></script>
     <title>Document</title>
+
+    <style>
+        /* Custom CSS for stone, sand, and sea-like glow effect */
+        .glow-box {
+          box-shadow: 
+            0 0 20px 5px rgba(105, 105, 105, 0.6),  /* Stone color (dark grey) */
+            0 0 50px 10px rgba(194, 178, 128, 0.4),  /* Sand color (light brown) */
+            0 0 70px 15px rgba(64, 164, 223, 0.3),  /* Sea color (light blue) */
+            inset 0 0 10px 2px rgba(255, 255, 255, 0.1);  /* Inner shadow for depth */
+        }
+
+        /* Custom Keyframes for Fade-In and Translate */
+        @keyframes fadeInDown {
+            0% {
+                opacity: 0;
+                transform: translateY(-100px); /* Start slightly below */
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0); /* End at normal position */
+            }
+        }
+
+        /* Adding the custom animation to Tailwind */
+        .animate-fade-in-down {
+            animation: fadeInDown 1s ease-out forwards;
+        }
+    </style>
 </head>
-<body>
-    <h1 class=""></h1>
-    <h2></h2>
+
+<body style="font-family: 'Press Start 2P', cursive;" class="bg-black min-h-screen items-center">
+    <section class="bg-blue-500 text-white py-12 px-6">
+        <div class="animate-fade-in-down">
+            <h1 class="text-4xl font-bold text-center">Section 1</h1>
+            <p class="text-center mt-4">This is the first section.</p>
+        </div>
+    </section>
+    
+    <section class="">
+        <div class="grid grid-cols-3 gap-10 p-36 text-white">
+            <div class="text-center flex transform transition-transform duration-300 hover:-translate-y-3">
+                <a href="#" class="bg-black glow-box p-8 rounded-lg">
+                    <span class="icon">
+                        <img class="mt-2 ml-1" src="" alt="img1">
+                    </span>
+                    <div class="desc">
+                        <h3 class="mb-5">Techvolution 2019</h3>
+                    </div>
+                </a>
+            </div>
+                        
+            <div class="text-center flex transform transition-transform duration-300 hover:-translate-y-3">
+                <a href="#" class="bg-black glow-box p-8 rounded-lg">
+                    <span class="icon">
+                        <img class="mt-2 ml-1" src="" alt="img1">
+                    </span>
+                    <div class="desc">
+                        <h3 class="mb-5">Techvolution 2020</h3>
+                    </div>
+                </a>
+            </div>
+
+            <div class="text-center flex transform transition-transform duration-300 hover:-translate-y-3">
+                <a href="" class="bg-black glow-box p-8 rounded-lg">
+                    <span class="icon">
+                        <img class="mt-2 ml-1" src="" alt="img1">
+                    </span>
+                    <div class="desc">
+                        <h3 class="mb-5">Techvolution 2021</h3>
+                    </div>
+                </a>
+            </div>
+
+            <div class="text-center flex transform transition-transform duration-300 hover:-translate-y-3">
+                <a href="" class="bg-black glow-box p-8 rounded-lg">
+                    <span class="icon">
+                        <img class="mt-2 ml-1" src="" alt="img1">
+                    </span>
+                    <div class="desc">
+                        <h3 class="mb-5">Techvolution 2022</h3>
+                    </div>
+                </a>
+            </div>
+
+            <div class="text-center flex transform transition-transform duration-300 hover:-translate-y-3">
+                <a href="" class="bg-black glow-box p-8 rounded-lg">
+                    <span class="icon">
+                        <img class="mt-2 ml-1" src="" alt="img1">
+                    </span>
+                    <div class="desc">
+                        <h3 class="mb-5">Techvolution 2023</h3>
+                    </div>
+                </a>
+            </div>
+        
+        </div>
+    </section>
 </body>
 </html>
