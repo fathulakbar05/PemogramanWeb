@@ -1,53 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Press+Start+2P&display=swap">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Login</title>
+
+    <style>
+        h1, h2, h3 {
+            font-family: 'Press Start 2P', cursive;
+        }
+        p, button, label {
+            font-family: 'Poppins', sans-serif;
+        }
+    </style>
 </head>
 
-<body></body>
-    <div class="navbar">
+<body class="bg-blue-100 flex justify-center items-center min-h-screen">
 
-    </div>
+    <div class="bg-blue-50 border-2 border-black p-8 rounded-lg shadow-lg w-96">
 
-    <div class="SignUp">
-        <h3 class="judul">patul</h3>
-
-        <div class="formInput">
-            <form action="#" method="post">
-                <label class="nama" for="nama">Name</label> <br>
-                <input class="inputNama" type="text" name="nama" id="nama" placeholder="Ex: Muhammad Fathul Akbar" value required> <br>
-
-                <label class="email" for="email">Email</label> <br>
-                <input class="inputEmail" type="text" name="email" id="email" placeholder="Ex: m.fathulakbar05@gmail.com" value required> <br>
-
-                <label class="password" for="password">Password</label> <br>
-                <input class="inputPassword" type="text" name="password" id="password" placeholder="Enter your password" value required> <br>
-
-                <label class="confirmPassword" for="confirmPassword">Confirm Password</label> <br>
-                <input class="inputConfirmPassword" type="text" name="confirmPassword" id="confirmPassword" placeholder="Confirm your password" value required> <br><br>
-
-                <input type="submit" value="CREATE ACCOUNT">
-            </form>
+        <div class="text-center mb-8">
+            <img src="" alt="Logo Techvolution" class="mx-auto mb-4">
+            <h1 class="font-bold text-lg mb-2">Registration</h1>
         </div>
 
-        <p class="or">OR</p>
-        
-        <div class="google">
-            <a href="#">
-                <button class="google" type="submit">SIGN UP WITH GOOGLE</button>
-            </a>
-        </div>
+        <form action="#" method="post">
+            <div class="mb-4">
+                <label class="block font-semibold mb-1" for="name">Name</label>
+                <input class="w-full p-2 border-2 border-black rounded-lg shadow-md" type="text" name="name" id="name" placeholder="Ex: Muhammad Fathul Akbar" value required>
+            </div>
 
-        <h4 class="signUp">
-            Already have an account? 
-            <a href="Login.html">Create an account</a>
-        </h4>
+            <div class="mb-4">
+                <label class="block font-semibold mb-1" for="email">Email</label>
+                <input class="w-full p-2 border-2 border-black rounded-lg shadow-md" type="text" name="email" id="email" placeholder="Ex: m.fathulakbar05@gmail.com" value required>
+            </div>
+
+            <div class="mb-6">
+                <label class="block font-semibold mb-1" for="password">Password</label>
+                <input class="w-full p-2 border-2 border-black rounded-lg shadow-md" type="text" name="password" id="password" placeholder="Enter your password" value required>
+            </div>
+
+            <div class="mb-6">
+                <label class="block font-semibold mb-1" for="confirmPassword"> Confirm Password</label>
+                <input class="w-full p-2 border-2 border-black rounded-lg shadow-md" type="text" name="confirmPassword" id="confirmPassword" placeholder="Confirm your password" value required>
+            </div>
+
+            <input class="w-full bg-red-500 hover:bg-red-600 text-white font-bold py-2 rounded-lg shadow-md mb-4" type="submit" value="CREATE ACCOUNT">
+
+            <p class="text-center font-semibold text-sm mb-4">OR</p>
+
+            <div class="mb-4">
+                <a href="#">
+                    <button class="w-full flex items-center justify-center bg-white border-2 border-black py-2 rounded-lg shadow-md hover:bg-gray-100 mb-2" type="submit">
+                        <img src="GoogleIcon.png" alt="Google" class="w-6 h-6 mr-2">
+                        SIGN UP WITH GOOGLE
+                    </button>
+                </a>
+            </div>
+
+            <div class="text-center mt-2"></div>
+                <h4 class="text-sm">
+                    Already have an account? 
+                    <a href="SignUp.html" class="text-blue-500 hover:underline">Sign in</a>
+                </h4>
+            </div>
+
+        </form>
     </div>
 
-    <div class="footbar">
-
-    </div>
 </body>
 </html>
