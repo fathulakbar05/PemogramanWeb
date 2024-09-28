@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Pendaftaran</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-900 text-white">
+    <div class="flex h-screen items-center justify-center">
+        <!-- Main container -->
+        <div class="bg-gray-800 rounded-lg shadow-lg flex w-3/4">
+            
+            <!-- Left side: Image placeholder -->
+            <div class="w-1/2 p-8 bg-gray-700">
+                <div>
+                    <h2 class="text-3xl font-bold mb-6">One More Step to Completion!</h2>
+                <p class="mb-6">Lengkapi detail akunmu sekarang juga</p>
+                </div>
+                <div>
+                    <img src="user.png" alt="gambar" style="width: 50px; height: 50px;">
+                </div>
+            </div>
+
+            <!-- Right side: Form -->
+            <div class="w-1/2 p-8"> 
+                <form action="#" method="POST">
+                    <div class="mb-4">
+                        <label for="phone" class="block text-sm font-medium mb-2">Nomor Handphone</label>
+                        <input type="text" id="phone" name="phone" class="w-full p-2 bg-gray-700 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500" value="0895604269475">
+                    </div>
+        
+                    <div class="mb-4">
+                        <label for="line-id" class="block text-sm font-medium mb-2">ID Line (Optional)</label>
+                        <input type="text" id="line-id" name="line-id" placeholder="Masukkan ID Line" class="w-full p-2 bg-gray-700 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                    </div>
+        
+                    <div class="mb-6">
+                        <label for="discord-id" class="block text-sm font-medium mb-2">ID Discord (Optional)</label>
+                        <input type="text" id="discord-id" name="discord-id" placeholder="Masukkan ID Discord-mu" class="w-full p-2 bg-gray-700 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                    </div>
+        
+                    <div class="flex justify-between items-center">
+                        <a href="editProfil1.html">
+                            <button type="submit" class="px-4 py-2 bg-gray-600 hover:bg-gray-500 text-white rounded-lg">
+                                Sebelumnya ←</button>
+
+                        </a> 
+                        <button type="submit" class="px-4 py-2 bg-gradient-to-r from-purple-500 to-blue-500 hover:from-purple-600 hover:to-blue-600 text-white rounded-lg">Berikutnya →</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
