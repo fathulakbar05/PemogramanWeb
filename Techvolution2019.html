@@ -16,7 +16,7 @@
         h1, h2, h3 {
             font-family: 'Press Start 2P', cursive;
         }
-        p, button {
+        p, button, table {
             font-family: 'Poppins', sans-serif;
         }
         
@@ -78,14 +78,14 @@
     </style>
 </head>
 
-<body class="bg-black">
+<body>
 
     <section class="bg-[url('OceanWithFish.jpg')] bg-cover bg-center text-white h-screen flex items-center justify-center">
 
         <div class="absolute inset-0 bg-black opacity-50"></div>
 
         <div class="animate-fade-in-down text-center">
-            <h1 class="text-5xl font-bold">
+            <h1 class="text-4xl font-bold py-5">
                 TECHVOLUTION 2019
             </h1>
 
@@ -102,9 +102,9 @@
     </section>
       
         
-    <section >
+    <section class="bg-[#0e236b] w-auto">
 
-        <div class="bg-gray-100 flex items-center justify-center h-screen">
+        <div class="flex items-center justify-center py-32">
             <div id="slider" class="w-full max-w-3xl mx-auto p-4 bg-white shadow-lg rounded-lg">
                 <!-- Radio Buttons for controlling slides -->
                 <input type="radio" name="slider" id="slide1" checked>
@@ -162,5 +162,48 @@
 
     </section>
 
+    
+    <section class="bg-[#0e236b]">
+        <div class="flex items-center justify-center">
+            <div id="" class="w-11/12 md:container mx-auto py-20">
+                <div class="flex space-x-10 items-center">
+
+                    <img src="Podium.png" class="">
+                    <div>
+                        <h3 class="text-3xl font-bold mb-10">
+                            Pemenang Lomba<br>Competitive Programming
+                        </h3>
+                        <table class="table-auto w-full border-collapse border-2 border-black text-white">
+                            <thead>
+                              <tr class="bg-black">
+                                <th class="px-4 py-2 text-left">Nama Kelompok</th>
+                                <th class="px-4 py-2 text-left">Anggota</th>
+                                <th class="px-4 py-2 text-left">Instansi</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr class="hover:bg-[#0850dc]">
+                                <td class="px-4 py-2">BiGlory</td>
+                                <td class="px-4 py-2">Muhammad Fathul Akbar<br>Kian Fikram Ayyubi</td>
+                                <td class="px-4 py-2">SMA Negeri 1 Palembang</td>
+                              </tr>
+                              <tr class="hover:bg-[#0850dc]">
+                                <td class="px-4 py-2">PastiMenang</td>
+                                <td class="px-4 py-2">Nazwa Abelia<br>Nurul Adhaini Nasution</td>
+                                <td class="px-4 py-2">SMA Negeri 10 Palembang</td>
+                              </tr>
+                              <tr class="hover:bg-[#0850dc]"></tr>
+                                <td class="px-4 py-2">Aamiin</td>
+                                <td class="px-4 py-2">Rahmad Ramadan</td>
+                                <td class="px-4 py-2">MAN 3 Palembang</td>
+                              </tr>
+                            </tbody>
+                          </table>
+                          
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 </body>
 </html>
