@@ -21,11 +21,7 @@
 
         /* Custom CSS for stone, sand, and sea-like glow effect */
         .glow-box {
-          box-shadow: 
-            0 0 20px 5px rgba(105, 105, 105, 0.6),  /* Stone color (dark grey) */
-            0 0 50px 10px rgba(194, 178, 128, 0.4),  /* Sand color (light brown) */
-            0 0 70px 15px rgba(64, 164, 223, 0.3),  /* Sea color (light blue) */
-            inset 0 0 10px 2px rgba(255, 255, 255, 0.1);  /* Inner shadow for depth */
+            box-shadow: 0 0 20px #0850dc, 0 0 40px #0850dc, 0 0 60px #0850dc;
         }
 
         /* Custom Keyframes for Fade-In and Translate */
@@ -48,20 +44,21 @@
 </head>
 
 <body>
-    <section class="bg-[#0e236b] text-white py-52 px-6">
+    
+    <section class="bg-[url('OceanWithFish.jpg')] bg-cover bg-center text-white py-52 px-6 flex items-center justify-center">
+
+        <div class="relative inset-0 bg-black opacity-50 w-full h-auto"></div>
         
-        <div class="animate-fade-in-down flex items-center">
-            <div class="text-center text-white">
-                <h1 class="text-4xl font-bold text-center ">
-                    SEJARAH TECHVOLUTION
-                </h1>
-                <p class="text-center mt-4">
-                    Techphoria merupakan serangkaian acara IT tahunan dengan fokus utama kompetisi yang 
-                    diperuntukan bagi Universitas/Politeknik se-Indonesia untuk meningkatkan kesadaran tentang 
-                    peranan IT serta meningkatkan nilai keilmuan dan komprehensif di bidang ilmu teknologi informasi komputer.
-                    Ajang ini sendiri diprakarsai oleh Mahasiswa Fakultas Ilmu Komputer Universitas Sriwijaya.
-                </p>
-            </div>
+        <div class="animate-fade-in-down text-center text-white">
+            <h1 class="text-4xl font-bold">
+                SEJARAH TECHVOLUTION
+            </h1>
+            <p class="mt-4 bg-[#0e236b]  rounded-lg inline-block p-4 max-w-5xl mx-auto">
+                Techvolution merupakan serangkaian acara IT tahunan dengan fokus utama kompetisi yang 
+                diperuntukan bagi Instansi-Instansi se-Indonesia untuk meningkatkan kesadaran tentang 
+                peranan IT serta meningkatkan nilai keilmuan dan komprehensif di bidang ilmu teknologi informasi komputer.
+                Event ini sendiri diprakarsai oleh Mahasiswa Fakultas Ilmu Komputer Universitas Sriwijaya.
+            </p>
         </div>
         
     </section>
