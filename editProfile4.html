@@ -14,35 +14,41 @@
             <!-- Left side: Image placeholder -->
             <div class="w-1/2 p-8 bg-gray-700">
                 <div>
-                    <h2 class="text-3xl font-bold mb-6">One More Step to Completion!</h2>
-                <p class="mb-6">Lengkapi detail akunmu sekarang juga</p>
+                    <h2 class="text-3xl font-bold mb-6" align="center">One More Step to Completion!</h2>
+                <p class="mb-6" align="center">Lengkapi detail akunmu sekarang juga</p>
                 </div>
-                <div>
-                    <img src="user.png" alt="gambar" style="width: 50px; height: 50px;">
+                <div class="flex justify-center">
+                    <img src="user.png" alt="gambar" style="width: 200px; height: 200px;">
                 </div>
             </div>
-
             <!-- Right side: Form -->
             <div class="w-1/2 p-8"> 
                 <form action="#" method="POST">
+                    <body class="flex items-center justify-center min-h-screen bg-gray-800">
+                        <div class="w-64">
+                            <!-- Tempat untuk memilih opsi -->
+                            <label for="options" class="block text-white mb-2">Bagaimana anda tau techvolutin?</label>
+                            <select id="options" class="block w-40 px-4 py-2 mb-3 text-white bg-gray-700 border border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" size="3" onchange="document.getElementById('selectedValue').value = this.value;">
+                                <option value="Instansi">Instansi</option>
+                                <option value="Media Sosial">Media Sosial</option>
+                                <option value="Teman">Teman</option>
+                                <option value="Website">Website</option>
+                                <option value="Iklan">Iklan</option>
+                            </select>
+                    
+                            <!-- Tempat untuk menerima inputan dari opsi yang dipilih -->
+                            <input id="selectedValue" type="text" class="block w-full px-4 py-2 mb-5 text-white bg-gray-700 border border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Selected Option">
+                        </div>
+                    </body>
+        
                     <div class="mb-4">
                         <label for="heard_about" class="block text-sm font-medium mb-2">How Did You Hear About COMPFEST?</label>
-                        <select id="heard_about" name="heard_about" class="w-full p-2 bg-gray-700 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                        <select id="heard_about" name="heard_about" class="w-full p-2 bg-gray-700 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 mb-5">
                             <option>Social Media</option>
                             <option>Friends</option>
                             <option>Website</option>
                             <option>Advertisement</option>
                         </select>
-                    </div>
-        
-                    <div class="mb-6">
-                        <label for="interests" class="block text-sm font-medium mb-2">Interests</label>
-                        <div id="interests" class="flex items-center space-x-2">
-                            <span class="px-3 py-1 bg-gray-600 rounded-full text-white flex items-center space-x-1">
-                                <span>UI/UX</span>
-                                <button type="button" class="focus:outline-none">✕</button>
-                            </span>
-                        </div>
                     </div>
         
                     <div class="flex justify-between items-center">
