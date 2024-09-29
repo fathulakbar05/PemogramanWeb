@@ -42,17 +42,21 @@
                 <input class="w-full p-2 border-2 border-black rounded-lg shadow-md" type="text" name="password" id="password" placeholder="Enter your password" value required>
             </div>
 
-            <input class="" type="checkbox" name="rememberMe" id="rememberMe">
-            <label class="text-center font-semibold text-sm mb-4" for="rememberMe">Remember Me</label>
+            <div class="flex items-center justify-between mb-4">
+                <label class="inline-flex items-center">
+                    <input class="form-checkbox text-neutral-700" type="checkbox" >
+                    <p class="ml-2 text-neutral-800">Remember Me</p>
+                </label>
+            </div>
 
-            <input class="w-full bg-red-500 hover:bg-red-600 text-white font-bold py-2 rounded-lg shadow-md mb-4" type="submit" value="LOGIN">
+            <input class="w-full bg-[#0850dc] hover:bg-[#0e236b] text-white font-bold py-2 rounded-lg shadow-md mb-4" type="submit" value="LOGIN">
 
 
             <p class="text-center font-semibold text-sm mb-4">OR</p>
 
             <div class="mb-4">
                 <a href="#">
-                    <button class="w-full flex items-center justify-center bg-white border-2 border-black py-2 rounded-lg shadow-md hover:bg-gray-100 mb-2" type="submit">
+                    <button class="w-full flex items-center justify-center bg-white border-2 border-black py-2 rounded-lg shadow-md hover:bg-gray-200 mb-2" type="submit">
                         <img src="GoogleIcon.png" alt="Google" class="w-6 h-6 mr-2">
                         LOGIN WITH GOOGLE
                     </button>
