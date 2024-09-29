@@ -31,25 +31,25 @@
             <h1 class="font-bold text-lg mb-2">Registration</h1>
         </div>
 
-        <form action="#" method="post">
+        <form action="home.html" method="post">
             <div class="mb-4">
                 <label class="block font-semibold mb-1" for="name">Name</label>
-                <input class="w-full p-2 border-2 border-black rounded-lg shadow-md" type="text" name="name" id="name" placeholder="Ex: Muhammad Fathul Akbar">
+                <input class="w-full p-2 border-2 border-black rounded-lg shadow-md" type="text" name="name" id="name" placeholder="Ex: Muhammad Fathul Akbar" value required>
             </div>
 
             <div class="mb-4">
                 <label class="block font-semibold mb-1" for="email">Email</label>
-                <input class="w-full p-2 border-2 border-black rounded-lg shadow-md" type="text" name="email" id="email" placeholder="Ex: m.fathulakbar05@gmail.com">
+                <input class="w-full p-2 border-2 border-black rounded-lg shadow-md" type="text" name="email" id="email" placeholder="Ex: m.fathulakbar05@gmail.com" value required>
             </div>
 
             <div class="mb-6">
                 <label class="block font-semibold mb-1" for="password">Password</label>
-                <input class="w-full p-2 border-2 border-black rounded-lg shadow-md" type="text" name="password" id="password" placeholder="Enter your password">
+                <input class="w-full p-2 border-2 border-black rounded-lg shadow-md" type="text" name="password" id="password" placeholder="Enter your password" value required>
             </div>
 
             <div class="mb-6">
                 <label class="block font-semibold mb-1" for="confirmPassword"> Confirm Password</label>
-                <input class="w-full p-2 border-2 border-black rounded-lg shadow-md" type="text" name="confirmPassword" id="confirmPassword" placeholder="Confirm your password">
+                <input class="w-full p-2 border-2 border-black rounded-lg shadow-md" type="text" name="confirmPassword" id="confirmPassword" placeholder="Confirm your password" value required>
             </div>
 
             <input class="w-full bg-[#0850dc] hover:bg-[#0e236b] text-white font-bold py-2 rounded-lg shadow-md mb-4" type="submit" value="CREATE ACCOUNT">
@@ -57,18 +57,16 @@
             <p class="text-center font-semibold text-sm mb-4">OR</p>
 
             <div class="mb-4">
-                <a href="#">
-                    <button class="w-full flex items-center justify-center bg-white border-2 border-black py-2 rounded-lg shadow-md hover:bg-gray-200 mb-2" type="submit">
-                        <img src="GoogleIcon.png" alt="Google" class="w-6 h-6 mr-2">
-                        SIGN UP WITH GOOGLE
-                    </button>
+                <a href="home.html" class="bg-white border-2 border-black py-2 px-4 rounded-lg shadow-md hover:bg-gray-200 w-full flex justify-center items-center">
+                    <img src="GoogleIcon.png" alt="Google" class="w-6 h-6 mr-2">
+                    LOGIN WITH GOOGLE
                 </a>
             </div>
 
-            <div class="text-center mt-2"></div>
+            <div class="text-center mt-2">
                 <h4 class="text-sm">
                     Already have an account? 
-                    <a href="SignUp.html" class="text-blue-500 hover:underline">Sign in</a>
+                    <a href="Login.html" class="text-blue-500 hover:underline">Sign in</a>
                 </h4>
             </div>
 
