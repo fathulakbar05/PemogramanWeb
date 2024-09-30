@@ -20,39 +20,21 @@
             font-family: 'Poppins', sans-serif;
         }
         
-        /* Custom Keyframes for Fade-In and Translate */
         @keyframes fadeInDown {
             0% {
                 opacity: 0;
-                transform: translateY(-100px); /* Start slightly below */
+                transform: translateY(-100px);
             }
             100% {
                 opacity: 1;
-                transform: translateY(0); /* End at normal position */
+                transform: translateY(0);
             }
         }
 
-        /* Adding the custom animation to Tailwind */
         .animate-fade-in-down {
             animation: fadeInDown 1s ease-out forwards;
         }
 
-        /* Define the custom animation using keyframes */
-        @keyframes move-left {
-            0% {
-                transform: translateX(100%);
-            }
-            100% {
-                transform: translateX(-100%);
-            }
-        }
-
-        /* Apply the animation to the moving element */
-        .animate-move-left {
-            animation: move-left 10s linear infinite;
-        }
-
-        /* Custom transition effect */
         input[type="radio"] {
         display: none;
         }
