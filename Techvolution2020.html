@@ -80,13 +80,50 @@
 
 <body>
 
-    <section class="bg-[url('OceanWithFishPixel.png')] bg-cover bg-center text-white h-screen flex items-center justify-center">
+    <!--Navigasi Bar-->
+    <nav class="bg-black text-white py-4">
+        <div class="container mx-auto flex justify-between items-center px-14">
+            
+            <!--Logo-->
+            <div class="flex items-center space-x-2">
+                <img src="LogoTechvolution1.png" alt="Logo" class="h-10 w-auto">
+                <img src="LogoTechvolution2.png" alt="Logo" class="h-10 w-72">
+            </div>
 
-        <div class="absolute inset-0 bg-black opacity-50"></div>
+            <!--Menu-->
+            <div class="flex items-center space-x-6 text-sm ml-auto" style="font-family: 'Press Start 2P', cursive;">
+                <ul class="flex space-x-6 ">
+                    <li>
+                        <a href="home.html" class="text-white hover:text-[#0850dc] py-8">Home</a>
+                    </li>
+                    <li><a href="home.html#about" class="text-white hover:text-[#0850dc] py-8">About</a></li>
+                    <li><a href="workshop.html" class="text-white hover:text-[#0850dc] py-8">Workshop</a></li>
+                    <li class="relative group">
+                        <a href="#" class="text-white hover:text-[#0850dc] py-8">Competition</a>
+                        <div class="hidden group-hover:block absolute left-0 bg-black mt-2 py-2 w-40 z-50">
+                            <a href="1Compe.html" class="block px-4 py-2 text-sm text-white hover:bg-gray-700">CP</a>
+                            <a href="1UI_UX.html" class="block px-4 py-2 text-sm text-white hover:bg-gray-700">UI/UX</a>
+                        </div>
+                    </li>
+                    <li><a href="KilasBalik.html" class="text-white hover:text-[#0850dc] py-8">Kilas Balik</a></li>
+                    <li><a href="#kontak" class="text-white hover:text-[#0850dc] py-8">Contact</a></li>
+                </ul>
+
+                <!--Login-->
+                <div>
+                    <a href="Login.html" class="border border-[#0850dc] text-[#0850dc] py-2 px-4 rounded hover:bg-[#0850dc] hover:text-black transition">Login</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <section class="bg-[url('OceanWithFishPixel.png')] bg-cover bg-center text-white py-52 px-6 flex items-center justify-center relative">
+
+        <div class="absolute inset-0 bg-black opacity-50 h-full w-full"></div>
 
         <div class="animate-fade-in-down text-center">
             <h1 class="text-4xl font-bold py-5">
-                TECHVOLUTION 2020
+                TECHVOLUTION <span class="text-yellow-400">2020</span>
             </h1>
 
             <p class="mt-4 bg-[#0e236b]  rounded-lg inline-block p-4 max-w-5xl mx-auto">
@@ -107,7 +144,7 @@
     </section>
       
         
-    <section class="bg-[#0e236b] w-auto">
+    <section class="bg-[#0e236b] w-auto" style="background-image: url('Desain\ tanpa\ judul\.png');">
 
         <div class="flex items-center justify-center py-32">
             <div id="slider" class="w-full max-w-3xl mx-auto p-4 bg-white shadow-lg rounded-lg">
@@ -124,7 +161,7 @@
                         <!-- Slide 1 -->
                         <div class="slide flex items-center justify-center bg-blue-900 text-white w-full">
                             <div class="slide-content">
-                                <img src="img5.jpeg" class="w-full h-full object-cover">
+                                <img src="img5.png" class="w-full h-full object-cover">
                             </div>
                         </div>
                 
@@ -138,14 +175,14 @@
                         <!-- Slide 3 -->
                         <div class="slide flex items-center justify-center bg-blue-700 text-white w-full">
                             <div class="slide-content">
-                                <img src="img3.jpeg" class="w-full h-full object-cover">
+                                <img src="img3.jpg" class="w-full h-full object-cover">
                             </div>
                         </div>
                 
                         <!-- Slide 4 -->
                         <div class="slide flex items-center justify-center bg-blue-700 text-white w-full">
                             <div class="slide-content">
-                                <img src="img4.jpeg" class="w-full h-full object-cover">
+                                <img src="img4.jpg" class="w-full h-full object-cover">
                             </div>
                         </div>
                     </div>
@@ -164,16 +201,16 @@
     </section>
 
     
-    <section class="bg-[#0e236b]">
+    <section class="bg-[#0e236b] text-white">
         
         <div class="flex space-x-10 items-center w-11/12 md:container mx-auto py-20">
             <img src="Podium.png" class="pl-16 pr-10">
 
             <div>
                 <h3 class="text-3xl font-bold mb-10">
-                    Pemenang Lomba<br>Competitive Programming
+                    Pemenang Lomba<br><span class="text-yellow-400">Competitive Programming</span>
                 </h3>
-                <table class="table-auto w-full border-collapse border-2 border-black text-white">
+                <table class="table-auto w-full border-collapse border-4 border-black text-white">
                     <thead>
                         <tr class="bg-black">
                             <th class="px-4 py-2 text-left">Nama Kelompok</th>
@@ -204,15 +241,15 @@
 
     </section>
 
-    <section class="bg-[#0e236b]">
+    <section class="bg-[#0e236b] text-white" style="background-image: url('Desain\ tanpa\ judul\ \(4\).png');">
         
         <div class="flex space-x-10 items-center w-11/12 md:container mx-auto py-20">
             
             <div class="pl-32">
                 <h3 class="text-3xl font-bold mb-10">
-                    Pemenang Lomba<br>UI/UX
+                    Pemenang Lomba<br><span class="text-yellow-400">UI/UX</span>
                 </h3>
-                <table class="table-auto w-full border-collapse border-2 border-black text-white">
+                <table class="table-auto w-full border-collapse border-4 border-black text-white">
                     <thead>
                         <tr class="bg-black">
                             <th class="px-4 py-2 text-left">Nama Kelompok</th>
@@ -221,7 +258,7 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr class="hover:bg-[#0850dc]">
+                        <tr class="hover:bg-[#0850dc] bg-[]">
                             <td class="px-4 py-2">BiGlory</td>
                             <td class="px-4 py-2">Muhammad Fathul Akbar<br>Kian Fikram Ayyubi</td>
                             <td class="px-4 py-2">SMA Negeri 1 Palembang</td>
