@@ -37,6 +37,43 @@
       </style>
 </head>
 <body style="font-family: 'Press Start 2P', cursive; background-color: #0e236b;">
+  <!--Navigasi Bar-->
+  <nav class="bg-black text-white py-4">
+    <div class="container mx-auto flex justify-between items-center px-14">
+        
+        <!--Logo-->
+        <div class="flex items-center space-x-2">
+            <img src="LogoTechvolution1.png" alt="Logo" class="h-10 w-auto">
+            <img src="LogoTechvolution2.png" alt="Logo" class="h-10 w-72">
+        </div>
+
+        <!--Menu-->
+        <div class="flex items-center space-x-6 text-sm ml-auto" style="font-family: 'Press Start 2P', cursive;">
+            <ul class="flex space-x-6 ">
+                <li>
+                    <a href="home.html" class="text-white hover:text-[#0850dc] py-8">Home</a>
+                </li>
+                <li><a href="home.html#about" class="text-white hover:text-[#0850dc] py-8">About</a></li>
+                <li><a href="workshop.html" class="text-white hover:text-[#0850dc] py-8">Workshop</a></li>
+                <li class="relative group">
+                    <a href="#" class="text-white hover:text-[#0850dc] py-8">Competition</a>
+                    <div class="hidden group-hover:block absolute left-0 bg-black mt-2 py-2 w-40 z-50">
+                        <a href="1Compe.html" class="block px-4 py-2 text-sm text-white hover:bg-gray-700">CP</a>
+                        <a href="1UI_UX.html" class="block px-4 py-2 text-sm text-white hover:bg-gray-700">UI/UX</a>
+                    </div>
+                </li>
+                <li><a href="KilasBalik.html" class="text-white hover:text-[#0850dc] py-8">Kilas Balik</a></li>
+                <li><a href="#kontak" class="text-white hover:text-[#0850dc] py-8">Contact</a></li>
+            </ul>
+
+            <!--Login-->
+            <div>
+                <a href="Login.html" class="border border-[#0850dc] text-[#0850dc] py-2 px-4 rounded hover:bg-[#0850dc] hover:text-black transition">Login</a>
+            </div>
+        </div>
+    </div>
+</nav>
+
 
 <!-- hero -->
 <div style="background-image: url('output-onlinegiftools\ \(1\).gif');" class="w-full bg-cover bg-center h-full"> 
@@ -183,11 +220,11 @@
           <p class="text-xl text-white" style="font-family: 'Poppins';">
             Techvolution adalah kompetisi komputer yang mencakup dua kategori: competitive programming, di mana peserta memecahkan masalah algoritma, dan UI/UX design, yang menantang peserta merancang antarmuka dan pengalaman pengguna yang inovatif.
           </p>
-          <!-- Button -->
-          <button class="mt-6 bg-white text-blue-900 font-semibold px-6 py-2 rounded-lg hover:bg-blue-900 hover:text-white transition duration-300">
+          <!-- Button 1 -->
+          <button onclick="window.location.href='1Compe.html'" class="mt-6 bg-white text-blue-900 font-semibold px-6 py-2 rounded-lg hover:bg-blue-900 hover:text-white transition duration-300">
             Competitive Programming
           </button>
-          <button class="mt-6 bg-white text-blue-900 font-semibold px-6 py-2 rounded-lg hover:bg-blue-900 hover:text-white transition duration-300">
+          <button onclick="window.location.href='1UI_UX.html'" class="mt-6 bg-white text-blue-900 font-semibold px-6 py-2 rounded-lg hover:bg-blue-900 hover:text-white transition duration-300">
             UI/UX
           </button>
         </div>
@@ -208,7 +245,7 @@
           <p class="text-xl text-white" style="font-family:'Poppins';">
             Workshop Techvolution meliputi pelatihan pemrograman dan UI/UX design, memberikan peserta keterampilan praktis dalam algoritma serta desain antarmuka dan pengalaman pengguna yang efektif.
           </p>
-          <!-- Button -->
+          <!-- Button 2 -->
           <button onclick="window.location.href='workshop.html'" class="mt-6 bg-white text-blue-900 font-semibold px-6 py-2 rounded-lg hover:bg-blue-900 hover:text-white transition duration-300">
             Learn More
           </button>
@@ -225,7 +262,7 @@
 
 <!-- Core Values Section -->
 <section class="w-full py-16" style="background-color: #0e236b;">
-  <h2 class="mb-20 text-4xl font-bold mb-10 text-center text-white">Our Core <span class="text-yellow-400">Values</span></h2>
+  <h2 class="mb-20 text-4xl font-bold text-center text-white">Our Core <span class="text-yellow-400">Values</span></h2>
 
   <!-- Grid Container -->
   <div class="flex justify-center space-x-9">
@@ -344,7 +381,7 @@
 
     <!-- Logo Section -->
     <div class="flex flex-col items-center">
-      <img src="logo.png" alt="Logo" class="mb-4 w-32 h-auto"> <!-- Ganti dengan path logo yang sesuai -->
+      <img src="LogoTechvolution.png" alt="Logo" class="mb-4 w-52 h-10"> 
     </div>
 
     <!-- Address and Social Media Section -->
