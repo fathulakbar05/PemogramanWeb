@@ -5,9 +5,27 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Form Completion</title>
   <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /*Animasi setelah reload*/
+    @keyframes fadeInDown {
+            0% {
+                opacity: 0;
+                transform: translateY(-50px); /*Start*/
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0); /*End*/
+            }
+        }
+
+        /*Biar animasinya bisa dipake di tailwind*/
+        .animate-fade-in-down {
+            animation: fadeInDown 1s ease-out forwards;
+        }
+  </style>
 </head>
 
-<body class="bg-gray-800 min-h-screen flex items-center justify-center ">
+<body class="animate-fade-in-down bg-gray-800 min-h-screen flex items-center justify-center ">
 
   <!-- Form -->
   <div class="bg-gray-700 p-5 rounded-lg shadow-lg w-80 h-44">
