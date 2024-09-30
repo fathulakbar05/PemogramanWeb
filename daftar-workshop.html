@@ -21,6 +21,102 @@
     </style>
 </head>
 <body>
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Navigation Bar</title>
+    <style>
+        h1, h2, h3{
+            font-family: 'Press Start 2P', cursive;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!--Navigasi Bar-->
+    <nav class="bg-black text-white py-4">
+        <div class="container mx-auto flex justify-between items-center px-14">
+            
+            <!--Logo-->
+            <a href="home.html" class="flex items-center space-x-2">
+                <img src="LogoTechvolution1.png" alt="Logo" class="h-10 w-auto">
+                <img src="LogoTechvolution2.png" alt="Logo" class="h-10 w-72">
+            </a>
+
+            <!--Menu-->
+            <div class="flex items-center space-x-6 text-sm ml-auto" style="font-family: 'Press Start 2P', cursive;">
+                <ul class="flex space-x-6 ">
+                    <li>
+                        <a href="home.html" class="text-white hover:text-[#0850dc] py-8">Home</a>
+                    </li>
+                    <li><a href="home.html#about" class="text-white hover:text-[#0850dc] py-8">About</a></li>
+                    <li><a href="workshop.html" class="text-white hover:text-[#0850dc] py-8">Workshop</a></li>
+                    <li class="relative group">
+                        <a href="#" class="text-white hover:text-[#0850dc] py-8">Competition</a>
+                        <div class="hidden group-hover:block absolute left-0 bg-black mt-2 py-2 w-40 z-50">
+                            <a href="1Compe.html" class="block px-4 py-2 text-sm text-white hover:bg-gray-700">CP</a>
+                            <a href="1UI_UX.html" class="block px-4 py-2 text-sm text-white hover:bg-gray-700">UI/UX</a>
+                        </div>
+                    </li>
+                    <li><a href="KilasBalik.html" class="text-white hover:text-[#0850dc] py-8">Kilas Balik</a></li>
+                    <li><a href="#kontak" class="text-white hover:text-[#0850dc] py-8">Contact</a></li>
+                </ul>
+
+                <!--Profile-->
+                <div>
+                    <a href="profile.html" class="border border-[#0850dc] text-[#0850dc] py-2 px-4 rounded hover:bg-[#0850dc] hover:text-black transition">RAHMAD</a>
+                </div>
+
+            </div>
+        </div>
+    </nav>
+
+</body>
+</html>
+
+    <!--Navigasi Bar-->
+<nav class="bg-black text-white py-4 md:py-6 lg:py-8">
+    <div class="container mx-auto flex justify-between items-center px-4 md:px-6 lg:px-14">
+        
+        <!--Logo-->
+        <a href="home.html" class="flex items-center space-x-2">
+            <img src="LogoTechvolution1.png" alt="Logo" class="h-6 md:h-8 lg:h-10 w-auto">
+            <img src="LogoTechvolution2.png" alt="Logo" class="h-6 md:h-8 lg:h-10 w-40 md:w-48 lg:w-72">
+        </a>
+
+        <!--Menu-->
+        <div class="flex items-center space-x-4 md:space-x-6 lg:space-x-8 text-sm ml-auto mt-4 md:mt-6 lg:mt-8" style="font-family: 'Press Start 2P', cursive;">
+            <ul class="flex space-x-4 md:space-x-6 lg:space-x-8">
+                <li>
+                    <a href="home.html" class="text-white hover:text-[#0850dc] py-4 md:py-6 lg:py-8">Home</a>
+                </li>
+                <li><a href="home.html#about" class="text-white hover:text-[#0850dc] py-4 md:py-6 lg:py-8">About</a></li>
+                <li><a href="workshop.html" class="text-white hover:text-[#0850dc] py-4 md:py-6 lg:py-8">Workshop</a></li>
+                <li class="relative group">
+                    <a href="#" class="text-white hover:text-[#0850dc] py-4 md:py-6 lg:py-8">Competition</a>
+                    <div class="hidden group-hover:block absolute left-0 bg-black mt-2 py-2 w-32 md:w-40 lg:w-48 z-50">
+                        <a href="1Compe.html" class="block px-4 py-2 text-sm text-white hover:bg-gray-700">CP</a>
+                        <a href="1UI_UX.html" class="block px-4 py-2 text-sm text-white hover:bg-gray-700">UI/UX</a>
+                    </div>
+                </li>
+                <li><a href="KilasBalik.html" class="text-white hover:text-[#0850dc] py-4 md:py-6 lg:py-8">Kilas Balik</a></li>
+                <li><a href="#kontak" class="text-white hover:text-[#0850dc] py-4 md:py-6 lg:py-8">Contact</a></li>
+            </ul>
+
+            <!--Profile-->
+            <div>
+                <a href="profile.html" class="border border-[#0850dc] text-[#0850dc] py-2 md:py-3 lg:py-4 px-4 md:px-6 lg:px-8 rounded hover:bg-[#0850dc] hover:text-black transition">RAHMAD</a>
+            </div>
+
+        </div>
+    </div>
+</nav>
 <!--Navigasi Bar-->
 <nav class="bg-black text-white py-4 md:py-6 lg:py-8">
     <div class="container mx-auto flex justify-between px-4 md:px-6 lg:px-14">
