@@ -19,12 +19,29 @@
         p, button, label {
             font-family: 'Poppins', sans-serif;
         }
+
+        /*Animasi setelah reload*/
+        @keyframes fadeInDown {
+            0% {
+                opacity: 0;
+                transform: translateY(-50px); /*Start*/
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0); /*End*/
+            }
+        }
+
+        /*Biar animasinya bisa dipake di tailwind*/
+        .animate-fade-in-down {
+            animation: fadeInDown 1s ease-out forwards;
+        }
     </style>
 </head>
 
 <body class="bg-[url('BgLogin.jpg')] bg-cover bg-center flex justify-center items-center min-h-screen">
 
-    <div class="bg-gradient-to-r from-blue-600 to-blue-800 border border-gray-500 p-8 rounded-lg shadow-lg w-96 text-white">
+    <div class="animate-fade-in-down bg-gradient-to-r from-blue-600 to-blue-800 border border-gray-500 p-8 rounded-lg shadow-lg w-96 text-white">
 
         <!--Judul-->
         <div class="text-center mb-8">
