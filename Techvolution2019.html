@@ -35,18 +35,6 @@
             animation: fadeInDown 1s ease-out forwards;
         }
 
-        @keyframes move-left {
-            0% {
-                transform: translateX(100%);
-            }
-            100% {
-                transform: translateX(-100%);
-            }
-        }
-
-        .animate-move-left {
-            animation: move-left 10s linear infinite;
-        }
 
         input[type="radio"] {
         display: none;
@@ -75,13 +63,50 @@
 
 <body>
 
-    <section class="bg-[url('OceanWithFishPixel.png')] bg-cover bg-center text-white h-screen flex items-center justify-center">
+    <!--Navigasi Bar-->
+    <nav class="bg-black text-white py-4">
+        <div class="container mx-auto flex justify-between items-center px-14">
+            
+            <!--Logo-->
+            <a href="home.html" class="flex items-center space-x-2">
+                <img src="LogoTechvolution1.png" alt="Logo" class="h-10 w-auto">
+                <img src="LogoTechvolution2.png" alt="Logo" class="h-10 w-72">
+            </a>
 
-        <div class="absolute inset-0 bg-black opacity-50"></div>
+            <!--Menu-->
+            <div class="flex items-center space-x-6 text-sm ml-auto" style="font-family: 'Press Start 2P', cursive;">
+                <ul class="flex space-x-6 ">
+                    <li>
+                        <a href="home.html" class="text-white hover:text-[#0850dc] py-8">Home</a>
+                    </li>
+                    <li><a href="home.html#about" class="text-white hover:text-[#0850dc] py-8">About</a></li>
+                    <li><a href="workshop.html" class="text-white hover:text-[#0850dc] py-8">Workshop</a></li>
+                    <li class="relative group">
+                        <a href="#" class="text-white hover:text-[#0850dc] py-8">Competition</a>
+                        <div class="hidden group-hover:block absolute left-0 bg-black mt-2 py-2 w-40 z-50">
+                            <a href="1Compe.html" class="block px-4 py-2 text-sm text-white hover:bg-gray-700">CP</a>
+                            <a href="1UI_UX.html" class="block px-4 py-2 text-sm text-white hover:bg-gray-700">UI/UX</a>
+                        </div>
+                    </li>
+                    <li><a href="KilasBalik.html" class="text-white hover:text-[#0850dc] py-8">Kilas Balik</a></li>
+                    <li><a href="#kontak" class="text-white hover:text-[#0850dc] py-8">Contact</a></li>
+                </ul>
+
+                <!--Login-->
+                <div>
+                    <a href="Login.html" class="border border-[#0850dc] text-[#0850dc] py-2 px-4 rounded hover:bg-[#0850dc] hover:text-black transition">Login</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <section class="bg-[url('OceanWithFishPixel.png')] bg-cover bg-center text-white py-52 px-6 flex items-center justify-center relative">
+
+        <div class="absolute inset-0 bg-black opacity-50 h-full w-full"></div>
 
         <div class="animate-fade-in-down text-center">
             <h1 class="text-4xl font-bold py-5">
-                TECHVOLUTION 2019
+                TECHVOLUTION <span class="text-yellow-400">2019</span>
             </h1>
 
             <p class="mt-4 bg-[#0e236b]  rounded-lg inline-block p-4 max-w-5xl mx-auto">
@@ -97,7 +122,7 @@
     </section>
       
         
-    <section class="bg-[#0e236b] w-auto">
+    <section class="bg-[#0e236b] w-auto" style="background-image: url('Desain\ tanpa\ judul\.png');">
 
         <div class="flex items-center justify-center py-32">
             <div id="slider" class="w-full max-w-3xl mx-auto p-4 bg-white shadow-lg rounded-lg">
@@ -108,7 +133,7 @@
                 <input type="radio" name="slider" id="slide4">
             
                 <!-- Slides Container -->
-                <div id="slides" class="overflow-hidden relative w-full h-96 sm:h-80 md:h-64 lg:h-96"> <!-- Menggunakan ukuran responsif -->
+                <div id="slides" class="overflow-hidden relative w-full h-96 sm:h-80 md:h-64 lg:h-96"> 
                     <div class="inner flex">
                 
                         <!-- Slide 1 -->
@@ -128,14 +153,14 @@
                         <!-- Slide 3 -->
                         <div class="slide flex items-center justify-center bg-blue-700 text-white w-full">
                             <div class="slide-content">
-                                <img src="img3.jpeg" class="w-full h-full object-cover">
+                                <img src="img3.jpg" class="w-full h-full object-cover">
                             </div>
                         </div>
                 
                         <!-- Slide 4 -->
                         <div class="slide flex items-center justify-center bg-blue-700 text-white w-full">
                             <div class="slide-content">
-                                <img src="img4.jpeg" class="w-full h-full object-cover">
+                                <img src="img4.jpg" class="w-full h-full object-cover">
                             </div>
                         </div>
                     </div>
@@ -155,16 +180,16 @@
     </section>
 
     
-    <section class="bg-[#0e236b]">
+    <section class="bg-[#0e236b] text-white">
         
         <div class="flex space-x-10 items-center w-11/12 md:container mx-auto py-20">
             <img src="Podium.png" class="pl-16 pr-10">
 
             <div>
                 <h3 class="text-3xl font-bold mb-10">
-                    Pemenang Lomba<br>Competitive Programming
+                    Pemenang Lomba<br><span class="text-yellow-400">Competitive Programming</span>
                 </h3>
-                <table class="table-auto w-full border-collapse border-2 border-black text-white">
+                <table class="table-auto w-full border-collapse border-4 border-black text-white">
                     <thead>
                         <tr class="bg-black">
                             <th class="px-4 py-2 text-left">Nama Kelompok</th>
@@ -195,15 +220,15 @@
 
     </section>
 
-    <section class="bg-[#0e236b]">
+    <section class="bg-[#0e236b] text-white" style="background-image: url('Desain\ tanpa\ judul\ \(4\).png');">
         
         <div class="flex space-x-10 items-center w-11/12 md:container mx-auto py-20">
             
             <div class="pl-32">
                 <h3 class="text-3xl font-bold mb-10">
-                    Pemenang Lomba<br>UI/UX
+                    Pemenang Lomba<br><span class="text-yellow-400">UI/UX</span>
                 </h3>
-                <table class="table-auto w-full border-collapse border-2 border-black text-white">
+                <table class="table-auto w-full border-collapse border-4 border-black text-white">
                     <thead>
                         <tr class="bg-black">
                             <th class="px-4 py-2 text-left">Nama Kelompok</th>
@@ -212,7 +237,7 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr class="hover:bg-[#0850dc]">
+                        <tr class="hover:bg-[#0850dc] bg-[]">
                             <td class="px-4 py-2">BiGlory</td>
                             <td class="px-4 py-2">Muhammad Fathul Akbar<br>Kian Fikram Ayyubi</td>
                             <td class="px-4 py-2">SMA Negeri 1 Palembang</td>
@@ -236,6 +261,60 @@
         </div>
 
     </section>
+
+    <!-- Footer Section -->
+    <footer class="bg-[#0A0514] text-gray-300 py-12">
+        <div class="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 items-start">
+    
+            <!-- Logo Section -->
+            <div class="flex justify-center items-center flex-col mt-20">
+                <img src="LogoTechvolution.png" alt="Logo" class="mb-4 w-80 h-24">
+            </div>
+  
+            <!-- Address and Social Media Section -->
+            <div class="flex flex-col items-start">
+                <h2 class="text-lg font-bold mb-4">Address</h2>
+                <p style="font-family:'Poppins';" class="text-xl">
+                    Jl. Raya Palembang - Prabumulih No.Km. 32,<br>
+                    Indralaya Indah, Kec. Indralaya,<br>
+                    Kabupaten Ogan Ilir, Sumatera Selatan 30862
+                </p>
+        
+                <h3 class="text-white text-lg font-bold mt-6 ">Social Media</h3>
+                <div class="flex space-x-4">
+                    <!-- Social Media Icons -->
+                    <a href="#" class="text-gray-400 hover:text-white text-2xl"><i class="fab fa-tiktok"></i></a>
+                    <a href="#" class="text-gray-400 hover:text-white text-2xl"><i class="fab fa-youtube"></i></a>
+                    <a href="#" class="text-gray-400 hover:text-white text-2xl"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+  
+            <!-- Contact Section -->
+            <div class="flex flex-col" id="kontak">
+                <h2 class="text-white text-lg font-bold mb-4">Contact</h2>
+                <p class="mb-2 pb-4 text-xl" style="font-family:'Poppins';">
+                    <span style="font-family: 'Press Start 2P';">
+                    <a href=" "><i class="fa-brands fa-whatsapp text-2xl" ></i> Whatsapp </a> </span>
+                    <br>+62 896-2103-887 (Fathul)
+                    <br>+62 812-3994-425 (Rahmad)
+                    <br>+62 821-5320-595 (Nazwa)
+                    <br>+62 812-4004-445 (Nurul)
+                    <br>+62 896-9820-543 (Kian)
+                </p>
+
+                <p class="mb-2">
+                    <a href=" "><i class="fas fa-envelope text-2xl" ></i> Email </a>
+                    <br>techvolution@gmail.com
+                </p>
+            </div>
+  
+        </div>
+    
+        <!-- Footer Bottom Section -->
+        <div class="border-t border-gray-600 mt-8 pt-4 text-center text-sm">
+            <p>© 2024 Techvolution . All rights reserved.</p>
+        </div>
+    </footer>
 
 </body>
 </html>

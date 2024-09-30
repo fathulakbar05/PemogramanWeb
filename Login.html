@@ -19,16 +19,33 @@
         p, button, label {
             font-family: 'Poppins', sans-serif;
         }
+
+        /*Animasi setelah reload*/
+        @keyframes fadeInDown {
+            0% {
+                opacity: 0;
+                transform: translateY(-50px); /*Start*/
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0); /*End*/
+            }
+        }
+
+        /*Biar animasinya bisa dipake di tailwind*/
+        .animate-fade-in-down {
+            animation: fadeInDown 1s ease-out forwards;
+        }
     </style>
 </head>
 
-<body class="bg-blue-100 flex justify-center items-center min-h-screen">
+<body class="bg-[url('BgLogin.jpg')] bg-cover bg-center flex justify-center items-center min-h-screen ">
 
-    <div class="bg-blue-50 border-2 border-black p-8 rounded-lg shadow-lg w-96">
+    <div class="animate-fade-in-down bg-gradient-to-r from-blue-600 to-blue-800 border border-gray-500 p-8 rounded-lg shadow-lg w-96 text-white">
 
         <!--Judul-->
-        <div class="text-center mb-8">
-            <img src="" alt="Logo Techvolution" class="mx-auto mb-4">
+        <div class="text-center mb-8 text-white">
+            
             <h1 class="font-bold text-lg mb-2">Log In</h1>
         </div>
 
@@ -36,12 +53,12 @@
             <!--Form-->
             <div class="mb-4">
                 <label class="block font-semibold mb-1" for="email">Email</label>
-                <input class="w-full p-2 border-2 border-black rounded-lg shadow-md" type="text" name="email" id="email" placeholder="Enter your email address" value required>
+                <input class="w-full p-2 border-2 border-black rounded-lg shadow-md text-black" type="text" name="email" id="email" placeholder="Enter your email address" value required>
             </div>
 
             <div class="mb-6">
                 <label class="block font-semibold mb-1" for="password">Password</label>
-                <input class="w-full p-2 border-2 border-black rounded-lg shadow-md" type="text" name="password" id="password" placeholder="Enter your password" value required>
+                <input class="w-full p-2 border-2 border-black rounded-lg shadow-md text-black" type="text" name="password" id="password" placeholder="Enter your password" value required>
             </div>
 
             <div class="flex items-center justify-between mb-4">
@@ -51,12 +68,12 @@
                 </label>
             </div>
 
-            <input class="w-full bg-[#0850dc] hover:bg-[#0e236b] text-white font-bold py-2 rounded-lg shadow-md mb-4" type="submit" value="LOGIN">
+            <input class="w-full bg-[#0e236b] hover:bg-[#141f43] font-bold py-2 rounded-lg shadow-md mb-4" type="submit" value="LOGIN">
 
 
             <p class="text-center font-semibold text-sm mb-4">OR</p>
             
-            <div class="mb-4">
+            <div class="mb-4 text-black">
                 <a href="home.html" class="bg-white border-2 border-black py-2 px-4 rounded-lg shadow-md hover:bg-gray-200 w-full flex justify-center items-center">
                     <img src="GoogleIcon.png" alt="Google" class="w-6 h-6 mr-2">
                     LOGIN WITH GOOGLE
@@ -65,14 +82,14 @@
             
 
             <!--Footer-->
-            <div class="text-center mt-2">
+            <div class="text-center mt-2 ">
                 <h4 class="forgotPassword">
-                    <a href="ForgotPassword.html" class="text-blue-500 hover:underline text-sm">Forgot Password?</a>
+                    <a href="ForgotPassword.html" class="text-black hover:underline text-sm">Forgot Password?</a>
                 </h4>
 
                 <h4 class="text-sm">
                     Don't have an account? 
-                    <a href="SignUp.html" class="text-blue-500 hover:underline">Create an account</a>
+                    <a href="SignUp.html" class="text-black hover:underline">Create an account</a>
                 </h4>
             </div>
 
