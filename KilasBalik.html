@@ -19,24 +19,24 @@
             font-family: 'Poppins', sans-serif;
         }
 
-        /* Custom CSS for stone, sand, and sea-like glow effect */
+        /*Cahaya di sekitar kotak*/
         .glow-box {
             box-shadow: 0 0 20px #0850dc, 0 0 40px #0850dc, 0 0 60px #0850dc;
         }
 
-        /* Custom Keyframes for Fade-In and Translate */
+        /*Animasi setelah reload*/
         @keyframes fadeInDown {
             0% {
                 opacity: 0;
-                transform: translateY(-100px); /* Start slightly below */
+                transform: translateY(-100px); /*Start*/
             }
             100% {
                 opacity: 1;
-                transform: translateY(0); /* End at normal position */
+                transform: translateY(0); /*End*/
             }
         }
 
-        /* Adding the custom animation to Tailwind */
+        /*Biar animasinya bisa dipake di tailwind*/
         .animate-fade-in-down {
             animation: fadeInDown 1s ease-out forwards;
         }
@@ -48,6 +48,7 @@
     <section class="bg-[url('OceanWithFish.jpg')] bg-cover bg-center text-white py-52 px-6 flex items-center justify-center relative">
 
         <div class="absolute inset-0 bg-black opacity-50 h-full w-full"></div>
+        
         
         <div class="animate-fade-in-down text-center text-white relative z-20">
             <h1 class="text-4xl font-bold">
