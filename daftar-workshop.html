@@ -20,7 +20,45 @@
         }
     </style>
 </head>
-<body class="flex items-center justify-center min-h-screen bg-cover" style="background-image: url('bg-daftar-lombaworkshop.gif');">
+<body>
+<!--Navigasi Bar-->
+<nav class="bg-black text-white py-4 md:py-6 lg:py-8">
+    <div class="container mx-auto flex justify-between px-4 md:px-6 lg:px-14">
+        
+        <!--Logo-->
+        <a href="home.html" class="flex items-center space-x-2">
+            <img src="LogoTechvolution1.png" alt="Logo" class="h-6 w-auto">
+            <img src="LogoTechvolution2.png" alt="Logo" class="h-6 w-40 pr-7">
+        </a>
+
+        <!--Menu-->
+        <div class="flex items-center space-x-4 md:space-x-6 lg:space-x-8 text-sm ml-auto" style="font-family: 'Press Start 2P', cursive;">
+            <ul class="flex space-x-4 md:space-x-6 lg:space-x-8">
+                <li>
+                    <a href="home.html" class="text-white hover:text-[#0850dc] py-4 md:py-6 lg:py-8">Home</a>
+                </li>
+                <li><a href="home.html#about" class="text-white hover:text-[#0850dc] py-4 md:py-6 lg:py-8">About</a></li>
+                <li><a href="workshop.html" class="text-white hover:text-[#0850dc] py-4 md:py-6 lg:py-8">Workshop</a></li>
+                <li class="relative group">
+                    <a href="#" class="text-white hover:text-[#0850dc] py-4 md:py-6 lg:py-8">Competition</a>
+                    <div class="hidden group-hover:block absolute left-0 bg-black mt-2 py-2 w-32 md:w-40 lg:w-48 z-50">
+                        <a href="1Compe.html" class="block px-4 py-2 text-sm text-white hover:bg-gray-700">CP</a>
+                        <a href="1UI_UX.html" class="block px-4 py-2 text-sm text-white hover:bg-gray-700">UI/UX</a>
+                    </div>
+                </li>
+                <li><a href="KilasBalik.html" class="text-white hover:text-[#0850dc] py-4 md:py-6 lg:py-8">Kilas Balik</a></li>
+                <li><a href="#kontak" class="text-white hover:text-[#0850dc] py-4 md:py-6 lg:py-8">Contact</a></li>
+            </ul>
+
+            <!--Login-->
+            <div>
+                <a href="Login.html" class="border border-[#0850dc] text-[#0850dc] py-2 md:py-3 lg:py-4 px-4 md:px-6 lg:px-8 rounded hover:bg-[#0850dc] hover:text-black transition">Login</a>
+            </div>
+        </div>
+    </div>
+</nav>
+ 
+<div class="flex items-center justify-center min-h-screen bg-cover" style="background-image: url('bg-daftar-lombaworkshop.gif');">
     <div class="bg-white bg-opacity-95 p-8 rounded-lg shadow-lg w-full max-w-4xl border border-white">
         <h1 class="text-3xl font-bold text-center gradient-text mb-8">DAFTARKAN DIRIMU!</h1>
         <div class="flex flex-col md:flex-row justify-between">
@@ -51,9 +89,9 @@
                     </div>
                     <div class="mb-4 text-gray-700">
                         <label for="bukti_pembayaran" class="block text-gray-700">Bukti Pembayaran</label>
-                        <input type="file" id="bukti_pembayaran" name="bukti_pembayaran" class="w-full p-2 border rounded">
+                        <input type="file" id="bukti_pembayaran" name="bukti_pembayaran" class="w-full p-2 border rounded bg-white">
                     </div>
-                    <input onclick="window.location.href='workshop.html'" class="w-full bg-[#0e236b] hover:bg-[#141f43] font-bold py-2 rounded-lg shadow-md mb-4 text-white" type="submit" value="KONFIRMASI" style="font-family: 'Press Start 2P';">
+                    <input class="w-full bg-[#0e236b] hover:bg-[#141f43] font-bold py-2 rounded-lg shadow-md mb-4 text-white" type="submit" value="KONFIRMASI" style="font-family: 'Press Start 2P';">
                 </form>
             </div>
             <div class="w-full md:w-1/2 p-4 gradient-border rounded-lg">
@@ -74,5 +112,6 @@
             </div>
         </div>
     </div>
+</div>
 </body>
 </html>
