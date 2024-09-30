@@ -9,7 +9,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Press+Start+2P&display=swap">
     <script src="https://cdn.tailwindcss.com"></script>
-    <title>Kilas Balik</title>
+    <title>Kilas Balik - Techvolution</title>
 
     <style>
         h1, h2, h3 {
@@ -19,24 +19,24 @@
             font-family: 'Poppins', sans-serif;
         }
 
-        /* Custom CSS for stone, sand, and sea-like glow effect */
+        /*Cahaya di sekitar kotak*/
         .glow-box {
             box-shadow: 0 0 20px #0850dc, 0 0 40px #0850dc, 0 0 60px #0850dc;
         }
 
-        /* Custom Keyframes for Fade-In and Translate */
+        /*Animasi setelah reload*/
         @keyframes fadeInDown {
             0% {
                 opacity: 0;
-                transform: translateY(-100px); /* Start slightly below */
+                transform: translateY(-100px); /*Start*/
             }
             100% {
                 opacity: 1;
-                transform: translateY(0); /* End at normal position */
+                transform: translateY(0); /*End*/
             }
         }
 
-        /* Adding the custom animation to Tailwind */
+        /*Biar animasinya bisa dipake di tailwind*/
         .animate-fade-in-down {
             animation: fadeInDown 1s ease-out forwards;
         }
@@ -48,6 +48,7 @@
     <section class="bg-[url('OceanWithFish.jpg')] bg-cover bg-center text-white py-52 px-6 flex items-center justify-center relative">
 
         <div class="absolute inset-0 bg-black opacity-50 h-full w-full"></div>
+        
         
         <div class="animate-fade-in-down text-center text-white relative z-20">
             <h1 class="text-4xl font-bold">
