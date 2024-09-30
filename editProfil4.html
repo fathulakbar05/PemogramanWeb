@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>4</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <style>
+        h2{
+            font-family: 'Press Start 2P', cursive;
+        }
+        p{
+            font-family: 'Poppins', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-white">
+    <div class="flex h-screen items-center justify-center">
+        <!-- Main container -->
+        <div class="bg-gray-800 rounded-lg shadow-lg flex w-3/4 border-4 border-white">
+            
+            <!-- Left side: Image placeholder -->
+            <div class="w-1/2 p-8 bg-gradient-to-r from-[#0e236b] via-blue-500 to-[#0850dc]">
+                <div style="text-align: center">
+                    <h2 class="text-lg font-bold mb-4">Selesaikan tahapan untuk melengkapi akun anda</h2>
+                <p class="mb-6">Lengkapi detail akunmu sekarang juga</p>
+                </div>
+                <div class="flex justify-center">
+                    <img src="Guardicore_ Brand Animation.gif" alt="gambar" style="width: 200px; height: 200px;" class=" rounded-2xl">
+                </div>
+            </div>
+            <!-- Right side: Form -->
+            <div class="w-1/2 p-8"> 
+                <form action="editProfil5.html" method="POST">
+                    <body class="flex items-center justify-center min-h-screen bg-gray-800">
+                        <div class="w-64">
+                            <!-- Tempat untuk memilih opsi -->
+                            <label for="options" class="block text-white mb-2">Bagaimana anda tau techvolutin?</label>
+                            <select id="options" class="block w-48 px-4 py-2 mb-3 text-white bg-gray-700 border border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" size="3" onchange="document.getElementById('selectedValue').value = this.value;">
+                                <option value="Instansi">Instansi</option>
+                                <option value="Media Sosial">Media Sosial</option>
+                                <option value="Teman">Teman</option>
+                                <option value="Website">Website</option>
+                                <option value="Iklan">Iklan</option>
+                            </select>
+                    
+                            <!-- Tempat untuk menerima inputan dari opsi yang dipilih -->
+                            <input id="selectedValue" type="text" class="block w-48 px-4 py-2 mb-5 text-white bg-gray-700 border border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Pilihan">
+                        </div>
+                    </body>
+        
+                    <div class="mb-4">
+                        <label for="heard_about" class="block text-sm font-medium mb-2">Kompetisi/Kegiatan</label>
+                        <select id="heard_about" name="heard_about" class="w-full p-2 bg-gray-700 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 mb-5">
+                            <option>Competitive Programming</option>
+                            <option>UI/UX Design</option>
+                            <option>Seminar</option>
+                        </select>
+                    </div>
+                    <div class="flex justify-between items-center">
+                        <div>
+                            <a href="editprofil3.html" class="px-4 py-2 bg-gray-600 hover:bg-gray-500 text-white rounded-lg">← 
+                                Sebelumnya
+                            </a> 
+                        </div>
+                        
+                        <input type="submit" class="px-4 py-2 bg-gradient-to-r from-blue-600 to-blue-500 hover:from-[#0e236b] hover:to-[#0850dc] text-white rounded-lg" value="Submit">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
