@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Pendaftaran</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+</head>
+<body class="min-h-screen flex items-center justify-center p-8" style="background-color: #0e236b;">
+    <div class="border bg-blue-800 bg-opacity-80 shadow-lg rounded-lg p-8 md:w-1/2">
+        <h1 class="text-4xl font-bold text-center mb-6 text-blue-600 text-white">DAFTARKAN DIRIMU!</h1>
+        <form>
+            <div class="mb-4">
+                <label for="nama_tim" class="text-white font-semibold mb-1">Nama Tim</label>
+                <input type="text" id="nama_tim" name="nama_tim" placeholder="Contoh : Jogo Hatoru" class="w-full p-2 border-2 border-black rounded-lg shadow-md">
+            </div>
+            <div class="mb-4">
+                <label class="text-white font-semibold mb-1" for="email">Email</label>
+                <input class="w-full p-2 border-2 border-black rounded-lg shadow-md" type="text" name="email" id="email" placeholder="Enter your email address" value required>
+            </div>
+            <div class="mb-4">
+                <label for="nomor_telepon" class="text-white font-semibold mb-1">Nomor Telepon</label>
+                <input type="text" id="nomor_telepon" name="nomor_telepon" placeholder="Contoh : 081234567898" class="w-full p-2 border-2 border-black rounded-lg shadow-md">
+            </div>
+            <div class="mb-4">
+                <label for="metode_pembayaran" class="text-white font-semibold mb-1">Metode Pembayaran</label>
+                <select id="metode_pembayaran" name="metode_pembayaran" class="w-full p-2 border-2 border-black rounded-lg shadow-md">
+                    <option>Pilih Opsi</option>
+                    <option>Dana</option>
+                    <option>Gopay</option>
+                    <option>OVO</option>
+                    <option>Shopeepay</option>
+                    <option>Transfer Bank</option>
+                </select>
+            </div>
+            <div class="mb-4 text-white">
+                <label for="bukti_pembayaran" class="text-white font-semibold mb-1">Bukti Pembayaran</label>
+                <input type="file" id="bukti_pembayaran" name="bukti_pembayaran" class="w-full p-2 border-2 border-black rounded-lg shadow-md">
+            </div>
+            <input class="w-full bg-[#0850dc] hover:bg-[#0e236b] text-white font-bold py-2 rounded-lg shadow-md mb-5" type="submit" value="KONFIRMASI">
+        </form>
+        <div class="mt-6 text-sm text-white">
+            <p>Pembayaran dapat dikirimkan melalui:</p>
+            <ul class="list-disc list-inside">
+                <li>Dana: 08127123655 (a.n Hafiz Kurniawan)</li>
+                <li>Gopay: 08127123655 (a.n Hafiz Kurniawan)</li>
+                <li>OVO: 08127123655 (a.n Hafiz Kurniawan)</li>
+                <li>Shopeepay: 08127123655 (a.n Hafiz Kurniawan)</li>
+            </ul>
+            <p class="mt-4">Transfer Bank:</p>
+            <ul class="list-disc list-inside">
+                <li>BSI: 7233744705 (a.n Alfina Dwi Rahmi)</li>
+                <li>BNI: 1176107810 (a.n Andini Dwipatricia)</li>
+                <li>Mandiri: 1120020209255 (a.n Annisa Reida)</li>
+            </ul>
+            <p class="mt-4 text-yellow-400">* Simpan dan unggah pada kolom bukti pembayaran sebelum anda melakukan pendaftaran.</p>
+        </div>
+    </div>
+</body>
+</html>
