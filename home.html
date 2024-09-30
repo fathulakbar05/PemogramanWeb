@@ -11,7 +11,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <title>Home-Techvolution</title>
   <style>
-  /* Custom transition effect */
+  /* transition effect */
         input[type="radio"] {
         display: none;
         } 
@@ -35,8 +35,22 @@
         width: 25%;
         }
       </style>
+
+<style>
+  
+  /* Hide scrollbar */
+  .scrollbar-hide::-webkit-scrollbar {
+      display: none;
+  }
+  .scrollbar-hide {
+      -ms-overflow-style: none;  
+      scrollbar-width: none;  
+  }
+</style>
+
 </head>
 <body style="font-family: 'Press Start 2P', cursive; background-color: #0e236b;">
+
   <!--Navigasi Bar-->
   <nav class="bg-black text-white py-4">
     <div class="container mx-auto flex justify-between items-center px-14">
@@ -77,9 +91,8 @@
 
 <!-- hero -->
 <div style="background-image: url('output-onlinegiftools\ \(1\).gif');" class="w-full bg-cover bg-center h-full"> 
-    <div class="text-7xl font-bold pb-5 container mx-auto text-center text-white h-screen justify-center items-center pt-52"><div class="text-5xl mb-3 text-yellow-400">2024</div>Techvolution<div>
+    <div class="animate-fade-in-down text-7xl font-bold pb-5 container mx-auto text-center text-white h-screen justify-center items-center pt-52"><div class="text-5xl mb-3 text-yellow-400">2024</div>Techvolution<div>
         <p class="text-white text-center mb-5 font-mono text-3xl pt-3">Where Tech Meets the Infinite Depths</p></div></div></div>
- 
  </section>
 
  <!-- Countdown Section -->
@@ -120,6 +133,26 @@
       </div>
     </div>
 </section>
+
+<!-- Time Line -->
+<section class="w-full py-10" style="background-color: #0e236b;">
+  <div class="container mx-auto">
+<h2 class="text-4xl font-bold text-center text-white mb-10">Time Line <span class="text-yellow-400">Techvolution</span></h2>
+<div id="about">
+<div class="w-full"> 
+  <div class="w-full"> 
+      <section class="w-full">
+          <div class="flex w-full overflow-x-scroll scrollbar-hide"> 
+              <img src="horizon1 (1).jpg" class="w-144 h-96 object-cover" alt="Image 1">
+              <img src="horizon2 (1).jpg" class="w-144 h-96 object-cover" alt="Image 2">
+              <img src="hoorizon3 (1).jpg" class="w-144 h-96 object-cover" alt="Image 3">
+              <img src="horizon4 (1).jpg" class="w-144 h-96 object-cover" alt="Image 4">
+          </div>
+      </section>
+  </div>
+</div>
+</div>
+
 
  <!-- about -->
 <div style="background-color: #0e236b;" id="about">
@@ -380,8 +413,9 @@
   <div class="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 items-start">
 
     <!-- Logo Section -->
-<div class="flex justify-center items-center flex-col mt-20">
-  <img src="LogoTechvolution.png" alt="Logo" class="mb-4 w-80 h-24">
+<div class="flex justify-center items-center flex-col mt-12">
+  <img src="LogoTechvolution1.png" alt="Logo" class="mb-4 w-32 h-auto">
+  <img src="LogoTechvolution2.png" alt="Logo" class="mb-4 w-52 h-auto">
 </div>
 
 
