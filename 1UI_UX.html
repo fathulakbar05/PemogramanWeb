@@ -11,118 +11,180 @@
       href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap"
       rel="stylesheet"
     />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Press+Start+2P&display=swap"
-      rel="stylesheet"
-    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
   <head>
-  <body class="bg-blue-900 h-screen" style="font-family: 'Press Start 2P', cursive">
-    
+  <body style="font-family: 'Press Start 2P', cursive; background-color: #0e236b;">
+
+    <!--Navigasi Bar-->
+  <nav class="bg-black text-white py-4">
+    <div class="container mx-auto flex justify-between items-center px-14">
+        
+        <!--Logo-->
+        <div class="flex items-center space-x-2">
+            <img src="LogoTechvolution1.png" alt="Logo" class="h-10 w-auto">
+            <img src="LogoTechvolution2.png" alt="Logo" class="h-10 w-72">
+        </div>
+
+        <!--Menu-->
+        <div class="flex items-center space-x-6 text-sm ml-auto" style="font-family: 'Press Start 2P', cursive;">
+            <ul class="flex space-x-6 ">
+                <li>
+                    <a href="home.html" class="text-white hover:text-[#0850dc] py-8">Home</a>
+                </li>
+                <li><a href="home.html#about" class="text-white hover:text-[#0850dc] py-8">About</a></li>
+                <li><a href="workshop.html" class="text-white hover:text-[#0850dc] py-8">Workshop</a></li>
+                <li class="relative group">
+                    <a href="#" class="text-white hover:text-[#0850dc] py-8">Competition</a>
+                    <div class="hidden group-hover:block absolute left-0 bg-black mt-2 py-2 w-40 z-50">
+                        <a href="1Compe.html" class="block px-4 py-2 text-sm text-white hover:bg-gray-700">CP</a>
+                        <a href="1UI_UX.html" class="block px-4 py-2 text-sm text-white hover:bg-gray-700">UI/UX</a>
+                    </div>
+                </li>
+                <li><a href="KilasBalik.html" class="text-white hover:text-[#0850dc] py-8">Kilas Balik</a></li>
+                <li><a href="#kontak" class="text-white hover:text-[#0850dc] py-8">Contact</a></li>
+            </ul>
+
+            <!--Login-->
+            <div>
+                <a href="Login.html" class="border border-[#0850dc] text-[#0850dc] py-2 px-4 rounded hover:bg-[#0850dc] hover:text-black transition">Login</a>
+            </div>
+        </div>
+    </div>
+</nav>
+
     <div
-      class="flex items-center justify-between h-screen bg-black bg-opacity-50 px-8"
+      class="flex items-center justify-center h-screen bg-opacity-50 px-8" style="background-image: url(bg_lomba.png);"
     >
-      <div class="bg-blue-700 bg-opacity-80 p-8 rounded-lg text-white" style="width: 70%; height: 50%; font-size: 1.25rem">
-        <h1 class="text-3xl font-bold mb-4">UI/UX Designing</h1>
-        <hr class="border-t-2 border-gray-400 mb-4" />
-        <p style="font-family: 'Poppins', sans-serif; font-size: 1.25rem">
+      <div class="container" style="display: flex; align-items: center; justify-content: space-between; height: 60%; width: 80%; padding: 20px; border: 3px solid gray; background-color: rgba(29, 78, 216, 0.8); border-radius: 1.5rem; color: white; font-size: 1.25rem;">
+    <div class="text-content" style="width: 60%;">
+        <h1 style="font-size: 2rem; font-weight: bold; margin-bottom: 20px;">UI/UX <span style="color: #fbbf24;">Designing</span></h1>
+        <hr style="border-top: 2px solid gray; margin-bottom: 20px;" />
+        <p style="font-family: 'Poppins', sans-serif; font-size: 1.25rem;">
           Lomba Techvolution UI/UX Designing adalah ajang kompetisi yang menantang peserta untuk merancang antarmuka dan pengalaman pengguna yang inovatif, estetis, dan fungsional. Kompetisi ini bertujuan untuk mengasah kemampuan peserta dalam menciptakan desain yang tidak hanya menarik secara visual, tetapi juga intuitif, responsif, dan berpusat pada kebutuhan pengguna.
         </p>
-        <br>
-        <div class="flex space-x-4">
-          <a
-            href="#"
-            class="text-white font-bold py-2 px-4 rounded"
-            style="background-color: rgba(255, 255, 0, 0.8); border: 4px solid white;"
-            >Daftar</a
-          >
-          <a
-            href="#"
-            class="text-white font-bold py-2 px-4 rounded"
-            style="background-color: rgba(255, 255, 0, 0.8); border: 4px solid white;"
-            >Buku Panduan</a
-          >
+
+        <button onclick="window.location.href='daftar-lomba-uiux.html'" class="mt-6 bg-white text-blue-900 font-semibold px-6 py-2 rounded-lg hover:bg-blue-900 hover:text-white transition duration-300">
+            Daftar </button>
+            
+          <button class="mt-6 bg-white text-blue-900 font-semibold px-6 py-2 rounded-lg hover:bg-blue-900 hover:text-white transition duration-300">
+            Buku Panduan </button>
+
+    </div>
+    <div class="image-content" style="width: 40%; text-align: right;">
+        <img src="uiux_1.png" alt="Descriptive Image" style="max-width: 100%; height: auto; border-radius: 1rem;">
+    </div>
+</div>
+      </div>
+
+      <!-- timeline -->
+      <div>
+        <img src="1.png" alt="Descriptive Image" style="max-width: 100%; height: auto; border-radius: 1rem;">
+      </div>
+      
+<!-- Countdown Section -->
+<section class="w-full h-full p-44" style="background-image: url('Desain\ tanpa\ judul\ \(2\).png');">
+    <div class="container mx-auto text-center">
+      <h2 class="text-4xl font-bold text-white mb-10">Close Regist <span class="text-yellow-400" >Countdown</span></h2>
+      
+      <!-- Countdown Timer -->
+      <div class="flex justify-center items-center space-x-4 text-white text-6xl font-extrabold">
+
+        <!-- Jam -->
+        <div class="text-center border border-gray-300 rounded-lg p-4">
+          <div>12</div>
+          <div class="text-lg text-white mt-2">Jam</div>
+        </div>
+  
+        <!-- Colon 1 -->
+        <div class="text-6xl font-bold text-white">:</div>
+  
+        <!-- Menit -->
+        <div class="text-center border border-gray-300 rounded-lg p-4">
+          <div>30</div>
+          <div class="text-lg text-white mt-2">Menit</div>
+        </div>
+  
+        <!-- Colon 2 -->
+        <div class="text-6xl font-bold text-white">:</div>
+  
+        <!-- Detik -->
+        <div class="text-center border border-gray-300 rounded-lg p-4">
+          <div>57</div>
+          <div class="text-lg text-white mt-2">Detik</div>
         </div>
       </div>
-      <div 
-      class="bg-blue-700 bg-opacity-85 p-8 rounded-lg text-white flex items-center justify-center" 
-      style="width: 20%; height: 30%"
-      >
-        <p style= "text-align: center">Competitive Programming</p>
+  
+      <div class="text-center mt-10 text-white font-semibold text-xl">
+      14 Desember 2024
       </div>
     </div>
-    <br>
+</section>
+
+<section class="pt-44 h-screen bg-cover bg-center text-center justify-items-center text-white"
+        style="background-image: url('bg-workshop3.png');">
+    <h1 class="text-5xl mb-4">Contact <span class="text-yellow-400">Person</span></h1>
+    <div class="text-3xl space-y-3 rounded-lg border inline-block bg-blue-900 bg-opacity-80 px-8 py-1 text-white mb-3 text-center">
+    <p>Honda Mitsubishi</p>
+    <p>0811-1100-9995</p>
+    </div>
+</section>
+
+    <!-- Footer Section -->
+<footer class="bg-[#0A0514] text-gray-300 py-12">
+  <div class="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 items-start">
+
+    <!-- Logo Section -->
+<div class="flex justify-center items-center flex-col mt-20">
+  <img src="LogoTechvolution.png" alt="Logo" class="mb-4 w-80 h-24">
+</div>
 
 
-    <section class="min-h-screen flex items-center justify-center">
-      <div class="bg-black bg-opacity-60 p-8 rounded-lg text-white w-[70%] space-y-8">
-        <h1 class="text-3xl text-center mb-6">Linimasa</h1>
-        <hr class="border-t-2 border-gray-400 mb-4" />
 
-        <div class="text-center space-y-4">
-          <div>
-            <p>1 Desember - 14 Desember</p>
-            <div class="bg-yellow-600 bg-opacity-70 flex items-center justify-center h-32 w-64 mx-auto rounded-lg mb-4">
-              Pendaftaran
-            </div>
-          </div> <br>
+    <!-- Address and Social Media Section -->
+    <div class="flex flex-col items-start">
+      <h2 class="text-lg font-bold mb-4">Address</h2>
+      <p style="font-family:'Poppins';" class="text-xl">Jl. Raya Palembang - Prabumulih No.Km. 32,<br>
+         Indralaya Indah, Kec. Indralaya,<br>
+         Kabupaten Ogan Ilir, Sumatera Selatan 30862</p>
 
-          <div>
-            <p>15 Desember</p>
-            <div class="bg-yellow-600 bg-opacity-70 flex items-center justify-center h-32 w-64 mx-auto rounded-lg mb-6">
-              Sosialisasi / Technical Meeting
-            </div>
-          </div> <br>
+      <h3 class="text-white text-lg font-bold mt-6 ">Social Media</h3>
+      <div class="flex space-x-4">
 
-          <div>
-            <p class="mb-0">20 Desember - 21 Desember</p>
-            <div class="bg-yellow-600 bg-opacity-70 flex items-center justify-center h-32 w-64 mx-auto rounded-lg">
-              Babak Penyisihan
-            </div>
-          </div>
-        </div>
-
-        <div class="text-center">
-          <div>
-            <p class="mb-0">22 Desember</p>
-            <div class="bg-yellow-600 bg-opacity-70 flex items-center justify-center h-32 w-64 mx-auto rounded-lg">
-              Pengumuman Babak Penyisihan
-            </div>
-          </div>
-
-          <div class="mt-4">
-            <p>23 Desember</p>
-            <div class="bg-yellow-600 bg-opacity-70 flex items-center justify-center h-32 w-64 mx-auto rounded-lg">
-              Babak Final
-            </div>
-          </div>
-<!--mb-0, teks-sm-->
-          <div>
-            <p>25 Desember</p>
-            <div class="bg-yellow-600 bg-opacity-70 flex items-center justify-center h-32 w-64 mx-auto rounded-lg">
-              Pengumuman Babak Final
-            </div>
-          </div>
-        </div>
+        <!-- Social Media Icons -->
+        <a href="#" class="text-gray-400 hover:text-white text-2xl"><i class="fab fa-tiktok"></i></a>
+        <a href="#" class="text-gray-400 hover:text-white text-2xl"><i class="fab fa-youtube"></i></a>
+        <a href="#" class="text-gray-400 hover:text-white text-2xl"><i class="fab fa-instagram"></i></a>
       </div>
-    </section>
-    <br>
+    </div>
 
-   <section class="bg-gray-900 flex justify-center items-center h-screen">
-      <div class="bg-black bg-opacity-50 p-8 rounded-lg shadow-lg text-center"
-           style="width: 65%; height: 80%; max-width: 800px;">
-          <h2 class="text-white text-4xl font-bold">Penutupan Pendaftaran</h2>
-      </div>
-    </section>
+    <!-- Contact Section -->
+    <div class="flex flex-col" id="kontak">
+      <h2 class="text-white text-lg font-bold mb-4">Contact</h2>
+      <p class="mb-2 pb-4 text-xl" style="font-family:'Poppins';">
+        <span style="font-family: 'Press Start 2P';">
+        <a href=" "><i class="fa-brands fa-whatsapp text-2xl" ></i> Whatsapp </a> </span>
+        <br>+62 896-2103-887 (Fathul)
+        <br >+62 812-3994-425 (Rahmad)
+        <br>+62 821-5320-595 (Nazwa)
+        <br>+62 812-4004-445 (Nurul)
+        <br>+62 896-9820-543 (Kian)
+      </p>
+      
+      </p>
+      <p class="mb-2">
+        <a href=" "><i class="fas fa-envelope text-2xl" ></i> Email </a>
+        <br>techvolution@gmail.com
+      </p>
+    </div>
 
-    <section class="bg-gray-900 flex justify-center items-center h-screen">
-        <div class="bg-black bg-opacity-50 p-8 rounded-lg shadow-lg text-center w-[65%] h-[50%]">
-            <h2 class="text-white text-2xl font-bold mb-6 mt-8">Contact Person</h2>
-            <hr class="border-t-4 border-gray-400 mb-4" />
-            <div class="bg-yellow-500 p-6 rounded-md w-[50%] mx-auto mt-8"> 
-                <p class="text-white font-semibold text-xl">Honda Mitsubishi</p>
-                <p class="text-white text-lg mt-4">0811-1100-9995</p>
-            </div>
-        </div>
-    </section>
+  </div>
+  
+  <!-- Footer Bottom Section -->
+  <div class="border-t border-gray-600 mt-8 pt-4 text-center text-sm">
+    <p>© 2024 Techvolution . All rights reserved.</p>
+  </div>
+</footer>
+
   </body>
 </html>
