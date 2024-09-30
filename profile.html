@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Edit Profile</title>
+    <title>Profile</title>
     <script src="https://cdn.tailwindcss.com">
             tailwind.config = {
         theme: {
@@ -12,6 +12,7 @@
                 fontSize:{
                     margin:{
                         '85px':'85px',
+                        '15px':'15px',
                     }
                 }
             }
@@ -38,7 +39,7 @@
             <nav>
                 <ul>
                     <li>
-                        <h3 class="text-xl font-bold text-center mt-[85px] mb-5">Techvolution</h3>
+                        <h3 class="text-xl font-bold text-center mt-1 mb-5">Techvolution</h3>
                     </li>
                     <li class="mt-20 mb-5">
                         
@@ -54,25 +55,34 @@
                         </a>
                     </li>
                     <li>
-                        <a href="#" class="flex items-center p-2 text-gray-300 hover:bg-gray-800 rounded">
-                            <img src="notification.png" alt="user" width="20" height="20" style="padding-right: 5px;">
-                            <p>notification</p>
-                        </a>
+                        <!-- Menggunakan <details> untuk membuka notifikasi di sebelah kanan -->
+                        <details class="group relative">
+                            <summary class="flex items-center p-2 text-gray-300 hover:bg-gray-800 rounded">
+                                <img src="notification.png" alt="user" width="20" height="20" style="padding-right: 5px;">
+                                <p>notification</p>
+                            </summary>
+                            <!-- Notifikasi muncul di sebelah kanan layar -->
+                            <div class="flex items-center w-full px-4 py-2 text-left hover:bg-black-700 rounded-lg cursor-pointer">
+                                <div class="p-4 border-b border-gray-700">
+                                </div>
+                            </div>
+                            <ul class="p-4 space-y-4">
+                                <li class="bg-gray-700 p-4 rounded-lg">
+                                    <p class="font-semibold">Belum ada notifikasi</p>
+                                </li>
+                            </ul>
+                        </details>
                     </li>
                 </ul>
             </nav>
         </div>
 
         <!-- Profile Edit Form -->
-        <div class="w-3/4 p-10">
-            <h2 class="text-2xl mb-6 mt-16">Edit Profile</h2>
-            <form class="space-y-6">
+        <div class="w-3/4 p-5">
+            <h2 class="text-2xl mb-6 ">Edit Profile</h2>
+            <form class="space-y-4">
                 <!-- Profile Picture -->
-                <div class="flex items-center space-x-4">
-                    <div class="w-24 h-24 bg-gray-500 rounded-full"></div>
-                    <div></div>
-                    <button type="button" class="px-5 py-2 bg-blue-600 text-white rounded hover:bg-blue-700"><P>Edit Photo</P></button>
-                </div>
+                
 
                 <!-- Name Field -->
                 <div>
