@@ -403,7 +403,7 @@
   function startAutoSlide() {
     setInterval(() => {
       showSlide(currentSlide + 1);
-    }, 4000); // Change slide every 5 seconds
+    }, 4000); // Change slide every 4 seconds
   }
 
   // Start auto slide on page load
@@ -419,37 +419,96 @@
   <div class="container mx-auto">
       <h2 class="text-white text-4xl font-bold text-center mb-16 snap-start">Media Partners</h2>
 
-     <!-- Media Partners Image -->
-     <div class="grid grid-cols-4 sm:grid-cols-4 md:grid-cols-4 gap-x-2 gap-y-4 justify-items-center rounded-lg bg-blue-950 bg-opacity-80 border m-9 p-8 shadow-lg">
+      <!-- Slider Container -->
+      <div class="relative overflow-hidden w-full">
+        <!-- Wrapper for slider images -->
+        <div class="flex transition-transform duration-500 ease-in-out" id="mediaPartnerSliderWrapper">
+          
+          <!-- Slide 1 -->
+          <div class="w-full flex-shrink-0">
+            <div class="grid grid-cols-4 sm:grid-cols-4 md:grid-cols-4 gap-x-2 gap-y-4 justify-items-center rounded-lg bg-blue-950 bg-opacity-80 border m-9 p-8 shadow-lg">
+              <!-- Partner 1 -->
+              <img src="pln-removebg-preview.png" alt="Partner 1" class="w-44 h-40 object-contain">
+              <!-- Partner 2 -->
+              <img src="radio-removebg-preview.png" alt="Partner 2" class="w-44 h-40 object-contain">
+              <!-- Partner 3 -->
+              <img src="shopee-removebg-preview.png" alt="Partner 3" class="w-44 h-40 object-contain">
+              <!-- Partner 4 -->
+              <img src="mixue-removebg-preview (1).png" alt="Partner 4" class="w-44 h-40 object-contain">
+              <!-- Partner 5 -->
+              <img src="xiaomi2-removebg-preview.png" alt="Partner 5" class="w-44 h-40 object-contain">
+              <!-- Partner 6 -->
+              <img src="gc-removebg-preview.png" alt="Partner 6" class="w-44 h-40 object-contain">
+              <!-- Partner 7 -->
+              <img src="samsung-removebg-preview.png" alt="Partner 7" class="w-44 h-40 object-contain">
+              <!-- Partner 8 -->
+              <img src="intel-removebg-preview.png" alt="Partner 8" class="w-44 h-40 object-contain">
+            </div>
+          </div>
 
-          <!-- Partner 1 -->
-          <img src="pln-removebg-preview.png" alt="Partner 1" class="w-44 h-40 object-contain">
+          <!-- Slide 2 (Optional) -->
+          <div class="w-full flex-shrink-0">
+            <div class="grid grid-cols-4 sm:grid-cols-4 md:grid-cols-4 gap-x-2 gap-y-4 justify-items-center rounded-lg bg-blue-950 bg-opacity-80 border m-9 p-8 shadow-lg">
+              <!-- Partner 1 -->
+              <img src="pln-removebg-preview.png" alt="Partner 1" class="w-44 h-40 object-contain">
+              <!-- Partner 2 -->
+              <img src="radio-removebg-preview.png" alt="Partner 2" class="w-44 h-40 object-contain">
+              <!-- Partner 3 -->
+              <img src="shopee-removebg-preview.png" alt="Partner 3" class="w-44 h-40 object-contain">
+              <!-- Partner 4 -->
+              <img src="mixue-removebg-preview (1).png" alt="Partner 4" class="w-44 h-40 object-contain">
+              <!-- Partner 5 -->
+              <img src="xiaomi2-removebg-preview.png" alt="Partner 5" class="w-44 h-40 object-contain">
+              <!-- Partner 6 -->
+              <img src="gc-removebg-preview.png" alt="Partner 6" class="w-44 h-40 object-contain">
+              <!-- Partner 7 -->
+              <img src="samsung-removebg-preview.png" alt="Partner 7" class="w-44 h-40 object-contain">
+              <!-- Partner 8 -->
+              <img src="intel-removebg-preview.png" alt="Partner 8" class="w-44 h-40 object-contain">
+            </div>
+          </div>
 
-          <!-- Partner 2 -->
-          <img src="radio-removebg-preview.png" alt="Partner 2" class="w-44 h-40 object-contain">
-
-          <!-- Partner 3 -->
-          <img src="shopee-removebg-preview.png" alt="Partner 3" class="w-44 h-40 object-contain">
-
-          <!-- Partner 4 -->
-          <img src="mixue-removebg-preview (1).png" alt="Partner 4" class="w-44 h-40 object-contain">
-
-          <!-- Partner 5 -->
-          <img src="xiaomi2-removebg-preview.png" alt="Partner 5" class="w-44 h-40 object-contain">
-
-          <!-- Partner 6 -->
-          <img src="gc-removebg-preview.png" alt="Partner 6" class="w-44 h-40 object-contain">
-
-          <!-- Partner 7 -->
-          <img src="samsung-removebg-preview.png" alt="Partner 7" class="w-44 h-40 object-contain">
-
-          <!-- Partner 8 -->
-          <img src="intel-removebg-preview.png" alt="Partner 8" class="w-44 h-40 object-contain">
-
+          <!-- Add more slides as needed -->
+        </div>
       </div>
   </div>
 </div>
-</section>
+
+<!-- JavaScript for automatic sliding -->
+<script>
+  const mediaPartnerSliderWrapper = document.getElementById('mediaPartnerSliderWrapper');
+  const mediaSlides = mediaPartnerSliderWrapper.children;
+  const totalMediaSlides = mediaSlides.length;
+  let currentMediaSlide = 0;
+
+  // Function to show specific slide based on index
+  function showMediaSlide(index) {
+    if (index >= totalMediaSlides) {
+      currentMediaSlide = 0;
+    } else if (index < 0) {
+      currentMediaSlide = totalMediaSlides - 1;
+    } else {
+      currentMediaSlide = index;
+    }
+
+    const currentTranslateX = -currentMediaSlide * 100; // Update translate position
+    mediaPartnerSliderWrapper.style.transform = `translateX(${currentTranslateX}%)`;
+  }
+
+  // Start auto slide
+  function startMediaAutoSlide() {
+    setInterval(() => {
+      showMediaSlide(currentMediaSlide + 1);
+    }, 4000); // Change slide every 4 seconds
+  }
+
+  // Start auto slide on page load
+  startMediaAutoSlide();
+
+  // Set initial slide
+  showMediaSlide(currentMediaSlide);
+</script>
+
 
 <!-- Footer Section -->
 <footer class="bg-[#0A0514] text-gray-300 py-12">
