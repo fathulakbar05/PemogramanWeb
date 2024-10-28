@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    <style>
+        h3,h2{
+            font-family: 'Press Start 2P', cursive;
+        }
+        p{
+            font-family: 'Poppins', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-gray-800 text-white">
+
+    <!-- Main container -->
+    <div class="flex h-full">
+        <!-- Sidebar -->
+        <div class="w-1/4 bg-gray-900 p-5">
+            <nav>
+                <ul>
+                    <li>
+                        <img src="LogoTechvolution2.png" alt="gambar">
+                    </li>
+                    <li class="mt-20 mb-4">
+                        <a href="home.html" class="flex items-center p-2 text-gray-300 hover:bg-gray-800 rounded">
+                            <img src="home-agreement.png" alt="user" width="20" height="20" style="padding-right: 5px;">
+                            <p>Halaman Utama</p>
+                        </a>
+                    </li>
+                    <li class="mb-4">
+                        <a href="profile2.html" class="flex items-center p-2 text-gray-300 hover:bg-gray-800 rounded">
+                            <img src="user.png" alt="user" width="20" height="20" style="padding-right: 5px;">
+                            <p>Profil</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="flex items-center p-2 text-gray-300 bg-gray-800 rounded mb-4">
+                            <img src="user.png" alt="user" width="20" height="20" style="padding-right: 5px;">
+                            <p>Kegiatan</p>
+                        </a>
+                    </li>
+                    <li>
+                        <!-- Menggunakan <details> untuk membuka notifikasi di sebelah kanan -->
+                        <details class="group relative">
+                            <summary class="flex items-center p-2 text-gray-300 hover:bg-gray-800 rounded">
+                                <img src="notification.png" alt="user" width="20" height="20" style="padding-right: 5px;">
+                                <p>notifikasi</p>
+                            </summary>
+                            <!-- Notifikasi muncul di sebelah kanan layar -->
+                            <div class="flex items-center w-full px-4 py-2 text-left hover:bg-black-700 rounded-lg cursor-pointer">
+                                <div class="p-4 border-b border-gray-700">
+                                </div>
+                            </div>
+                            <ul class="p-4 space-y-4">
+                                <li class="bg-gray-700 p-4 rounded-lg">
+                                    <p class="font-semibold">Belum ada notifikasi</p>
+                                </li>
+                            </ul>
+                        </details>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+
+        <!-- Profile Edit Form -->
+        <div class="w-3/4 p-5 flex h-screen bg-gradient-to-r from-blue-300 to-[#0850dc] border-blue-400 border-2">
+            <div class="w-3/4 bg-gray-900 p-16 border-white border-2 text-xl" style="text-align: center">
+                <h2 class="mb-6 mt-32">Anda belum memiliki kegiatan apapun di <span class=" text-[#ffde59]">Techvolution</span></h2>
+                <pre style="text-align: center">Ayo tekan tombol dibawah ini untuk
+mengetahui informasi lebih lanjut
+mengenai kompetisi.</pre>
+                    
+                <form action="1UI_UX.html" class="space-y-4 mt-5">
+                    <div class="flex justify-center items-center space-x-4">
+                        <a href="1Compe.html" class="programming-button px-6 py-3 bg-gradient-to-r from-blue-600 to-blue-500 text-white rounded-lg shadow-lg transition duration-300 ease-in-out">
+                            Competitive Programming
+                        </a>
+                        <input type="submit" class="uiux-button px-6 py-3 bg-gradient-to-r from-blue-600 to-blue-500 text-white rounded-lg shadow-lg transition duration-300 ease-in-out" value="UI/UX Design">
+                    </div>
+
+                    <div class="flex justify-center mt-5">
+                        <a href="workshop.html" class="seminar-button px-6 py-3 bg-gradient-to-r from-blue-600 to-blue-500 text-white rounded-lg shadow-lg transition duration-300 ease-in-out">
+                            Seminar
+                        </a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer Section -->
+    <footer class="bg-[#0A0514] text-gray-300 py-12">
+        <div class="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 items-start">
+      
+            <!-- Logo Section -->
+            <div class="flex justify-center items-center flex-col mt-12">
+                <img src="LogoTechvolution1.png" alt="Logo" class="mb-4 w-32 h-auto">
+                <img src="LogoTechvolution2.png" alt="Logo" class="mb-4 w-52 h-auto">
+            </div>
+      
+            <!-- Address and Social Media Section -->
+            <div class="flex flex-col items-start">
+                <h2 class="text-lg font-bold mb-4">Address</h2>
+                <p style="font-family:'Poppins';" class="text-xl">Jl. Raya Palembang - Prabumulih No.Km. 32,<br>
+                   Indralaya Indah, Kec. Indralaya,<br>
+                   Kabupaten Ogan Ilir, Sumatera Selatan 30862</p>
+      
+                <h3 class="text-white text-lg font-bold mt-6 ">Social Media</h3>
+                <div class="flex space-x-4">
+                    <!-- Social Media Icons -->
+                    <a href="#" class="text-gray-400 hover:text-white text-2xl"><i class="fab fa-tiktok"></i></a>
+                    <a href="#" class="text-gray-400 hover:text-white text-2xl"><i class="fab fa-youtube"></i></a>
+                    <a href="#" class="text-gray-400 hover:text-white text-2xl"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+      
+            <!-- Contact Section -->
+            <div class="flex flex-col" id="kontak">
+                <h2 class="text-white text-lg font-bold mb-4">Contact</h2>
+                <p class="mb-2 pb-4 text-xl" style="font-family:'Poppins';">
+                    <span style="font-family: 'Press Start 2P';">
+                    <a href=" "><i class="fa-brands fa-whatsapp text-2xl" ></i> Whatsapp </a> </span>
+                    <br>+62 896-2103-887 (Fathul)
+                    <br >+62 812-3994-425 (Rahmad)
+                    <br>+62 821-5320-595 (Nazwa)
+                    <br>+62 812-4004-445 (Nurul)
+                    <br>+62 896-9820-543 (Kian)
+                </p>
+                
+                <p class="mb-2 pb-4 text-xl" style="font-family:'Poppins';">
+                    <span style="font-family: 'Press Start 2P';">
+                    <a href=" "><i class="fas fa-envelope text-2xl" ></i> Email </a></span>
+                    <br>techvolution@gmail.com
+                </p>
+            </div>
+        </div>
+        
+        <!-- Footer Bottom Section -->
+        <div class="border-t border-gray-600 mt-8 pt-4 text-center text-sm">
+            <p>© 2024 Techvolution . All rights reserved.</p>
+        </div>
+    </footer>
+
+<!-- Tambahkan kelas pada tombol -->
+<a href="1Compe.html" class="programming-button px-6 py-3 bg-gradient-to-r from-blue-600 to-blue-500 text-white rounded-lg shadow-lg transition duration-300 ease-in-out">
+    Competitive Programming
+</a>
+<input type="submit" class="uiux-button px-6 py-3 bg-gradient-to-r from-blue-600 to-blue-500 text-white rounded-lg shadow-lg transition duration-300 ease-in-out" value="UI/UX Design">
+<a href="workshop.html" class="seminar-button px-6 py-3 bg-gradient-to-r from-blue-600 to-blue-500 text-white rounded-lg shadow-lg transition duration-300 ease-in-out">
+    Seminar
+</a>
+
+<script>
+    // Efek hover untuk tombol
+    const buttons = document.querySelectorAll('.programming-button, .uiux-button, .seminar-button');
+    buttons.forEach(button => {
+        button.addEventListener('mouseenter', () => {
+            button.classList.add('bg-[#0e236b]', 'transition-colors', 'duration-300');
+        });
+        button.addEventListener('mouseleave', () => {
+            button.classList.remove('bg-[#0e236b]', 'transition-colors', 'duration-300');
+        });
+    });
+</script>
+</body>
+</html>
