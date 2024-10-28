@@ -329,5 +329,21 @@ menghadapi dunia yang semakin terhubung secara teknologi.
     <p>© 2024 Techvolution . All rights reserved.</p>
   </div>
 </footer>
+
+
+<script>
+  const fadeInElements = document.querySelectorAll('.fade-in');
+
+const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('animate-fadeIn');
+        }
+    });
+});
+
+fadeInElements.forEach(el => observer.observe(el));
+
+</script>
   </body>
 </html>
