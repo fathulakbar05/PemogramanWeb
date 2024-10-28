@@ -17,6 +17,14 @@
         p{
             font-family: 'Poppins', sans-serif;
         }
+        .button-hover {
+            transition: all 0.3s ease; /* Transisi yang halus */
+        }
+        .hovered {
+            background-color: #0e236b; /* Warna latar belakang saat hover */
+            transform: scale(1.1); /* Membesarkan tombol saat hover */
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Menambahkan bayangan */
+        }
     </style>
 </head>
 <body class="bg-gray-800 text-white">
@@ -53,7 +61,7 @@
                         <details class="group relative">
                             <summary class="flex items-center p-2 text-gray-300 hover:bg-gray-800 rounded">
                                 <img src="notification.png" alt="user" width="20" height="20" style="padding-right: 5px;">
-                                <p>notifikasi</p>
+                                <p>notifikasi <span id="notification-counter" class="text-red-500 font-bold">(0)</span></p>
                             </summary>
                             <!-- Notifikasi muncul di sebelah kanan layar -->
                             <div class="flex items-center w-full px-4 py-2 text-left hover:bg-black-700 rounded-lg cursor-pointer">
@@ -81,14 +89,14 @@ mengenai kompetisi.</pre>
                     
 <form action="1UI_UX.html" class="space-y-4 mt-5">
     <div class="flex justify-center items-center space-x-4">
-        <a href="1Compe.html" class="px-6 py-3 bg-gradient-to-r from-blue-600 to-blue-500 hover:from-[#0e236b] hover:to-[#0850dc] text-white rounded-lg shadow-lg transition duration-300 ease-in-out">
+        <a href="1Compe.html" class="px-6 py-3 bg-gradient-to-r from-blue-600 to-blue-500 text-white rounded-lg shadow-lg button-hover" id="competitive-programming">
             Competitive Programming
         </a>
-        <input type="submit" class="px-6 py-3 bg-gradient-to-r from-blue-600 to-blue-500 hover:from-[#0e236b] hover:to-[#0850dc] text-white rounded-lg shadow-lg transition duration-300 ease-in-out" value="UI/UX Design">
+        <input type="submit" class="px-6 py-3 bg-gradient-to-r from-blue-600 to-blue-500 text-white rounded-lg shadow-lg button-hover" value="UI/UX Design" id="ui-ux-design">
     </div>
 
     <div class="flex justify-center mt-5">
-        <a href="workshop.html" class="px-6 py-3 bg-gradient-to-r from-blue-600 to-blue-500 hover:from-[#0e236b] hover:to-[#0850dc] text-white rounded-lg shadow-lg transition duration-300 ease-in-out">
+        <a href="workshop.html" class="px-6 py-3 bg-gradient-to-r from-blue-600 to-blue-500 text-white rounded-lg shadow-lg button-hover" id="seminar">
             Seminar
         </a>
     </div>
@@ -151,5 +159,45 @@ mengenai kompetisi.</pre>
           <p>© 2024 Techvolution . All rights reserved.</p>
         </div>
       </footer>
+
+      <script>
+        // Dynamic Notification Counter
+        let notificationCount = 0; // Initialize notification count
+
+        const addNotification = () => {
+            notificationCount++;
+            document.getElementById('notification-counter').innerText = `(${notificationCount})`;
+        };
+
+        // Example: Simulating new notifications every 5 seconds
+        setInterval(addNotification, 5000);
+
+        // Ambil elemen tombol
+        const competitiveProgrammingButton = document.getElementById('competitive-programming');
+        const uiUxDesignButton = document.getElementById('ui-ux-design');
+        const seminarButton = document.getElementById('seminar');
+
+        // Fungsi untuk menambahkan efek hover
+        function addHoverEffect(button) {
+            button.classList.add('hovered');
+        }
+
+        // Fungsi untuk menghapus efek hover
+        function removeHoverEffect(button) {
+            button.classList.remove('hovered');
+        }
+
+        // Tambahkan event listener untuk tombol Competitive Programming
+        competitiveProgrammingButton.addEventListener('mouseover', () => addHoverEffect(competitiveProgrammingButton));
+        competitiveProgrammingButton.addEventListener('mouseout', () => removeHoverEffect(competitiveProgrammingButton));
+
+        // Tambahkan event listener untuk tombol UI/UX Design
+        uiUxDesignButton.addEventListener('mouseover', () => addHoverEffect(uiUxDesignButton));
+        uiUxDesignButton.addEventListener('mouseout', () => removeHoverEffect(uiUxDesignButton));
+
+        // Tambahkan event listener untuk tombol Seminar
+        seminarButton.addEventListener('mouseover', () => addHoverEffect(seminarButton));
+        seminarButton.addEventListener('mouseout', () => removeHoverEffect(seminarButton));
+      </script>
 </body>
 </html>

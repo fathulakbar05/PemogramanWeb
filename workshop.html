@@ -26,6 +26,58 @@
       p, button {
         font-family: "Poppins", sans-serif;
       }
+
+      .aquarium {
+        position: relative;
+        width: 90%;
+        height: 500px;
+        margin: 0 auto;
+        background-color: #47439e4a;
+        border: 5px solid #03A9F4; 
+        border-radius: 15px;
+        overflow: hidden;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+        animation: waterMove 4s infinite alternate;
+      }
+
+      @keyframes waterMove {
+        0% { box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); }
+        100% { box-shadow: 0 0 30px rgba(0, 0, 0, 0.4); }
+      }
+
+      .note {
+        width: 250px;
+        height: auto;
+        padding: 20px;
+        font-size:medium;
+        color: #fff;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        cursor: move;
+        position: absolute;
+        transition: transform 0.2s ease;
+        will-change: transform;
+        animation: float 5s infinite alternate;
+      }
+
+      /* Different colors for each note */
+      #note1 { background-color: #124c76; }
+      #note2 { background-color: #335fff; }
+      #note3 { background-color: #3238ad;}
+      #note4 { background-color: #4454ad; }
+      #note5 { background-color: #283db4; }
+      #note6 { background-color: #1b226c; }
+
+      /* Floating animation for notes */
+      @keyframes float {
+        0% { transform: translateY(0); }
+        100% { transform: translateY(-20px); }
+      }
+
     </style>
   </head>
   <body style="background-color: #0e236b">
@@ -235,7 +287,7 @@ menghadapi dunia yang semakin terhubung secara teknologi.
                 </div>
                 <div class="text-gray-50 text-xl max-w-2xl">
                   <h1 class="text-yellow-400">Waktu</h1>
-                  <p>13.00 - 16.000 WIB</p>
+                  <p>13.00 - 16.00 WIB</p>
                 </div>
                 <div class="space-x-4">
                   <button
@@ -257,6 +309,40 @@ menghadapi dunia yang semakin terhubung secara teknologi.
           </div>
         </div>
       </div>
+
+<section style="padding-top: 12%;">
+  <h1 style="color: #fff; font-size: xx-large; text-align: center;">What people said about 
+    Techvolution's Workshop</h1>
+  <div class="aquarium">
+    <div id="note1" class="note">
+      <div style="display: flex;">
+        <img src="mar" alt="User Photo 1" class="user-photo">
+        <p class="user-name">Nama Pengguna 1</p> </div><br>
+        <p>“Even after finishing my course I still receive support from the community at Techvolution”</p>
+    </div>
+    <div id="note2" class="note">
+        <img src="path/to/photo2.jpg" alt="User Photo 2" class="user-photo">
+        <p class="user-name">Nama Pengguna 2</p> <br>
+        <p>“I keep coming back to Techvolution every years. Genuine community that is active and involved.”</p>
+    </div>
+    <div id="note3" class="note">
+        <img src="path/to/photo3.jpg" alt="User Photo 3" class="user-photo">
+        <p class="user-name">Nama Pengguna 3</p> <br>
+        <p>“Techvolution not only jumpstarted my career in design but also provided me with a community that supports me every day.”</p>
+    </div>
+    <div id="note4" class="note">
+        <img src="path/to/photo4.jpg" alt="User Photo 4" class="user-photo">
+        <p class="user-name">Nama Pengguna 4</p> <br>
+        <p>“Techvolution is truly a unique learning experience that stays with you beyond just the classes.”</p>
+    </div>
+    <div id="note5" class="note">
+        <img src="path/to/photo5.jpg" alt="User Photo 5" class="user-photo">
+        <p class="user-name">Nama Pengguna 5</p> <br>
+        <p>“I love how Techvolution is focused on community and creativity rather than just coding.”</p>
+    </div>
+</div>
+
+</section>
     </section>
     <section
       class="pt-44 h-screen bg-cover bg-center text-center justify-items-center text-white"
@@ -272,6 +358,8 @@ menghadapi dunia yang semakin terhubung secara teknologi.
         <p>0853-2123-2133</p>
       </div>
     </section>
+
+
 
         
 <!-- Footer Section -->
@@ -329,5 +417,55 @@ menghadapi dunia yang semakin terhubung secara teknologi.
     <p>© 2024 Techvolution . All rights reserved.</p>
   </div>
 </footer>
+
+
+<script>
+  // Function to scatter notes around the center
+  const scatterNotes = () => {
+    const notes = document.querySelectorAll('.note');
+    notes.forEach(note => {
+      const randomX = Math.floor(Math.random() * 200) - 100; // Randomly position within a 200px range horizontally
+      const randomY = Math.floor(Math.random() * 200) - 100; // Randomly position within a 200px range vertically
+      note.style.left = `calc(50% + ${randomX}px)`; // Centered with slight offset
+      note.style.top = `calc(50% + ${randomY}px)`;
+    });
+  };
+
+  // Smooth drag functionality
+  let newX = 0, newY = 0, startX = 0, startY = 0;
+
+  const notes = document.querySelectorAll('.note');
+
+  notes.forEach(note => {
+    note.addEventListener('mousedown', mouseDown);
+
+    function mouseDown(e) {
+      startX = e.clientX;
+      startY = e.clientY;
+
+      document.addEventListener('mousemove', mouseMove);
+      document.addEventListener('mouseup', mouseUp);
+    }
+
+    function mouseMove(e) {
+      newX = startX - e.clientX;
+      newY = startY - e.clientY;
+
+      startX = e.clientX;
+      startY = e.clientY;
+
+      note.style.top = (note.offsetTop - newY) + 'px';
+      note.style.left = (note.offsetLeft - newX) + 'px';
+    }
+
+    function mouseUp() {
+      document.removeEventListener('mousemove', mouseMove);
+      document.removeEventListener('mouseup', mouseUp);
+    }
+  });
+
+  // Scatter notes on initial load
+  window.onload = scatterNotes;
+</script>
   </body>
 </html>
