@@ -35,27 +35,18 @@
             animation: fadeInDown 1s ease-out forwards;
         }
 
-        input[type="radio"] {
-        display: none;
+        .carousel {
+            display: flex;
+            overflow: hidden;
         }
-        #slide1:checked ~ #slides .inner {
-        margin-left: 0;
+        .carousel-track {
+            display: flex;
+            transition: transform 0.5s linear;
         }
-        #slide2:checked ~ #slides .inner {
-        margin-left: -100%;
-        }
-        #slide3:checked ~ #slides .inner {
-        margin-left: -200%;
-        }
-        #slide4:checked ~ #slides .inner {
-        margin-left: -300%;
-        }
-        .inner {
-        transition: margin-left 800ms ease;
-        width: 400%;
-        }
-        .slide {
-        width: 25%;
+        .carousel-item {
+            min-width: 50%;
+            height: 500px;
+            box-sizing: border-box;
         }
     </style>
 </head>
@@ -98,12 +89,12 @@
         </div>
     </nav>
 
-    <section class="bg-[url('OceanWithFishPixel.jpg')] bg-cover bg-center text-white py-52 px-6 flex items-center justify-center relative">
+    <section class="bg-[url('OceanWithFishPixel.jpg')] bg-cover bg-center text-white flex items-center justify-center relative h-screen">
 
         <div class="absolute inset-0 bg-black opacity-25 h-full w-full"></div>
 
         <div class="animate-fade-in-down text-center">
-            <h1 class="text-4xl font-bold py-5">
+            <h1 class="text-5xl font-bold py-5">
                 TECHVOLUTION <span class="text-yellow-400">2021</span>
             </h1>
 
@@ -123,56 +114,19 @@
     </section>
       
         
-    <section class="bg-[#0e236b] w-auto" style="background-image: url('Desain\ tanpa\ judul\.png');">
+    <section class="bg-[#0e236b] h-screen bg-center bg-cover flex items-center p-20" style="background-image: url('Desain\ tanpa\ judul\.png');">
 
-        <div class="flex items-center justify-center py-32">
-            <div id="slider" class="w-full max-w-3xl mx-auto p-4 bg-white shadow-lg rounded-lg">
-                <!-- Radio Buttons for controlling slides -->
-                <input type="radio" name="slider" id="slide1" checked>
-                <input type="radio" name="slider" id="slide2">
-                <input type="radio" name="slider" id="slide3">
-                <input type="radio" name="slider" id="slide4">
-            
-                <!-- Slides Container -->
-                <div id="slides" class="overflow-hidden relative w-full h-96 sm:h-80 md:h-64 lg:h-96"> <!-- Menggunakan ukuran responsif -->
-                    <div class="inner flex">
-                
-                        <!-- Slide 1 -->
-                        <div class="slide flex items-center justify-center bg-blue-900 text-white w-full">
-                            <div class="slide-content">
-                                <img src="img7.jpeg" class="w-full h-full object-cover">
-                            </div>
-                        </div>
-                
-                        <!-- Slide 2 -->
-                        <div class="slide flex items-center justify-center bg-blue-700 text-white w-full">
-                            <div class="slide-content">
-                                <img src="img6.jpeg" class="w-full h-full object-cover">
-                            </div>
-                        </div>
-                
-                        <!-- Slide 3 -->
-                        <div class="slide flex items-center justify-center bg-blue-700 text-white w-full">
-                            <div class="slide-content">
-                                <img src="img5.png" class="w-full h-full object-cover">
-                            </div>
-                        </div>
-                
-                        <!-- Slide 4 -->
-                        <div class="slide flex items-center justify-center bg-blue-700 text-white w-full">
-                            <div class="slide-content">
-                                <img src="img4.jpg" class="w-full h-full object-cover">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            
-                <!-- Bullets for navigation -->
-                <div id="bullets" class="mt-4 flex justify-center space-x-4">
-                    <label for="slide1" class="w-4 h-4 bg-gray-400 rounded-full cursor-pointer"></label>
-                    <label for="slide2" class="w-4 h-4 bg-gray-400 rounded-full cursor-pointer"></label>
-                    <label for="slide3" class="w-4 h-4 bg-gray-400 rounded-full cursor-pointer"></label>
-                    <label for="slide4" class="w-4 h-4 bg-gray-400 rounded-full cursor-pointer"></label>
+        <div class="container mx-auto">
+            <h3 class="text-3xl font-bold text-center mb-10 text-white">Dokumentasi</h3>
+            <div class="carousel w-full h-auto overflow-hidden relative">
+                <div class="carousel-track">
+                    <img src="img1.jpeg" class="carousel-item" alt="Image 1">
+                    <img src="img2.jpeg" class="carousel-item" alt="Image 2">
+                    <img src="img3.jpg" class="carousel-item" alt="Image 3">
+                    <img src="img4.jpg" class="carousel-item" alt="Image 4">
+                    <img src="img5.png" class="carousel-item" alt="Image 5">
+                    <img src="img6.jpeg" class="carousel-item" alt="Image 6">
+                    <img src="img7.jpeg" class="carousel-item" alt="Image 7">
                 </div>
             </div>
         </div>
@@ -180,24 +134,26 @@
     </section>
 
     
-    <section class="bg-[#0e236b] text-white">
+    <section class="bg-[#0e236b] text-white py-20">
         
-        <div class="flex space-x-10 items-center w-11/12 md:container mx-auto py-20">
-            <img src="Podium.png" class="pl-16 pr-10">
+        <div class="flex items-center justify-center">
+            <div class="w-4/12">
+                <img src="Podium.png">
+            </div>
 
-            <div>
+            <div class="w-6/12">
                 <h3 class="text-3xl font-bold mb-10">
                     Pemenang Lomba<br><span class="text-yellow-400">Competitive Programming</span>
                 </h3>
                 <table class="table-auto w-full border-collapse border-4 border-black text-white">
-                    <thead>
-                        <tr class="bg-black">
+                    <thead class="bg-black">
+                        <tr>
                             <th class="px-4 py-2 text-left">Nama Kelompok</th>
                             <th class="px-4 py-2 text-left">Anggota</th>
                             <th class="px-4 py-2 text-left">Instansi</th>
                         </tr>
                     </thead>
-                    <tbody>
+                    <tbody class="bg-[#0e236b]">
                         <tr class="hover:bg-[#0850dc]">
                             <td class="px-4 py-2">BiGlory</td>
                             <td class="px-4 py-2">Muhammad Fathul Akbar<br>Kian Fikram Ayyubi</td>
@@ -220,11 +176,11 @@
 
     </section>
 
-    <section class="bg-[#0e236b] text-white" style="background-image: url('Desain\ tanpa\ judul\ \(4\).png');">
+    <section class="bg-[#0e236b] text-white py-20" style="background-image: url('Desain\ tanpa\ judul\ \(4\).png');">
         
-        <div class="flex space-x-10 items-center w-11/12 md:container mx-auto py-20">
+        <div class="flex items-center justify-center">
             
-            <div class="pl-32">
+            <div class="w-6/12">
                 <h3 class="text-3xl font-bold mb-10">
                     Pemenang Lomba<br><span class="text-yellow-400">UI/UX</span>
                 </h3>
@@ -236,7 +192,7 @@
                             <th class="px-4 py-2 text-left">Instansi</th>
                         </tr>
                     </thead>
-                    <tbody>
+                    <tbody class="bg-[#0e236b]">
                         <tr class="hover:bg-[#0850dc] bg-[]">
                             <td class="px-4 py-2">BiGlory</td>
                             <td class="px-4 py-2">Muhammad Fathul Akbar<br>Kian Fikram Ayyubi</td>
@@ -256,7 +212,9 @@
                 </table>        
             </div>
 
-            <img src="Podium.png" class="px-10">
+            <div class="w-4/12">
+                <img src="Podium.png">
+            </div>
 
         </div>
 
@@ -265,22 +223,22 @@
     <!-- Footer Section -->
     <footer class="bg-[#0A0514] text-gray-300 py-12">
         <div class="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 items-start">
-    
+
             <!-- Logo Section -->
-            <div class="flex justify-center items-center flex-col mt-20">
-                <img src="LogoTechvolution.png" alt="Logo" class="mb-4 w-80 h-24">
+            <div class="flex justify-center items-center flex-col mt-12">
+                <img src="LogoTechvolution1.png" alt="Logo" class="mb-4 w-32 h-auto">
+                <img src="LogoTechvolution2.png" alt="Logo" class="mb-4 w-52 h-auto">
             </div>
-  
+
             <!-- Address and Social Media Section -->
             <div class="flex flex-col items-start">
                 <h2 class="text-lg font-bold mb-4">Address</h2>
-                <p style="font-family:'Poppins';" class="text-xl">
-                    Jl. Raya Palembang - Prabumulih No.Km. 32,<br>
+                <p style="font-family:'Poppins';" class="text-xl">Jl. Raya Palembang - Prabumulih No.Km. 32,<br>
                     Indralaya Indah, Kec. Indralaya,<br>
-                    Kabupaten Ogan Ilir, Sumatera Selatan 30862
-                </p>
-        
+                    Kabupaten Ogan Ilir, Sumatera Selatan 30862</p>
+
                 <h3 class="text-white text-lg font-bold mt-6 ">Social Media</h3>
+
                 <div class="flex space-x-4">
                     <!-- Social Media Icons -->
                     <a href="#" class="text-gray-400 hover:text-white text-2xl"><i class="fab fa-tiktok"></i></a>
@@ -288,7 +246,7 @@
                     <a href="#" class="text-gray-400 hover:text-white text-2xl"><i class="fab fa-instagram"></i></a>
                 </div>
             </div>
-  
+
             <!-- Contact Section -->
             <div class="flex flex-col" id="kontak">
                 <h2 class="text-white text-lg font-bold mb-4">Contact</h2>
@@ -296,25 +254,44 @@
                     <span style="font-family: 'Press Start 2P';">
                     <a href=" "><i class="fa-brands fa-whatsapp text-2xl" ></i> Whatsapp </a> </span>
                     <br>+62 896-2103-887 (Fathul)
-                    <br>+62 812-3994-425 (Rahmad)
+                    <br >+62 812-3994-425 (Rahmad)
                     <br>+62 821-5320-595 (Nazwa)
                     <br>+62 812-4004-445 (Nurul)
                     <br>+62 896-9820-543 (Kian)
                 </p>
-
-                <p class="mb-2">
-                    <a href=" "><i class="fas fa-envelope text-2xl" ></i> Email </a>
+                
+                <p class="mb-2 pb-4 text-xl" style="font-family:'Poppins';">
+                    <span style="font-family: 'Press Start 2P';">
+                    <a href=" "><i class="fas fa-envelope text-2xl" ></i> Email </a></span>
                     <br>techvolution@gmail.com
                 </p>
             </div>
-  
         </div>
     
         <!-- Footer Bottom Section -->
         <div class="border-t border-gray-600 mt-8 pt-4 text-center text-sm">
             <p>© 2024 Techvolution . All rights reserved.</p>
-        </div>
+        </div>  
     </footer>
 
+
+
+    <!-- JAVASCRIPT -->
+    <script>
+        const track = document.querySelector('.carousel-track');
+        const items = document.querySelectorAll('.carousel-item');
+        let currentIndex = 0;
+
+        const moveSlide = () => {
+            currentIndex++;
+            if (currentIndex >= items.length-1) {
+                currentIndex = 0;
+            }
+            track.style.transform = `translateX(-${currentIndex * 50}%)`;
+        };
+
+        // Move slide every 3 seconds
+        setInterval(moveSlide, 3000);
+    </script>
 </body>
 </html>
