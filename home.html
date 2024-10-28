@@ -105,7 +105,7 @@
 
         <!-- Jam -->
         <div class="text-center border border-gray-300 rounded-lg p-4">
-          <div>12</div>
+          <div id="hours">12</div>
           <div class="text-lg text-white mt-2">Jam</div>
         </div>
   
@@ -114,7 +114,7 @@
   
         <!-- Menit -->
         <div class="text-center border border-gray-300 rounded-lg p-4">
-          <div>30</div>
+          <div id="minutes">30</div>
           <div class="text-lg text-white mt-2">Menit</div>
         </div>
   
@@ -123,7 +123,7 @@
   
         <!-- Detik -->
         <div class="text-center border border-gray-300 rounded-lg p-4">
-          <div>57</div>
+          <div id="seconds">57</div>
           <div class="text-lg text-white mt-2">Detik</div>
         </div>
       </div>
@@ -133,6 +133,37 @@
       </div>
     </div>
 </section>
+
+<!--javascript for countdown-->
+<script>
+  const countdownDate = new Date("December 14, 2024 00:00:00").getTime();
+
+function updateCountdown() {
+  const now = new Date().getTime();
+  const timeLeft = countdownDate - now;
+
+  if (timeLeft > 0) {
+    const hours = Math.floor(
+      (timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+    );
+    const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+
+    document.getElementById("hours").innerText = String(hours).padStart(2, "0");
+    document.getElementById("minutes").innerText = String(minutes).padStart(
+      2,
+      "0"
+    );
+    document.getElementById("seconds").innerText = String(seconds).padStart(
+      2,
+      "0"
+    );
+  } else {
+    document.getElementById("countdown").innerText =
+      "Pendaftaran Telah Ditutup";
+  }
+}
+</script>
 
 <!-- Time Line -->
 <section class="w-full py-10" style="background-color: #0e236b;">
