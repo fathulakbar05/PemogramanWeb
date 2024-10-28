@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Smooth Draggable Notes</title>
+  <style>
+    /* Background setup */
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: #4CAF50; /* Green background */
+      overflow: hidden;
+      position: relative;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* Note styling */
+    .note {
+      width: 200px;
+      padding: 20px;
+      color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      cursor: pointer;
+      position: absolute;
+      transition: transform 0.2s ease;
+      will-change: transform;
+    }
+
+    /* Different colors for each note */
+    #note1 { background-color: #0096FF; }
+    #note2 { background-color: #FF5733; }
+    #note3 { background-color: #FFC300; color: #000; }
+    #note4 { background-color: #8E44AD; }
+    #note5 { background-color: #28B463; }
+    #note6 { background-color: #FF5733; }
+  </style>
+</head>
+<body>
+
+  <!-- Notes with smooth drag functionality -->
+  <div id="note1" class="note">“Even after finishing my course I still receive support from the community at SuperHi”</div>
+  <div id="note2" class="note">“I keep coming back to SuperHi even when I’m not taking a course. SuperHi has a genuine community that is active and involved.”</div>
+  <div id="note3" class="note">“SuperHi not only jumpstarted my career in design but also provided me with a community that supports me every day.”</div>
+  <div id="note4" class="note">“The biggest plus has been the community and the fact that I can get help quickly if I’m stuck.”</div>
+  <div id="note5" class="note">“SuperHi removes the barrier of how to start, and what to build with amazing projects through the learning process.”</div>
+  <div id="note6" class="note">“I will be starting as a software engineer intern next week! I owe so much to SuperHi and everyone in this community!”</div>
+
+  <script>
+    // Function to scatter notes around the center
+    const scatterNotes = () => {
+      const notes = document.querySelectorAll('.note');
+      notes.forEach(note => {
+        const randomX = Math.floor(Math.random() * 200) - 100; // Randomly position within a 200px range horizontally
+        const randomY = Math.floor(Math.random() * 200) - 100; // Randomly position within a 200px range vertically
+        note.style.left = `calc(50% + ${randomX}px)`; // Centered with slight offset
+        note.style.top = `calc(50% + ${randomY}px)`;
+      });
+    };
+
+    // Smooth drag functionality
+    let newX = 0, newY = 0, startX = 0, startY = 0;
+
+    const notes = document.querySelectorAll('.note');
+
+    notes.forEach(note => {
+      note.addEventListener('mousedown', mouseDown);
+
+      function mouseDown(e) {
+        startX = e.clientX;
+        startY = e.clientY;
+
+        document.addEventListener('mousemove', mouseMove);
+        document.addEventListener('mouseup', mouseUp);
+      }
+
+      function mouseMove(e) {
+        newX = startX - e.clientX;
+        newY = startY - e.clientY;
+
+        startX = e.clientX;
+        startY = e.clientY;
+
+        note.style.top = (note.offsetTop - newY) + 'px';
+        note.style.left = (note.offsetLeft - newX) + 'px';
+      }
+
+      function mouseUp() {
+        document.removeEventListener('mousemove', mouseMove);
+        document.removeEventListener('mouseup', mouseUp);
+      }
+    });
+
+    // Scatter notes on initial load
+    window.onload = scatterNotes;
+  </script>
+
+</body>
+</html>
