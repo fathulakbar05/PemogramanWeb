@@ -95,73 +95,64 @@
 
  <!-- Countdown Section -->
 <section class="w-full h-full p-44" style="background-image: url('Desain\ tanpa\ judul\ \(2\).png');">
-    <div class="container mx-auto text-center">
-      <h2 class="text-4xl font-bold text-white mb-10">Opening Ceremony <span class="text-yellow-400" >Countdown</span></h2>
+  <div class="container mx-auto text-center">
+      <h2 class="text-4xl font-bold text-white mb-10">Opening Ceremony <span class="text-yellow-400">Countdown</span></h2>
       
       <!-- Countdown Timer -->
       <div class="flex justify-center items-center space-x-4 text-white text-6xl font-extrabold">
 
-        <!-- Jam -->
-        <div class="text-center border border-gray-300 rounded-lg p-4">
-          <div id="hours">12</div>
-          <div class="text-lg text-white mt-2">Jam</div>
-        </div>
-  
-        <!-- Colon 1 -->
-        <div class="text-6xl font-bold text-white">:</div>
-  
-        <!-- Menit -->
-        <div class="text-center border border-gray-300 rounded-lg p-4">
-          <div id="minutes">30</div>
-          <div class="text-lg text-white mt-2">Menit</div>
-        </div>
-  
-        <!-- Colon 2 -->
-        <div class="text-6xl font-bold text-white">:</div>
-  
-        <!-- Detik -->
-        <div class="text-center border border-gray-300 rounded-lg p-4">
-          <div id="seconds">57</div>
-          <div class="text-lg text-white mt-2">Detik</div>
-        </div>
+          <!-- Days -->
+          <div class="text-center border border-gray-300 rounded-lg p-4">
+              <div id="days">0</div>
+              <div class="text-lg text-white mt-2">Hari</div>
+          </div>
+
+          <!-- Hours -->
+          <div class="text-center border border-gray-300 rounded-lg p-4">
+              <div id="hours">0</div>
+              <div class="text-lg text-white mt-2">Jam</div>
+          </div>
+    
+          <!-- Minutes -->
+          <div class="text-center border border-gray-300 rounded-lg p-4">
+              <div id="minutes">0</div>
+              <div class="text-lg text-white mt-2">Menit</div>
+          </div>
+
+          <!-- Seconds -->
+          <div class="text-center border border-gray-300 rounded-lg p-4">
+              <div id="seconds">0</div>
+              <div class="text-lg text-white mt-2">Detik</div>
+          </div>
       </div>
-  
+
       <div class="text-center mt-10 text-white font-semibold text-xl">
-      11 November 2024
+          11 November 2024
       </div>
-    </div>
+  </div>
 </section>
 
-<!--javascript for countdown-->
+<!-- JavaScript for Countdown -->
 <script>
-  const countdownDate = new Date("December 14, 2024 00:00:00").getTime();
+  function updateCountdown() {
+      const eventDate = new Date("November 11, 2024 00:00:00").getTime();
+      const now = new Date().getTime();
+      const timeLeft = eventDate - now;
 
-function updateCountdown() {
-  const now = new Date().getTime();
-  const timeLeft = countdownDate - now;
+      const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
 
-  if (timeLeft > 0) {
-    const hours = Math.floor(
-      (timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
-    );
-    const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
-    const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
-
-    document.getElementById("hours").innerText = String(hours).padStart(2, "0");
-    document.getElementById("minutes").innerText = String(minutes).padStart(
-      2,
-      "0"
-    );
-    document.getElementById("seconds").innerText = String(seconds).padStart(
-      2,
-      "0"
-    );
-  } else {
-    document.getElementById("countdown").innerText =
-      "Pendaftaran Telah Ditutup";
+      document.getElementById("days").textContent = days;
+      document.getElementById("hours").textContent = hours;
+      document.getElementById("minutes").textContent = minutes;
+      document.getElementById("seconds").textContent = seconds;
   }
-}
+
+  setInterval(updateCountdown, 1000);
 </script>
+
 
 <!-- Time Line -->
 <section class="w-full py-10" style="background-color: #0e236b;">
