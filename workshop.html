@@ -32,7 +32,7 @@
         width: 90%;
         height: 500px;
         margin: 0 auto;
-        background-color: #47439e4a;
+        background-image: url(Underwater\ Scene\ \(Pixel\ Animation\)\,\ Csilla\ Rödönyi.gif);
         border: 5px solid #03A9F4; 
         border-radius: 15px;
         overflow: hidden;
@@ -420,18 +420,16 @@ menghadapi dunia yang semakin terhubung secara teknologi.
 
 
 <script>
-  // Function to scatter notes around the center
   const scatterNotes = () => {
     const notes = document.querySelectorAll('.note');
     notes.forEach(note => {
-      const randomX = Math.floor(Math.random() * 200) - 100; // Randomly position within a 200px range horizontally
-      const randomY = Math.floor(Math.random() * 200) - 100; // Randomly position within a 200px range vertically
-      note.style.left = `calc(50% + ${randomX}px)`; // Centered with slight offset
+      const randomX = Math.floor(Math.random() * 200) - 100; 
+      const randomY = Math.floor(Math.random() * 200) - 100;
+      note.style.left = `calc(50% + ${randomX}px)`; 
       note.style.top = `calc(50% + ${randomY}px)`;
     });
   };
 
-  // Smooth drag functionality
   let newX = 0, newY = 0, startX = 0, startY = 0;
 
   const notes = document.querySelectorAll('.note');
@@ -464,7 +462,6 @@ menghadapi dunia yang semakin terhubung secara teknologi.
     }
   });
 
-  // Scatter notes on initial load
   window.onload = scatterNotes;
 </script>
   </body>
