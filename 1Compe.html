@@ -105,7 +105,7 @@
     </nav>
 
     <div
-      class="flex items-center justify-center h-screen bg-opacity-50 px-8"
+      class="flex items-center justify-center h-screen bg-opacity-50 px-8 bg-cover bg-center"
       style="background-image: url(666.png)"
     >
       <div
@@ -147,7 +147,7 @@
           </button>
 
           <button
-            class="mt-6 bg-white text-blue-900 font-semibold px-6 py-2 rounded-lg hover:bg-blue-900 hover:text-white transition duration-300"
+            class="mt-6 bg-white text-blue-900 font-semibold px-6 py-2 rounded-lg hover:bg-blue-900 hover:text-white transition duration-300 buku-panduan-btn"
           >
             Buku Panduan
           </button>
@@ -183,27 +183,27 @@
         <div
           class="flex justify-center items-center space-x-4 text-white text-6xl font-extrabold"
         >
+          <!-- Days -->
+          <div class="text-center border border-gray-300 rounded-lg p-4">
+            <div id="days">0</div>
+            <div class="text-lg text-white mt-2">Hari</div>
+          </div>
+
           <!-- Jam -->
           <div class="text-center border border-gray-300 rounded-lg p-4">
-            <div>12</div>
+            <div id="hours">12</div>
             <div class="text-lg text-white mt-2">Jam</div>
           </div>
 
-          <!-- Colon 1 -->
-          <div class="text-6xl font-bold text-white">:</div>
-
           <!-- Menit -->
           <div class="text-center border border-gray-300 rounded-lg p-4">
-            <div>30</div>
+            <div id="minutes">30</div>
             <div class="text-lg text-white mt-2">Menit</div>
           </div>
 
-          <!-- Colon 2 -->
-          <div class="text-6xl font-bold text-white">:</div>
-
           <!-- Detik -->
           <div class="text-center border border-gray-300 rounded-lg p-4">
-            <div>57</div>
+            <div id="seconds">57</div>
             <div class="text-lg text-white mt-2">Detik</div>
           </div>
         </div>
@@ -304,6 +304,8 @@
       >
         <p>© 2024 Techvolution . All rights reserved.</p>
       </div>
+
+      <script src="1Compe.js"></script>
     </footer>
   </body>
 </html>

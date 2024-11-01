@@ -1,5 +1,4 @@
 <!doctype html>
-<body>
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -35,11 +34,8 @@
         .slide {
         width: 25%;
         }
-      </style>
 
-<style>
-  
-  /* Hide scrollbar */
+        /* Hide scrollbar */
   .scrollbar-hide::-webkit-scrollbar {
       display: none;
   }
@@ -47,9 +43,11 @@
       -ms-overflow-style: none;  
       scrollbar-width: none;  
   }
-</style>
+      </style>
 
 </head>
+
+
 <body style="font-family: 'Press Start 2P', cursive; background-color: #0e236b;">
 
   <nav class="bg-black text-white py-4 md:py-6 lg:py-8">
@@ -97,42 +95,64 @@
 
  <!-- Countdown Section -->
 <section class="w-full h-full p-44" style="background-image: url('Desain\ tanpa\ judul\ \(2\).png');">
-    <div class="container mx-auto text-center">
-      <h2 class="text-4xl font-bold text-white mb-10">Opening Ceremony <span class="text-yellow-400" >Countdown</span></h2>
+  <div class="container mx-auto text-center">
+      <h2 class="text-4xl font-bold text-white mb-10">Opening Ceremony <span class="text-yellow-400">Countdown</span></h2>
       
       <!-- Countdown Timer -->
       <div class="flex justify-center items-center space-x-4 text-white text-6xl font-extrabold">
 
-        <!-- Jam -->
-        <div class="text-center border border-gray-300 rounded-lg p-4">
-          <div>12</div>
-          <div class="text-lg text-white mt-2">Jam</div>
-        </div>
-  
-        <!-- Colon 1 -->
-        <div class="text-6xl font-bold text-white">:</div>
-  
-        <!-- Menit -->
-        <div class="text-center border border-gray-300 rounded-lg p-4">
-          <div>30</div>
-          <div class="text-lg text-white mt-2">Menit</div>
-        </div>
-  
-        <!-- Colon 2 -->
-        <div class="text-6xl font-bold text-white">:</div>
-  
-        <!-- Detik -->
-        <div class="text-center border border-gray-300 rounded-lg p-4">
-          <div>57</div>
-          <div class="text-lg text-white mt-2">Detik</div>
-        </div>
+          <!-- Days -->
+          <div class="text-center border border-gray-300 rounded-lg p-4">
+              <div id="days">0</div>
+              <div class="text-lg text-white mt-2">Hari</div>
+          </div>
+
+          <!-- Hours -->
+          <div class="text-center border border-gray-300 rounded-lg p-4">
+              <div id="hours">0</div>
+              <div class="text-lg text-white mt-2">Jam</div>
+          </div>
+    
+          <!-- Minutes -->
+          <div class="text-center border border-gray-300 rounded-lg p-4">
+              <div id="minutes">0</div>
+              <div class="text-lg text-white mt-2">Menit</div>
+          </div>
+
+          <!-- Seconds -->
+          <div class="text-center border border-gray-300 rounded-lg p-4">
+              <div id="seconds">0</div>
+              <div class="text-lg text-white mt-2">Detik</div>
+          </div>
       </div>
-  
+
       <div class="text-center mt-10 text-white font-semibold text-xl">
-      11 November 2024
+          11 November 2024
       </div>
-    </div>
+  </div>
 </section>
+
+<!-- JavaScript for Countdown -->
+<script>
+  function updateCountdown() {
+      const eventDate = new Date("November 11, 2024 00:00:00").getTime();
+      const now = new Date().getTime();
+      const timeLeft = eventDate - now;
+
+      const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+
+      document.getElementById("days").textContent = days;
+      document.getElementById("hours").textContent = hours;
+      document.getElementById("minutes").textContent = minutes;
+      document.getElementById("seconds").textContent = seconds;
+  }
+
+  setInterval(updateCountdown, 1000);
+</script>
+
 
 <!-- Time Line -->
 <section class="w-full py-10" style="background-color: #0e236b;">
@@ -155,7 +175,7 @@
 
 
  <!-- about -->
-<div style="background-color: #0e236b;" id="about">
+<section style="background-color: #0e236b;" id="about">
   <div id="about" class="p-16 w-11/12 md:container mx-auto py-20">
     <div class="flex space-x-10 items-center">
       <section class="bg-[#0e236b] w-auto">
@@ -200,6 +220,7 @@
                             
                             </div>
                         </div>
+
                     </div>
                 </div>
             
@@ -210,13 +231,14 @@
                     <label for="slide3" class="w-4 h-4 bg-gray-400 rounded-full cursor-pointer"></label>
                     <label for="slide4" class="w-4 h-4 bg-gray-400 rounded-full cursor-pointer"></label>
                 </div>
+
             </div>
         </div>
 
     </section>
  <div class="w-2/3">
-    <h3 class="text-5xl text-white font-bold mb-10">About <div class=" text-yellow-400 mt-3">Techvolution</div>
-    </h3>
+    <h3 class="text-5xl text-white font-bold mb-4">About
+    <span class="text-5xl text-yellow-400 mt-3">Techvolution</span></h3>
     <p class="text-xl text-white mb-8 pb-5 border-b border-yellow-400" style="font-family:'Poppins';">Techvolution adalah sebuah kompetisi komputer yang berfokus pada competitive programming dan UI/UX design. Dalam kategori competitive programming, peserta akan berkompetisi menyelesaikan berbagai tantangan algoritma dan pemrograman dalam waktu yang terbatas. Sementara itu, dalam kategori UI/UX design, peserta ditantang untuk menciptakan desain antarmuka yang intuitif dan pengalaman pengguna yang optimal, sesuai dengan kebutuhan pengguna dan tren desain terkini. Kompetisi ini bertujuan untuk mengasah keterampilan teknis dan kreativitas dalam pengembangan solusi digital.
 
     </p>
@@ -234,10 +256,11 @@
         <a href=" "><i class="fa-brands fa-instagram text-2xl" ></i> Instagram </a>
     </li> 
 </ul>
-</div>
+
 </div>
 
 </div>
+
 </div>
 </section>
 
@@ -336,7 +359,7 @@
 
 <!-- Sponsor -->
 <div style="background-color: #0e236b;" class="py-10 min-h-screen">
-  <div class="container mx-auto">
+  <class class="container mx-auto">
     <h2 class="text-white text-4xl font-bold text-center mb-16 snap-start">Our Sponsors</h2>
 
     <!-- Slider Container -->
@@ -347,13 +370,21 @@
         <!-- Slide 1 -->
         <div class="w-full flex-shrink-0">
           <div class="grid grid-cols-4 sm:grid-cols-4 md:grid-cols-4 gap-x-2 gap-y-4 justify-items-center rounded-lg bg-blue-950 bg-opacity-80 border m-9 p-8 shadow-lg">
+            <!-- sponsor 1 -->
             <img src="es_teh-removebg-preview.png" alt="Sponsor 1" class="w-44 h-40 object-contain">
+            <!-- sponsor 2 -->
             <img src="bukit_asam-removebg-preview (1).png" alt="Sponsor 2" class="w-44 h-40 object-contain">
+            <!-- sponsor 3 -->
             <img src="nutrisarii-removebg-preview.png" alt="Sponsor 3" class="w-44 h-40 object-contain">
+            <!-- sponsor 4 -->
             <img src="gacoan-removebg-preview.png" alt="Sponsor 4" class="w-44 h-40 object-contain">
+            <!-- sponsor 5 -->
             <img src="wardah-removebg-preview.png" alt="Sponsor 5" class="w-44 h-40 object-contain">
+            <!-- sponsor 6 -->
             <img src="ayam_gepuk-removebg-preview-removebg-preview.png" alt="Sponsor 6" class="w-44 h-40 object-contain">
+            <!-- sponsor 7 -->
             <img src="telkom-removebg-preview.png" alt="Sponsor 7" class="w-44 h-40 object-contain">
+            <!-- sponsor 8 -->
             <img src="nvdia1-removebg-preview.png" alt="Sponsor 8" class="w-44 h-40 object-contain">
           </div>
         </div>
@@ -361,48 +392,82 @@
         <!-- Slide 2 -->
         <div class="w-full flex-shrink-0">
           <div class="grid grid-cols-4 sm:grid-cols-4 md:grid-cols-4 gap-x-2 gap-y-4 justify-items-center rounded-lg bg-blue-950 bg-opacity-80 border m-9 p-8 shadow-lg">
+            <!-- sponsor 9 -->
             <img src="es_teh-removebg-preview.png" alt="Sponsor 1" class="w-44 h-40 object-contain">
+            <!-- sponsor 10 -->
             <img src="bukit_asam-removebg-preview (1).png" alt="Sponsor 2" class="w-44 h-40 object-contain">
+            <!-- sponsor 11 -->
             <img src="nutrisarii-removebg-preview.png" alt="Sponsor 3" class="w-44 h-40 object-contain">
+            <!-- sponsor 12 -->
             <img src="gacoan-removebg-preview.png" alt="Sponsor 4" class="w-44 h-40 object-contain">
+            <!-- sponsor 13 -->
             <img src="wardah-removebg-preview.png" alt="Sponsor 5" class="w-44 h-40 object-contain">
+            <!-- sponsor 14 -->
             <img src="ayam_gepuk-removebg-preview-removebg-preview.png" alt="Sponsor 6" class="w-44 h-40 object-contain">
+            <!-- sponsor 15 -->
             <img src="telkom-removebg-preview.png" alt="Sponsor 7" class="w-44 h-40 object-contain">
+            <!-- sponsor 16 -->
             <img src="nvdia1-removebg-preview.png" alt="Sponsor 8" class="w-44 h-40 object-contain">
           </div>
         </div>
 
-        <!-- Add more slides as needed -->
+       <!-- Slide 3 -->
+       <div class="w-full flex-shrink-0">
+        <div class="grid grid-cols-4 sm:grid-cols-4 md:grid-cols-4 gap-x-2 gap-y-4 justify-items-center rounded-lg bg-blue-950 bg-opacity-80 border m-9 p-8 shadow-lg">
+          <!-- sponsor 9 -->
+          <img src="es_teh-removebg-preview.png" alt="Sponsor 1" class="w-44 h-40 object-contain">
+          <!-- sponsor 10 -->
+          <img src="bukit_asam-removebg-preview (1).png" alt="Sponsor 2" class="w-44 h-40 object-contain">
+          <!-- sponsor 11 -->
+          <img src="nutrisarii-removebg-preview.png" alt="Sponsor 3" class="w-44 h-40 object-contain">
+          <!-- sponsor 12 -->
+          <img src="gacoan-removebg-preview.png" alt="Sponsor 4" class="w-44 h-40 object-contain">
+          <!-- sponsor 13 -->
+          <img src="wardah-removebg-preview.png" alt="Sponsor 5" class="w-44 h-40 object-contain">
+          <!-- sponsor 14 -->
+          <img src="ayam_gepuk-removebg-preview-removebg-preview.png" alt="Sponsor 6" class="w-44 h-40 object-contain">
+          <!-- sponsor 15 -->
+          <img src="telkom-removebg-preview.png" alt="Sponsor 7" class="w-44 h-40 object-contain">
+          <!-- sponsor 16 -->
+          <img src="nvdia1-removebg-preview.png" alt="Sponsor 8" class="w-44 h-40 object-contain">
+        </div>
       </div>
-    </div>
   </div>
 </div>
 
-<!-- JavaScript for automatic sliding -->
+</class>
+</div>
+
+<!-- JavaScript for automatic sliding in Sponsors -->
 <script>
   const sliderWrapper = document.getElementById('sponsorSliderWrapper');
   const slides = sliderWrapper.children;
   const totalSlides = slides.length;
   let currentSlide = 0;
+  let direction = 1; // 1 for forward, -1 for backward
 
   // Function to show specific slide based on index
   function showSlide(index) {
-    if (index >= totalSlides) {
-      currentSlide = 0;
-    } else if (index < 0) {
-      currentSlide = totalSlides - 1;
-    } else {
-      currentSlide = index;
-    }
+    // Update current slide index
+    currentSlide = index;
 
-    const currentTranslateX = -currentSlide * 100; // Update translate position
+    // Update translate position
+    const currentTranslateX = -currentSlide * 100; 
     sliderWrapper.style.transform = `translateX(${currentTranslateX}%)`;
   }
 
   // Start auto slide
   function startAutoSlide() {
     setInterval(() => {
-      showSlide(currentSlide + 1);
+      // Change direction if at the last or first slide
+      if (currentSlide >= totalSlides - 1) {
+        direction = -1; // Go backward
+      } else if (currentSlide <= 0) {
+        direction = 1; // Go forward
+      }
+
+      // Update slide index based on direction
+      showSlide(currentSlide + direction);
     }, 4000); // Change slide every 4 seconds
   }
 
@@ -412,7 +477,6 @@
   // Set initial slide
   showSlide(currentSlide);
 </script>
-
 
 <!-- Media partners -->
 <div style="background-color: #0e236b;" class="py-10 min-h-screen">
@@ -446,59 +510,86 @@
             </div>
           </div>
 
-          <!-- Slide 2 (Optional) -->
+          <!-- Slide 2 -->
           <div class="w-full flex-shrink-0">
             <div class="grid grid-cols-4 sm:grid-cols-4 md:grid-cols-4 gap-x-2 gap-y-4 justify-items-center rounded-lg bg-blue-950 bg-opacity-80 border m-9 p-8 shadow-lg">
-              <!-- Partner 1 -->
+              <!-- Partner 9 -->
               <img src="pln-removebg-preview.png" alt="Partner 1" class="w-44 h-40 object-contain">
-              <!-- Partner 2 -->
+              <!-- Partner 10 -->
               <img src="radio-removebg-preview.png" alt="Partner 2" class="w-44 h-40 object-contain">
-              <!-- Partner 3 -->
+              <!-- Partner 11 -->
               <img src="shopee-removebg-preview.png" alt="Partner 3" class="w-44 h-40 object-contain">
-              <!-- Partner 4 -->
+              <!-- Partner 12 -->
               <img src="mixue-removebg-preview (1).png" alt="Partner 4" class="w-44 h-40 object-contain">
-              <!-- Partner 5 -->
+              <!-- Partner 13 -->
               <img src="xiaomi2-removebg-preview.png" alt="Partner 5" class="w-44 h-40 object-contain">
-              <!-- Partner 6 -->
+              <!-- Partner 14 -->
               <img src="gc-removebg-preview.png" alt="Partner 6" class="w-44 h-40 object-contain">
-              <!-- Partner 7 -->
+              <!-- Partner 15 -->
               <img src="samsung-removebg-preview.png" alt="Partner 7" class="w-44 h-40 object-contain">
-              <!-- Partner 8 -->
+              <!-- Partner 16 -->
               <img src="intel-removebg-preview.png" alt="Partner 8" class="w-44 h-40 object-contain">
             </div>
           </div>
 
-          <!-- Add more slides as needed -->
-        </div>
+           <!-- Slide 3 -->
+           <div class="w-full flex-shrink-0">
+            <div class="grid grid-cols-4 sm:grid-cols-4 md:grid-cols-4 gap-x-2 gap-y-4 justify-items-center rounded-lg bg-blue-950 bg-opacity-80 border m-9 p-8 shadow-lg">
+              <!-- Partner 9 -->
+              <img src="pln-removebg-preview.png" alt="Partner 1" class="w-44 h-40 object-contain">
+              <!-- Partner 10 -->
+              <img src="radio-removebg-preview.png" alt="Partner 2" class="w-44 h-40 object-contain">
+              <!-- Partner 11 -->
+              <img src="shopee-removebg-preview.png" alt="Partner 3" class="w-44 h-40 object-contain">
+              <!-- Partner 12 -->
+              <img src="mixue-removebg-preview (1).png" alt="Partner 4" class="w-44 h-40 object-contain">
+              <!-- Partner 13 -->
+              <img src="xiaomi2-removebg-preview.png" alt="Partner 5" class="w-44 h-40 object-contain">
+              <!-- Partner 14 -->
+              <img src="gc-removebg-preview.png" alt="Partner 6" class="w-44 h-40 object-contain">
+              <!-- Partner 15 -->
+              <img src="samsung-removebg-preview.png" alt="Partner 7" class="w-44 h-40 object-contain">
+              <!-- Partner 16 -->
+              <img src="intel-removebg-preview.png" alt="Partner 8" class="w-44 h-40 object-contain">
+            </div>
+          </div>
+
       </div>
+    </div>
+
   </div>
 </div>
 
-<!-- JavaScript for automatic sliding -->
+<!-- JavaScript for automatic sliding in Media Partners -->
 <script>
   const mediaPartnerSliderWrapper = document.getElementById('mediaPartnerSliderWrapper');
   const mediaSlides = mediaPartnerSliderWrapper.children;
   const totalMediaSlides = mediaSlides.length;
   let currentMediaSlide = 0;
+  let mediaDirection = 1; // 1 for forward, -1 for backward
 
   // Function to show specific slide based on index
   function showMediaSlide(index) {
-    if (index >= totalMediaSlides) {
-      currentMediaSlide = 0;
-    } else if (index < 0) {
-      currentMediaSlide = totalMediaSlides - 1;
-    } else {
-      currentMediaSlide = index;
-    }
+    // Update current slide index
+    currentMediaSlide = index;
 
-    const currentTranslateX = -currentMediaSlide * 100; // Update translate position
+    // Update translate position
+    const currentTranslateX = -currentMediaSlide * 100;
     mediaPartnerSliderWrapper.style.transform = `translateX(${currentTranslateX}%)`;
   }
 
   // Start auto slide
   function startMediaAutoSlide() {
     setInterval(() => {
-      showMediaSlide(currentMediaSlide + 1);
+      // Change direction if at the last or first slide
+      if (currentMediaSlide >= totalMediaSlides - 1) {
+        mediaDirection = -1; // Go backward
+      } else if (currentMediaSlide <= 0) {
+        mediaDirection = 1; // Go forward
+      }
+
+      // Update slide index based on direction
+      showMediaSlide(currentMediaSlide + mediaDirection);
     }, 4000); // Change slide every 4 seconds
   }
 
@@ -511,60 +602,74 @@
 
 
 <!-- Footer Section -->
-<footer class="bg-[#0A0514] text-gray-300 py-12">
+<footer class="bg-[#0A0514] text-gray-300 py-12 mt-auto">
   <div class="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 items-start">
-
-    <!-- Logo Section -->
-<div class="flex justify-center items-center flex-col mt-12">
-  <img src="LogoTechvolution1.png" alt="Logo" class="mb-4 w-32 h-auto">
-  <img src="LogoTechvolution2.png" alt="Logo" class="mb-4 w-52 h-auto">
-</div>
-
-    <!-- Address and Social Media Section -->
-    <div class="flex flex-col items-start">
-      <h2 class="text-lg font-bold mb-4">Address</h2>
-      <p style="font-family:'Poppins';" class="text-xl">Jl. Raya Palembang - Prabumulih No.Km. 32,<br>
-         Indralaya Indah, Kec. Indralaya,<br>
-         Kabupaten Ogan Ilir, Sumatera Selatan 30862</p>
-
-      <h3 class="text-white text-lg font-bold mt-6 ">Social Media</h3>
-      <div class="flex space-x-4">
-
-        <!-- Social Media Icons -->
-        <a href="#" class="text-gray-400 hover:text-white text-2xl"><i class="fab fa-tiktok"></i></a>
-        <a href="#" class="text-gray-400 hover:text-white text-2xl"><i class="fab fa-youtube"></i></a>
-        <a href="#" class="text-gray-400 hover:text-white text-2xl"><i class="fab fa-instagram"></i></a>
+      <!-- Logo Section -->
+      <div class="flex justify-center items-center flex-col mt-12">
+          <img src="LogoTechvolution1.png" alt="Logo" class="mb-4 w-32 h-auto">
+          <img src="LogoTechvolution2.png" alt="Logo" class="mb-4 w-52 h-auto">
       </div>
-    </div>
 
-    <!-- Contact Section -->
-    <div class="flex flex-col" id="kontak">
-      <h2 class="text-white text-lg font-bold mb-4">Contact</h2>
-      <p class="mb-2 pb-4 text-xl" style="font-family:'Poppins';">
-        <span style="font-family: 'Press Start 2P';">
-        <a href=" "><i class="fa-brands fa-whatsapp text-2xl" ></i> Whatsapp </a> </span>
-        <br>+62 896-2103-887 (Fathul)
-        <br >+62 812-3994-425 (Rahmad)
-        <br>+62 821-5320-595 (Nazwa)
-        <br>+62 812-4004-445 (Nurul)
-        <br>+62 896-9820-543 (Kian)
-      </p>
-      
-      
-      <p class="mb-2 pb-4 text-xl" style="font-family:'Poppins';">
-          <span style="font-family: 'Press Start 2P';">
-        <a href=" "><i class="fas fa-envelope text-2xl" ></i> Email </a></span>
-        <br>techvolution@gmail.com
-      </p>
-    </div>
+      <!-- Address and Social Media Section -->
+      <div class="flex flex-col items-start">
+          <h2 class="text-lg font-bold mb-4">Address</h2>
+          <p style="font-family:'Poppins';" class="text-xl">Jl. Raya Palembang - Prabumulih No.Km. 32,<br>
+              Indralaya Indah, Kec. Indralaya,<br>
+              Kabupaten Ogan Ilir, Sumatera Selatan 30862</p>
 
+          <h3 class="text-white text-lg font-bold mt-6">Social Media</h3>
+          <div class="flex space-x-4">
+              <!-- Social Media Icons -->
+              <a href="#" class="text-gray-400 hover:text-white text-2xl"><i class="fab fa-tiktok"></i></a>
+              <a href="#" class="text-gray-400 hover:text-white text-2xl"><i class="fab fa-youtube"></i></a>
+              <a href="#" class="text-gray-400 hover:text-white text-2xl"><i class="fab fa-instagram"></i></a>
+          </div>
+      </div>
+
+      <!-- Contact Section -->
+      <div class="flex flex-col" id="kontak">
+          <h2 class="text-white text-lg font-bold mb-4">Contact</h2>
+          <p class="mb-2 pb-4 text-xl" style="font-family:'Poppins';">
+              <span style="font-family: 'Press Start 2P';">
+              <a href=" "><i class="fa-brands fa-whatsapp text-2xl"></i> Whatsapp </a> </span>
+              <br>+62 896-2103-887 (Fathul)
+              <br>+62 812-3994-425 (Rahmad)
+              <br>+62 821-5320-595 (Nazwa)
+              <br>+62 812-4004-445 (Nurul)
+              <br>+62 896-9820-543 (Kian)
+          </p>
+
+          <p class="mb-2 pb-4 text-xl" style="font-family:'Poppins';">
+              <span style="font-family: 'Press Start 2P';">
+              <a href=" "><i class="fas fa-envelope text-2xl" ></i> Email </a></span>
+              <br>techvolution@gmail.com
+          </p>
+      </div>
   </div>
-  
+
   <!-- Footer Bottom Section -->
   <div class="border-t border-gray-600 mt-8 pt-4 text-center text-sm" style="font-family:'Poppins';">
-    <p>© 2024 Techvolution . All rights reserved.</p>
+      <p>© 2024 Techvolution. All rights reserved.</p>
   </div>
 </footer>
 
+<style>
+  /* Ensure the footer is always at the bottom of the page */
+  html, body {
+      height: 100%;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+  }
+
+  body > footer {
+      margin-top: auto; /* Push footer to the bottom */
+      width: 100%; /* Make sure the footer spans the full width */
+  }
+
+  .container {
+      flex: 1; /* Allow the container to grow and take remaining space */
+  }
+</style>
+
 </body>
-</html>
