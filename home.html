@@ -264,57 +264,87 @@
 </div>
 </section>
 
+<!-- What's in Techvolution -->
 <!-- Card 1 -->
-<section class="w-full py-16" style="background-color: #0e236b;">
-    <div class="container mx-auto">
-      <h2 class="text-4xl font-bold text-center text-white mb-10">What's in <span class="text-yellow-400">Techvolution?</span></h2>
-  
-      <!-- Gradient Card 1 -->
-      <div class="bg-gradient-to-r from-blue-600 to-blue-800 border border-gray-500 p-8 rounded-3xl shadow-md flex items-center justify-between mx-20">
-        <div>
-          <h3 class="text-3xl font-bold text-yellow-400 mb-4">Competition</h3>
-          <p class="text-xl text-white" style="font-family: 'Poppins';">
-            Techvolution adalah kompetisi komputer yang mencakup dua kategori: competitive programming, di mana peserta memecahkan masalah algoritma, dan UI/UX design, yang menantang peserta merancang antarmuka dan pengalaman pengguna yang inovatif.
-          </p>
-          <!-- Button 1 -->
-          <button onclick="window.location.href='1Compe.html'" class="mt-6 bg-white text-blue-900 font-semibold px-6 py-2 rounded-lg hover:bg-blue-900 hover:text-white transition duration-300">
-            Competitive Programming
-          </button>
-          <button onclick="window.location.href='1UI_UX.html'" class="mt-6 bg-white text-blue-900 font-semibold px-6 py-2 rounded-lg hover:bg-blue-900 hover:text-white transition duration-300">
-            UI/UX
-          </button>
+<section id="techvolution-section" class="w-full py-10 relative overflow-hidden" style="background-color: #0e236b;">
+    <div class="container mx-auto relative z-10">
+        <h2 class="text-4xl font-bold text-center text-white mb-10">What's in <span class="text-yellow-400">Techvolution?</span></h2>
+
+        <!-- Gradient Card 1 -->
+        <div id="competition-card" class="bg-gradient-to-r from-blue-600 to-blue-800 border border-gray-500 p-8 rounded-3xl shadow-md flex items-center justify-between mx-10 transition-all duration-1000 opacity-0 transform translate-x-full">
+            <div>
+                <h3 class="text-3xl font-bold text-yellow-400 mb-4">Competition</h3>
+                <p class="text-xl text-white" style="font-family: 'Poppins';">
+                    Techvolution adalah kompetisi komputer yang mencakup dua kategori: competitive programming, di mana peserta memecahkan masalah algoritma, dan UI/UX design, yang menantang peserta merancang antarmuka dan pengalaman pengguna yang inovatif.
+                </p>
+                <!-- Button 1 -->
+                <button onclick="window.location.href='1Compe.html'" class="mt-6 bg-white text-blue-900 font-semibold px-6 py-2 rounded-lg hover:bg-blue-900 hover:text-white transition duration-300">
+                    Competitive Programming
+                </button>
+                <button onclick="window.location.href='1UI_UX.html'" class="mt-6 bg-white text-blue-900 font-semibold px-6 py-2 rounded-lg hover:bg-blue-900 hover:text-white transition duration-300">
+                    UI/UX
+                </button>
+            </div>
+            <!-- Image 1 -->
+            <div class="hidden md:block">
+                <img src="Guardicore_ Brand Animation.gif" alt="Image" class=" rounded-lg min-w-56 h-52">
+            </div>
         </div>
-        <!-- Image 1 -->
-        <div class="hidden md:block">
-          <img src="Guardicore_ Brand Animation.gif" alt="Image" class=" rounded-lg min-w-56 h-52">
-        </div>
-      </div>
     </div>
-  <!-- Card 2 -->
-  <section class="w-full py-16" style="background-color: #0e236b;">
-    <div class="container mx-auto">
-  
-      <!-- Gradient Card 2 -->
-      <div class="bg-gradient-to-r from-blue-600 to-blue-800 border p-8 rounded-3xl shadow-lg flex items-center justify-between mx-20">
-        <div>
-          <h3 class="text-3xl font-bold text-yellow-400 mb-4">Workshop</h3>
-          <p class="text-xl text-white" style="font-family:'Poppins';">
-            Workshop Techvolution meliputi pelatihan pemrograman dan UI/UX design, memberikan peserta keterampilan praktis dalam algoritma serta desain antarmuka dan pengalaman pengguna yang efektif.
-          </p>
-          <!-- Button 2 -->
-          <button onclick="window.location.href='workshop.html'" class="mt-6 bg-white text-blue-900 font-semibold px-6 py-2 rounded-lg hover:bg-blue-900 hover:text-white transition duration-300">
-            Learn More
-          </button>
-        </div>
-        <!-- Image 2 -->
-        <div class="hidden md:block">
-          <img src="Antivirus Software isometric animation.gif" alt="Image" class="rounded-lg min-w-56 h-52">
-        </div>
-      </div>
-    </div>
-  </section>
-</div>
 </section>
+
+<!-- Card 2 -->
+<section class="w-full py-10" style="background-color: #0e236b;">
+    <div class="container mx-auto">
+        <!-- Gradient Card 2 -->
+        <div id="workshop-card" class="bg-gradient-to-r from-blue-600 to-blue-800 border p-8 rounded-3xl shadow-lg flex items-center justify-between mx-10 transition-all duration-1000 opacity-0 transform -translate-x-full">
+            <div>
+                <h3 class="text-3xl font-bold text-yellow-400 mb-4">Workshop</h3>
+                <p class="text-xl text-white" style="font-family:'Poppins';">
+                    Workshop Techvolution meliputi pelatihan pemrograman dan UI/UX design, memberikan peserta keterampilan praktis dalam algoritma serta desain antarmuka dan pengalaman pengguna yang efektif.
+                </p>
+                <!-- Button 2 -->
+                <button onclick="window.location.href='workshop.html'" class="mt-6 bg-white text-blue-900 font-semibold px-6 py-2 rounded-lg hover:bg-blue-900 hover:text-white transition duration-300">
+                    Learn More
+                </button>
+            </div>
+            <!-- Image 2 -->
+            <div class="hidden md:block">
+                <img src="Antivirus Software isometric animation.gif" alt="Image" class="rounded-lg min-w-56 h-52">
+            </div>
+        </div>
+    </div>
+</section>
+
+<script>
+    // JavaScript untuk animasi masuk dari kanan dan kiri
+    window.addEventListener('scroll', function() {
+        const competitionCard = document.getElementById('competition-card');
+        const workshopCard = document.getElementById('workshop-card');
+        const sectionPositionCompetition = competitionCard.getBoundingClientRect().top;
+        const sectionPositionWorkshop = workshopCard.getBoundingClientRect().top;
+        const screenPosition = window.innerHeight / 1.2; // Memeriksa posisi di layar
+
+        // Cek untuk card Competition
+        if (sectionPositionCompetition < screenPosition) {
+            competitionCard.classList.remove('opacity-0', 'translate-x-full');
+            competitionCard.classList.add('opacity-100', 'translate-x-0');
+        } else {
+            competitionCard.classList.add('opacity-0', 'translate-x-full');
+            competitionCard.classList.remove('opacity-100', 'translate-x-0');
+        }
+
+        // Cek untuk card Workshop
+        if (sectionPositionWorkshop < screenPosition) {
+            workshopCard.classList.remove('opacity-0', '-translate-x-full');
+            workshopCard.classList.add('opacity-100', 'translate-x-0');
+        } else {
+            workshopCard.classList.add('opacity-0', '-translate-x-full');
+            workshopCard.classList.remove('opacity-100', 'translate-x-0');
+        }
+    });
+</script>
+
 
 <!-- Core Values Section -->
 <section class="w-full py-16" style="background-color: #0e236b;">
