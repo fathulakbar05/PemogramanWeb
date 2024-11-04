@@ -359,6 +359,48 @@ menghadapi dunia yang semakin terhubung secara teknologi.
       </div>
     </section>
 
+  <section class="bg-gray-100 flex items-center justify-center min-h-screen">
+    <div class="w-full max-w-xl p-6 bg-white rounded-lg shadow-lg">
+      <!-- Question 1 -->
+      <div class="border-b border-gray-200">
+        <button class="w-full text-left py-4 font-semibold text-2xl text-gray-800 hover:text-blue-600 focus:outline-none" onclick="toggleAnswer(1)">
+          What is ProjectX?
+        </button>
+        <div id="answer1" class="hidden text-gray-600 text-base pb-4">
+          ProjectX is an innovative platform aimed at bridging digital experiences with real-world solutions. Our goal is to create a seamless interface where users can benefit from both virtual and tangible interactions.
+        </div>
+      </div>
+  
+      <!-- Question 2 -->
+      <div class="border-b border-gray-200">
+        <button class="w-full text-left py-4 font-semibold text-2xl text-gray-800 hover:text-blue-600 focus:outline-none" onclick="toggleAnswer(2)">
+          What is the roadmap for ProjectX?
+        </button>
+        <div id="answer2" class="hidden text-gray-600 text-base pb-4">
+          ProjectX is structured as a multi-phase journey. Phase 1 launches immediately, with a duration of 6 months. In Phase 2, new features and experiences will be introduced based on community feedback. We aim to grow ProjectX into a sustainable brand that integrates digital and physical services for a holistic user experience.
+        </div>
+      </div>
+  
+      <!-- Question 3 -->
+      <div>
+        <button class="w-full text-left py-4 font-semibold text-2xl text-gray-800 hover:text-blue-600 focus:outline-none" onclick="toggleAnswer(3)">
+          What are the core features?
+        </button>
+        <div id="answer3" class="hidden text-gray-600 text-base pb-4">
+          ProjectX offers several key features, including real-time data analytics, interactive user profiles, and personalized content recommendations. Our platform is designed to evolve, with new features added regularly based on user needs and technological advancements.
+        </div>
+      </div>
+    </div>
+  
+    <script>
+      function toggleAnswer(id) {
+        const answer = document.getElementById(`answer${id}`);
+        answer.classList.toggle('hidden');
+      }
+    </script>
+
+  </section>
+
 
 
         
