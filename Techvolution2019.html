@@ -49,6 +49,20 @@
             height: 500px;
             box-sizing: border-box;
         }
+
+
+        /* Atur posisi untuk bubble chat */
+        .bubble-chat {
+            position: absolute;
+            opacity: 0; /* Bubble mulai tidak terlihat */
+            transform: scale(0.8); /* Efek sedikit lebih kecil */
+            transition: opacity 0.5s ease, transform 0.5s ease;
+        }
+        /* Kelas untuk menampilkan bubble chat */
+        .bubble-visible {
+            opacity: 1;
+            transform: scale(1); /* Kembali ke ukuran asli */
+        }
     </style>
 </head>
 
@@ -131,6 +145,24 @@
 
     </section>
 
+    <!-- JAVASCRIPT -->
+    <script>
+        const track = document.querySelector('.carousel-track');
+        const items = document.querySelectorAll('.carousel-item');
+        let currentIndex = 0;
+
+        const moveSlide = () => {
+            currentIndex++;
+            if (currentIndex >= items.length-1) {
+                currentIndex = 0;
+            }
+            track.style.transform = `translateX(-${currentIndex * 50}%)`;
+        };
+
+        // Move slide every 3 seconds
+        setInterval(moveSlide, 3000);
+    </script>
+
     
     <section class="bg-[#0e236b] text-white py-20">
         
@@ -174,7 +206,7 @@
 
     </section>
 
-    <section class="bg-[#0e236b] text-white py-20 bg-cover bg-center" style="background-image: url('Desain\ tanpa\ judul\ \(4\).png');">
+    <section class="bg-[#0e236b] text-white py-20 bg-cover bg-center">
         
         <div class="flex items-center justify-center">
             
@@ -217,6 +249,69 @@
         </div>
 
     </section>
+
+
+    <section class="bg-cover bg-center h-screen px-10 py-20" style="background-image: url('Desain\ tanpa\ judul\ \(4\).png');">
+        <div class="bg-blue-900 bg-opacity-80 p-8 rounded-lg border shadow-md w-full h-full relative overflow-hidden">
+
+            <div id="bubble-container"></div>
+
+        </div>
+    </section>
+
+    <script>
+        // Fungsi untuk membuat bubble chat
+        function createBubbleChat(text, delay) {
+            // Buat elemen bubble chat
+            const bubble = document.createElement('div');
+            bubble.className = "bubble-chat p-4 bg-[#709df7] text-black rounded-lg shadow-md max-w-xs";
+            bubble.innerHTML = `
+                <p>${text}</p>
+                <div class="absolute bottom-0 left-4 w-0 h-0 border-t-8 border-t-[#709df7] border-l-8 border-l-transparent border-r-8 border-r-transparent transform translate-y-full"></div>
+            `;
+    
+            // Set posisi acak
+            const x = Math.random() * (window.innerWidth - 150); // 150px sebagai lebar minimum
+            const y = Math.random() * (window.innerHeight - 100); // 100px sebagai tinggi minimum
+            bubble.style.left = `${x}px`;
+            bubble.style.top = `${y}px`;
+        
+            // Tambahkan ke dalam container tapi sembunyikan dulu
+            document.getElementById('bubble-container').appendChild(bubble);
+        
+            // Atur waktu munculnya bubble secara bertahap
+            setTimeout(() => {
+                bubble.classList.add('bubble-visible'); // Tambahkan kelas untuk menampilkan bubble
+            }, delay);
+        }
+    
+        // Daftar pesan bubble chat
+        const messages = [
+            "Acara yang sangat menarik! Saya belajar banyak tentang teknologi dan melihat karya-karya luar biasa.",
+            "Bagaimana kabarmu?",
+            "Luar biasa melihat generasi muda begitu bersemangat dalam teknologi, acara ini sangat menginspirasi!",
+            "Halo! Ini adalah bubble chat.",
+            "Materi workshopnya langsung bisa diterapkan dan sangat bermanfaat bagi pengembangan diri di bidang teknologi.",
+            "Sesi desainnya sangat inspiratif, dan persaingannya membuat saya semakin bersemangat untuk berkarya!",
+            "Senang bisa mendukung acara ini, karena ini adalah wadah penting bagi talenta muda untuk berkembang.",
+            "Teknologi keren, kan?",
+            "Bubble chat seperti di komik!",
+            "Tantangannya seru dan menambah banyak wawasan baru dalam coding, senang bisa ikut berkompetisi di sini!",
+            "Suasana di sini penuh antusiasme, semua peserta dan pengunjung sangat bersemangat!",
+            "Kreativitas dan pemikiran analitis peserta tahun ini sungguh mengesankan, sulit memilih pemenangnya!",
+            "Selamat belajar!",
+            "Interaksi dengan peserta workshop sangat aktif, semoga mereka mendapatkan manfaat maksimal dari sesi ini!",
+            "Semoga harimu menyenangkan!",
+            "Lihat, bubble ini bisa berpindah!",
+            "Acara ini luar biasa, senang bisa berkontribusi dan melihat banyak ide-ide cemerlang dari para peserta.",
+        ];
+    
+        // Tambahkan bubble chat satu per satu dengan jeda
+        messages.forEach((message, index) => {
+            createBubbleChat(message, index * 500); // Jeda 500ms antar bubble
+        });
+    </script>
+
 
     <!-- Footer Section -->
     <footer class="bg-[#0A0514] text-gray-300 py-12">
@@ -271,25 +366,5 @@
             <p>© 2024 Techvolution . All rights reserved.</p>
         </div>  
     </footer>
-
-
-
-    <!-- JAVASCRIPT -->
-    <script>
-        const track = document.querySelector('.carousel-track');
-        const items = document.querySelectorAll('.carousel-item');
-        let currentIndex = 0;
-
-        const moveSlide = () => {
-            currentIndex++;
-            if (currentIndex >= items.length-1) {
-                currentIndex = 0;
-            }
-            track.style.transform = `translateX(-${currentIndex * 50}%)`;
-        };
-
-        // Move slide every 3 seconds
-        setInterval(moveSlide, 3000);
-    </script>
 </body>
 </html>
