@@ -67,7 +67,37 @@
 
 <body>
 
-    <nav class="fixed top-0 w-full z-50 bg-black text-white py-4 md:py-6 lg:py-8">
+    <!-- Loading Screen -->
+    <section id="loading-screen" class="bg-cover bg-center fixed inset-0 flex items-center justify-center z-50 transition-opacity duration-500" style="background-image: url('Desain\ tanpa\ judul\ (3)\.png');">
+        <div class="text-center flex flex-col items-center justify-center transform">
+            <img class="mt-2 ml-1 w-60 h-60" src="Logo2019.png" alt="Logo2019">
+
+            <div class="flex items-center mt-4">
+                <div class="loader border-t-4 border-b-4 border-white w-12 h-12 rounded-full animate-spin"></div>
+                <p class="text-white ml-4">Techvolution 2019...</p>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Event listener untuk menyembunyikan loading screen setelah waktu tertentu
+        window.addEventListener("load", function() {
+            // Atur waktu loading screen
+            setTimeout(function() {
+                const loadingScreen = document.getElementById("loading-screen");
+                loadingScreen.classList.add("opacity-0"); // Kelas untuk fade-out
+
+                // Menunggu animasi selesai, lalu menyembunyikan elemen loading screen
+                loadingScreen.addEventListener("transitionend", function() {
+                    loadingScreen.classList.add("hidden");
+                });
+            }, 2500); // 2500ms = 2,5 detik durasi tampil loading screen
+        });
+    </script>
+
+
+    <!-- Navigasi Bar -->
+    <nav class="fixed top-0 w-full bg-black text-white py-4 md:py-6 lg:py-8 z-40">
         <div class="container mx-auto flex justify-between px-4 md:px-6 lg:px-14">
             
             <!--Logo-->
@@ -244,7 +274,7 @@
     </section>
 
     <script>
-        // Fungsi untuk membuat bubble chat
+        // Fungsi untuk buat bubble chat
         function createBubbleChat(text, delay) {
             // Buat elemen bubble chat
             const bubble = document.createElement('div');
@@ -255,8 +285,8 @@
             `;
     
             // Set posisi acak
-            const x = Math.random() * (window.innerWidth - 150); // 150px sebagai lebar minimum
-            const y = Math.random() * (window.innerHeight - 100); // 100px sebagai tinggi minimum
+            const x = Math.random() * (window.innerWidth - 150); // lebar minimum 150px
+            const y = Math.random() * (window.innerHeight - 100); // tinggi minimum 100px
             bubble.style.left = `${x}px`;
             bubble.style.top = `${y}px`;
         
@@ -269,7 +299,7 @@
             }, delay);
         }
     
-        // Daftar pesan bubble chat
+        // Daftar pesan
         const messages = [
             "Acara yang sangat menarik! Saya belajar banyak tentang teknologi dan melihat karya-karya luar biasa.",
             "Bagaimana kabarmu?",
@@ -290,7 +320,7 @@
             "Acara ini luar biasa, senang bisa berkontribusi dan melihat banyak ide-ide cemerlang dari para peserta.",
         ];
     
-        // Tambahkan bubble chat satu per satu dengan jeda
+        // Menambah bubble chat satu per satu dengan jeda
         messages.forEach((message, index) => {
             createBubbleChat(message, index * 500); // Jeda 500ms antar bubble
         });
