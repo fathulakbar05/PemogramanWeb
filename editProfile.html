@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Profile Page</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&family=Press+Start+2P&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<style>
+    /* *{
+        color: white;
+        font-family: 'Poppins', sans-serif;
+    } */
+    h2, h3{
+            font-family: 'Press Start 2P', cursive;
+        }
+</style>
+<body class="bg-[#0e236b]">
+      <!--Navigasi Bar-->
+      <nav class="bg-black text-white py-4">
+        <div class="container mx-auto flex justify-between items-center px-14">
+            
+            <!--Logo-->
+            <a href="home.html" class="flex items-center space-x-2">
+                <img src="LogoTechvolution1.png" alt="Logo" class="h-10 w-auto">
+                <img src="LogoTechvolution2.png" alt="Logo" class="h-10 w-72">
+            </a>
+
+            <!--Menu-->
+            <div class="flex items-center space-x-6 text-sm ml-auto" style="font-family: 'Press Start 2P', cursive;">
+                <ul class="flex space-x-6 ">
+                    <li>
+                        <a href="home.html" class="text-white hover:text-[#0850dc] py-8">Home</a>
+                    </li>
+                    <li><a href="home.html#about" class="text-white hover:text-[#0850dc] py-8">About</a></li>
+                    <li><a href="workshop.html" class="text-white hover:text-[#0850dc] py-8">Workshop</a></li>
+                    <li class="relative group">
+                        <a href="#" class="text-white hover:text-[#0850dc] py-8">Competition</a>
+                        <div class="hidden group-hover:block absolute left-0 bg-black mt-2 py-2 w-40 z-50">
+                            <a href="1Compe.html" class="block px-4 py-2 text-sm text-white hover:bg-gray-700">CP</a>
+                            <a href="1UI_UX.html" class="block px-4 py-2 text-sm text-white hover:bg-gray-700">UI/UX</a>
+                        </div>
+                    </li>
+                    <li><a href="KilasBalik.html" class="text-white hover:text-[#0850dc] py-8">Kilas Balik</a></li>
+                    <li><a href="#kontak" class="text-white hover:text-[#0850dc] py-8">Contact</a></li>
+                </ul>
+
+                <!--Profile-->
+                <div>
+                    <a href="profile.html" class="border border-[#0850dc] text-[#0850dc] py-2 px-4 rounded hover:bg-[#0850dc] hover:text-black transition">RAHMAD</a>
+                </div>
+
+            </div>
+        </div>
+    </nav>
+<!-- Container Utama -->
+<div class="container mx-auto flex flex-col md:flex-row gap-6 py-10">
+    <!-- Sidebar Kiri -->
+    <div class="w-full md:w-1/4">
+        <div id="sidebar" class="sticky top-10 p-6 rounded-lg shadow-lg bg-black text-lg text-white">
+            <ul class="space-y-4">
+                <li><a href="#general" class="block">General</a></li>
+                <li><a href="#institution" class="block">Institution</a></li>
+                <li><a href="#social" class="block">Social</a></li>
+                <li><a href="#payment" class="block">Payment</a></li>
+                <li><a href="#password" class="block">Password</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Konten Utama -->
+    <div class="w-full md:w-3/4">
+        <!-- Section general -->
+        <section id="general" class="bg-black p-4 rounded-lg shadow-lg mb-10">
+          <div>
+            <button class="text-white text-lg font-bold rounded mb-4" style="font-family: 'Press Start 2P', sans-serif;">
+                  General
+                </button>
+          </div>
+                <div class="flex items-center mb-4">
+                  <div class="rounded-full overflow-hidden">
+                    <img src="image.png" alt="Profile Picture" class="w-24 h-24 rounded-full mr-5 ml-6"  id="profile-picture" onclick="triggerFileInput()">
+                    <input type="file" id="fileInput" accept="image/*" style="display: none;" onchange="changeProfilePicture(event)">
+                  </div>
+                  <div class="ml-4 text-xl text-white">
+                    <h1 style="font-family: 'Press Start 2P', sans-serif;">Rahmad Ramadan</h1>
+                  </div>
+                </div>
+                <hr class="mb-4">
+            
+                <form id="profile-form" class="mr-5 ml-5 mb-5">
+                  <!-- First Name and Last Name Section -->
+                  <div class="mb-4 grid grid-cols-2 gap-4">
+                    <div>
+                      <label class="block text-white text-sm font-bold mb-2">First Name</label>
+                      <input type="text" placeholder="First Name" class="w-full px-3 py-2 border rounded-md caret-gray-900 text-black font-bold">
+                    </div>
+                    <div>
+                      <label class="block text-white text-sm font-bold mb-2">Last Name</label>
+                      <input type="text" placeholder="Last Name" class="w-full px-3 py-2 border rounded-md caret-gray-900 text-black font-bold">
+                    </div>
+                  </div>
+            
+                  <div class="mb-4">
+                    <label class="block text-white text-sm font-bold mb-2">Username</label>
+                    <input type="text" value="rahmad_ramadan" class="bg-white text-black font-bold w-full px-3 py-2 border rounded-md" disabled>
+                  </div>
+
+                  <p class="block text-white text-sm font-bold mb-2">Gender</p>
+                  <div class="mb-4 flex space-x-6">
+                      <label>
+                        <input type="radio" name="gender" value="male" checked disabled>
+                        <span class="text-white text-sm">Male</span>
+                      </label>
+                      <label>
+                        <input type="radio" name="gender" value="Female">
+                        <span class="text-white text-sm">Female</span>
+                      </label>
+                  </div>
+
+                  <div class="mb-4">
+                    <label class="block text-white text-sm font-bold mb-2">Email</label>
+                    <input type="email" placeholder="ramadanrahmad1910@gmail.com" class="w-full px-3 py-2 border rounded-md caret-gray-900 text-black font-bold">
+                  </div>
+
+                  <div class="mb-4">
+                    <label class="block text-white text-sm font-bold mb-2">Phone Number</label>
+                    <input type="number" placeholder="081234567890" class="w-full px-3 py-2 border rounded-md caret-gray-900 text-black font-bold">
+                  </div>
+
+                  <div class="mb-4">
+                    <label class="block text-white text-sm font-bold mb-2">Date of Birth</label>
+                    <input type="date" placeholder="" class="w-full px-3 py-2 border rounded-md caret-gray-900 text-black font-bold">
+                  </div>
+            
+                  <div class="mb-4">
+                    <label class="block text-white text-sm font-bold mb-2">Location</label>
+                    <input type="text" placeholder="e.g. Indonesia" class="w-full px-3 py-2 border rounded-md caret-gray-900 text-black font-bold">
+                  </div>
+                </form>
+        </section>
+
+        <!-- Section Insitution -->
+        <section id="institution" class="bg-black p-6 rounded-lg shadow-lg mb-10">
+          <div>
+            <button class="text-white text-lg font-bold rounded mb-4" style="font-family: 'Press Start 2P', sans-serif;">
+                  Institution
+                </button>
+          </div>
+          <div class="mb-4">
+            <label class="block text-white text-sm font-bold mb-2">Institution</label>
+            <input type="text" placeholder="Universitas Sriwijaya" class="w-full px-3 py-2 border rounded-md caret-gray-900 text-black font-bold">
+          </div>
+
+          <div class="mb-4">
+            <label  class="block text-white text-sm font-bold mb-2">Education</label>
+            <div class="relative text-black">
+              <select id="education" class="block w-full pl-3 pr-10 py-2 text-black font-bold bg-white border border-black rounded-md shadow-sm">
+                <option class="text-black font-bold" value="SD">SD</option>
+                <option class="text-black font-bold" value="SMP">SMP</option>
+                <option class="text-black font-bold" value="SMA">SMA</option>
+                <option class="text-black font-bold" value="D3">D3</option>
+                <option class="text-black font-bold" value="S1" selected>S1</option>
+                <option class="text-black font-bold" value="S2">S2</option>
+                <option class="text-black font-bold" value="S3">S3</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="mb-4">
+            <label class="block text-white text-sm font-bold mb-2">Generation</label>
+            <input type="number" placeholder="2023" class="w-full px-3 py-2 border rounded-md caret-gray-900 text-black font-bold">
+          </div>
+        </section>
+
+        <!-- Section social -->
+        <section id="social" class="bg-black p-6 rounded-lg shadow-lg mb-10">
+          <div>
+            <button class="text-white text-lg font-bold rounded mb-4" style="font-family: 'Press Start 2P', sans-serif;">
+                  Social
+                </button>
+          </div>
+          <div>
+            <div class="flex items-center justify-between border-b border-gray-500 p-3 bg-black">
+              <div class="flex items-center space-x-3">
+                <div class="flex items-center space-x-2">
+                  <img src="linkedin.png" alt="LinkedIn" class="w-6 h-6">
+                  <span class="block text-white text-sm font-bold">LinkedIn</span>
+                </div>
+              </div>
+              <button
+                class="flex items-center space-x-2 bg-[#0850dc] text-white font-bold px-4 py-2 rounded-full hover:bg-yellow-400 transition">
+                <span>Connect LinkedIn</span>
+                <img src="right-arrow.png" alt="panah" class="w-4 h-5">
+              </button>
+            </div>
+        
+            <div class="flex items-center justify-between border-b border-gray-500 p-3 bg-black">
+              <div class="flex items-center space-x-3">
+                <div class="flex items-center space-x-2">
+                  <img src="github.png" alt="github" class="w-6 h-6">
+                  <span class="block text-white text-sm font-bold">Github</span>
+                </div>
+              </div>
+              <button
+                class="flex items-center space-x-2 bg-[#0850dc] text-white px-4 py-2 font-bold rounded-full hover:bg-yellow-400 transition">
+                <span>Connect Github</span>
+                <img src="right-arrow.png" alt="panah" class="w-4 h-5">
+              </button>
+            </div>
+        
+            <div class="flex items-center justify-between border-b border-gray-500 p-3 bg-black">
+              <div class="flex items-center space-x-3">
+                <div class="flex items-center space-x-2">
+                  <img src="instagram.png" alt="Instagram" class="w-6 h-6">
+                  <span class="block text-white text-sm font-bold">instagram</span>
+                </div>
+              </div>
+              <button
+                class="flex items-center space-x-2 bg-[#0850dc] text-white font-bold px-4 py-2 rounded-full hover:bg-yellow-400 transition">
+                <span>Connect instagram</span>
+                <img src="right-arrow.png" alt="panah" class="w-4 h-5">
+              </button>
+            </div>
+        
+            <div class="flex items-center justify-between p-3 bg-black">
+              <div class="flex items-center space-x-3">
+                <div class="flex items-center space-x-2">
+                  <img src="twitter.png" alt="twitter" class="w-6 h-6">
+                  <span class="block text-white text-sm font-bold">Twitter</span>
+                </div>
+              </div>
+              <button
+                class="flex items-center space-x-2 bg-[#0850dc] text-white font-bold px-4 py-2 rounded-full hover:bg-yellow-400 transition">
+                <span>Connect Twitter</span>
+                <img src="right-arrow.png" alt="panah" class="w-4 h-5">
+              </button>
+            </div>
+        </section>
+
+        <!-- Section Payment -->
+        <section id="payment" class="bg-black p-6 rounded-lg shadow-lg mb-10">
+          <div>
+            <button class="text-white text-lg font-bold rounded mb-4" style="font-family: 'Press Start 2P', sans-serif;">
+                  Payment
+                </button>
+          </div>
+          <div class="flex items-center justify-between border-b border-gray-500 p-3 bg-black">
+            <div class="flex items-center space-x-3">
+              <div class="flex items-center space-x-2">
+                <img src="dana.png" alt="dana" class="w-6 h-6 mr-2">
+                <span class="block text-white text-sm font-bold">Dana</span>
+              </div>
+            </div>
+            <button
+              class="flex items-center space-x-2 bg-yellow-400 text-white font-bold px-4 py-2 rounded-full hover:bg-[#0850dc] transition">
+              <span class="text-black">Link</span>
+              <img src="share.png" alt="panah" class="w-4 h-5">
+            </button>
+          </div>
+
+            <div class="flex items-center justify-between border-b border-gray-500 p-3 bg-black">
+              <div class="flex items-center space-x-3">
+                <div class="flex items-center space-x-2">
+                  <img src="shopeepay.png" alt="shopeepay" class="w-8 h-8">
+                  <span class="block text-white text-sm font-bold">Shopeepay</span>
+                </div>
+              </div>
+              <button
+                class="flex items-center space-x-2 bg-yellow-400 text-white font-bold px-4 py-2 rounded-full hover:bg-[#0850dc] transition">
+                <span class="text-black">Link</span>
+                <img src="share.png" alt="panah" class="w-4 h-5">
+              </button>
+            </div>
+
+            <div class="flex items-center justify-between border-b border-gray-500 p-3 bg-black">
+              <div class="flex items-center space-x-3">
+                <div class="flex items-center space-x-2">
+                  <img src="gopay.webp" alt="gopay" class="w-6 h-6 mr-2">
+                  <span class="block text-white text-sm font-bold">Gopay</span>
+                </div>
+              </div>
+              <button
+                class="flex items-center space-x-2 bg-yellow-400 text-white font-bold px-4 py-2 rounded-full hover:bg-[#0850dc] transition">
+                <span class="text-black">Link</span>
+                <img src="share.png" alt="panah" class="w-4 h-5">
+              </button>
+            </div>
+
+            <div class="flex items-center justify-between border-b border-gray-500 p-3 bg-black">
+              <div class="flex items-center space-x-3">
+                <div class="flex items-center space-x-2">
+                  <img src="credit-card.png" alt="kartuKredti" class="w-7 h-7 mr-1">
+                  <span class="block text-white text-sm font-bold">Credit Card</span>
+                </div>
+              </div>
+              <button
+                class="flex items-center space-x-2 bg-yellow-400 text-white font-bold px-4 py-2 rounded-full hover:bg-[#0850dc] transition">
+                <span class="text-black">Add</span>
+                <img src="plus.png" alt="panah" class="w-4 h-4">
+              </button>
+            </div>
+
+            <div class="flex items-center justify-between p-3 bg-black">
+              <div class="flex items-center space-x-3">
+                <div class="flex items-center space-x-2">
+                  <img src="bank.png" alt="bank" class="w-6 h-6 mr-2">
+                  <span class="block text-white text-sm font-bold">Bank</span>
+                </div>
+              </div>
+              <button
+                class="flex items-center space-x-2 bg-yellow-400 text-white font-bold px-4 py-2 rounded-full hover:bg-[#0850dc] transition">
+                <span class="text-black">Add</span>
+                <img src="plus.png" alt="panah" class="w-4 h-4">
+              </button>
+            </div>
+        </section>
+
+        <!-- Section Password -->
+        <section id="password" class="bg-black p-6 rounded-lg shadow-lg mb-10">
+          <div class="flex flex-col items-center mb-6">
+            <h2 class="text-lg font-bold text-center text-white" style="font-family: 'Press Start 2P', sans-serif;">Perubahan Password Akun <span class="text-yellow-400 font-bold" style="font-family: 'Press Start 2P', sans-serif;">TECHVOLUTION</span></h2>
+        </div>
+        <form id="passwordForm" class="mr-10 ml-10">
+            <div class="mb-4">
+                <label for="newPassword" class="block text-sm font-bold text-white">New Password</label>
+                <div class="relative mt-1">
+                    <input type="password" id="newPassword" name="newPassword" placeholder="New Password" class="w-full px-3 py-2 border caret-gray-900 font-bold rounded-md block text-black mt-1" required>
+                </div>
+            </div>
+            <div class="mb-6">
+                <label for="confirmPassword" class="block text-sm font-bold text-white">Confirm New Password</label>
+                <div class="relative mt-1">
+                    <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Confirm New Password" class="w-full px-3 py-2 border caret-gray-900  font-bold rounded-md block text-black mt-1" required>
+                </div>
+            </div>
+        </form>
+        </section>
+
+        <section class="p-6 rounded-lg shadow-2xl mb-10">
+          <div class="flex justify-end space-x-4">
+            <a href="profile.html">
+              <button type="button" class="px-4 py-2 bg-yellow-500 text-white rounded-md hover:bg-yellow-600 focus:outline-none">Cancel</button>
+            </a>
+            <a href="profile.html">
+              <button type="button" class="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 focus:outline-none">Save</button>
+            </a>
+        </div>
+        </section>
+    </div>
+</div>
+<script>
+    // JavaScript untuk efek scrollspy
+    const sections = document.querySelectorAll('section');
+    const sidebarLinks = document.querySelectorAll('#sidebar a');
+    window.addEventListener('scroll', () => {
+        let currentSection = '';
+        sections.forEach((section) => {
+            const sectionTop = section.offsetTop - 150;
+            if (scrollY >= sectionTop) {
+                currentSection = section.getAttribute('id');
+            }
+        });
+        sidebarLinks.forEach((link) => {
+            link.classList.remove('text-yellow-400', 'font-bold');
+            if (link.getAttribute('href').includes(currentSection)) {
+                link.classList.add('text-yellow-400', 'font-bold');
+            }
+        });
+    });
+
+    // Fungsi untuk memicu input file saat gambar diklik
+function triggerFileInput() {
+    document.getElementById("fileInput").click();
+}
+// Fungsi untuk mengubah gambar profil saat file dipilih
+function changeProfilePicture(event) {
+    const file = event.target.files[0];
+    if (file) {
+        const reader = new FileReader();
+        reader.onload = function(e) {
+            document.getElementById("profile-picture").src = e.target.result;
+        };
+        reader.readAsDataURL(file);
+    }
+}
+</script>
+
+<footer class="bg-[#0A0514] text-gray-300 py-12">
+  <div class="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 items-start">
+
+    <!-- Logo Section -->
+<div class="flex justify-center items-center flex-col mt-12">
+  <img src="LogoTechvolution1.png" alt="Logo" class="mb-4 w-32 h-auto">
+  <img src="LogoTechvolution2.png" alt="Logo" class="mb-4 w-52 h-auto">
+</div>
+
+    <!-- Address and Social Media Section -->
+    <div class="flex flex-col items-start">
+      <h2 class="text-lg font-bold mb-4">Address</h2>
+      <p style="font-family:'Poppins';" class="text-xl">Jl. Raya Palembang - Prabumulih No.Km. 32,<br>
+         Indralaya Indah, Kec. Indralaya,<br>
+         Kabupaten Ogan Ilir, Sumatera Selatan 30862</p>
+
+      <h3 class="text-white text-lg font-bold mt-6 ">Social Media</h3>
+      <div class="flex space-x-4">
+
+        <!-- Social Media Icons -->
+        <a href="#" class="text-gray-400 hover:text-white text-2xl"><i class="fab fa-tiktok"></i></a>
+        <a href="#" class="text-gray-400 hover:text-white text-2xl"><i class="fab fa-youtube"></i></a>
+        <a href="#" class="text-gray-400 hover:text-white text-2xl"><i class="fab fa-instagram"></i></a>
+      </div>
+    </div>
+
+    <!-- Contact Section -->
+    <div class="flex flex-col" id="kontak">
+      <h2 class="text-white text-lg font-bold mb-4">Contact</h2>
+      <p class="mb-2 pb-4 text-xl" style="font-family:'Poppins';">
+        <span style="font-family: 'Press Start 2P';">
+        <a href=" "><i class="fa-brands fa-whatsapp text-2xl" ></i> Whatsapp </a> </span>
+        <br>+62 896-2103-887 (Fathul)
+        <br >+62 812-3994-425 (Rahmad)
+        <br>+62 821-5320-595 (Nazwa)
+        <br>+62 812-4004-445 (Nurul)
+        <br>+62 896-9820-543 (Kian)
+      </p>
+      
+      
+      <p class="mb-2 pb-4 text-xl" style="font-family:'Poppins';">
+          <span style="font-family: 'Press Start 2P';">
+        <a href=" "><i class="fas fa-envelope text-2xl" ></i> Email </a></span>
+        <br>techvolution@gmail.com
+      </p>
+    </div>
+
+  </div>
+  
+  <!-- Footer Bottom Section -->
+  <div class="border-t border-gray-600 mt-8 pt-4 text-center text-sm" style="font-family:'Poppins';">
+    <p>© 2024 Techvolution . All rights reserved.</p>
+  </div>
+</footer>
+
+</body>
+</html>
