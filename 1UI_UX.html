@@ -12,6 +12,10 @@
       rel="stylesheet"
     />
     <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Press+Start+2P&display=swap"
+      rel="stylesheet"
+    />
+    <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
     />
@@ -19,37 +23,54 @@
   <body
     style="font-family: 'Press Start 2P', cursive; background-color: #0e236b"
   >
-  
     <!-- Loading Screen -->
-    <section id="loading-screen" class="bg-cover bg-center fixed inset-0 flex items-center justify-center z-50 transition-opacity duration-500" style="background-image: url('Desain\ tanpa\ judul\ (3)\.png');">
-      <div class="text-center flex flex-col items-center justify-center transform">
-          <img class="mt-2 ml-1 w-40 h-40" src="LogoTechvolution1.png" alt="Logo2019">
+    <section
+      id="loading-screen"
+      class="bg-cover bg-center fixed inset-0 flex items-center justify-center z-50 transition-opacity duration-500"
+      style="background-image: url('Desain\ tanpa\ judul\ (3)\.png')"
+    >
+      <div
+        class="text-center flex flex-col items-center justify-center transform"
+      >
+        <img
+          class="mt-2 ml-1 w-40 h-40"
+          src="LogoTechvolution1.png"
+          alt="Logo2019"
+        />
 
-          <div class="flex items-center mt-4">
-              <div class="loader border-t-4 border-b-4 border-white w-12 h-12 rounded-full animate-spin"></div>
-              <img class="mt-2 ml-1 w-60 h-16" src="LogoTechvolution2.png" alt="LogoTechvolution">
-          </div>
+        <div class="flex items-center mt-4">
+          <div
+            class="loader border-t-4 border-b-4 border-white w-12 h-12 rounded-full animate-spin"
+          ></div>
+          <img
+            class="mt-2 ml-1 w-60 h-16"
+            src="LogoTechvolution2.png"
+            alt="LogoTechvolution"
+          />
+        </div>
       </div>
-  </section>
+    </section>
 
-  <script>
+    <script>
       // Event listener untuk menyembunyikan loading screen setelah waktu tertentu
-      window.addEventListener("load", function() {
-          // Atur waktu loading screen
-          setTimeout(function() {
-              const loadingScreen = document.getElementById("loading-screen");
-              loadingScreen.classList.add("opacity-0"); // Kelas untuk fade-out
+      window.addEventListener("load", function () {
+        // Atur waktu loading screen
+        setTimeout(function () {
+          const loadingScreen = document.getElementById("loading-screen");
+          loadingScreen.classList.add("opacity-0"); // Kelas untuk fade-out
 
-              // Menunggu animasi selesai, lalu menyembunyikan elemen loading screen
-              loadingScreen.addEventListener("transitionend", function() {
-                  loadingScreen.classList.add("hidden");
-              });
-          }, 1000); // 1000ms = 1 detik durasi tampil loading screen
+          // Menunggu animasi selesai, lalu menyembunyikan elemen loading screen
+          loadingScreen.addEventListener("transitionend", function () {
+            loadingScreen.classList.add("hidden");
+          });
+        }, 1000); // 1000ms = 1 detik durasi tampil loading screen
       });
-  </script>
+    </script>
 
     <!--Navigasi Bar-->
-    <nav class="fixed top-0 w-full z-40 bg-black text-white py-4 md:py-6 lg:py-8">
+    <nav
+      class="fixed top-0 w-full z-40 bg-black text-white py-4 md:py-6 lg:py-8"
+    >
       <div class="container mx-auto flex justify-between px-4 md:px-6 lg:px-14">
         <!--Logo-->
         <a href="home.html" class="flex items-center space-x-2">
@@ -167,17 +188,19 @@
             berpusat pada kebutuhan pengguna.
           </p>
 
+          <!-- Register Button -->
           <button
-            onclick="window.location.href='daftar-lomba-uiux.html'"
+            id="register-btn"
             class="mt-6 bg-white text-blue-900 font-semibold px-6 py-2 rounded-lg hover:bg-blue-900 hover:text-white transition duration-300"
+            onclick="handleRegister()"
           >
-            Daftar
+            Register
           </button>
 
           <button
             class="mt-6 bg-white text-blue-900 font-semibold px-6 py-2 rounded-lg hover:bg-blue-900 hover:text-white transition duration-300 buku-panduan-btn"
           >
-            Buku Panduan
+            Guidebook
           </button>
         </div>
         <div class="image-content" style="width: 40%; text-align: right">
@@ -187,6 +210,48 @@
             style="max-width: 100%; height: auto; border-radius: 1rem"
           />
         </div>
+      </div>
+    </div>
+
+    <!-- Popup Modal -->
+    <div
+      id="popup-closed"
+      style="
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        z-index: 1000;
+        justify-content: center;
+        align-items: center;
+      "
+    >
+      <div
+        style="
+          background-color: #1e3a8a;
+          padding: 20px;
+          border: 3px solid #ffffff;
+          border-radius: 10px;
+          text-align: center;
+          max-width: 400px;
+          width: 90%;
+        "
+      >
+        <h2 style="font-size: 1.5rem; font-weight: bold; color: #fbbf24">
+          Pendaftaran Ditutup
+        </h2>
+        <p style="margin-top: 10px; font-size: 1rem; color: white">
+          Maaf, pendaftaran sudah ditutup. Anda tidak dapat mendaftar saat ini.
+        </p>
+        <button
+          class="mt-6 bg-white text-blue-900 font-semibold px-6 py-2 rounded-lg hover:bg-blue-600 hover:text-white transition duration-300 buku-panduan-btn"
+          onclick="closePopup()"
+        >
+          Close
+        </button>
       </div>
     </div>
 
@@ -219,27 +284,260 @@
 
           <!-- Jam -->
           <div class="text-center border border-gray-300 rounded-lg p-4">
-            <div id="hours">12</div>
+            <div id="hours">0</div>
             <div class="text-lg text-white mt-2">Jam</div>
           </div>
 
           <!-- Menit -->
           <div class="text-center border border-gray-300 rounded-lg p-4">
-            <div id="minutes">30</div>
+            <div id="minutes">0</div>
             <div class="text-lg text-white mt-2">Menit</div>
           </div>
 
           <!-- Detik -->
           <div class="text-center border border-gray-300 rounded-lg p-4">
-            <div id="seconds">57</div>
+            <div id="seconds">0</div>
             <div class="text-lg text-white mt-2">Detik</div>
           </div>
         </div>
 
-        <div class="text-center mt-10 text-white font-semibold text-xl">
-          14 Desember 2024
+        <div
+          id="expired-message"
+          class="hidden text-yellow-500 text-xl font-semibold mt-10"
+        >
+          Pendaftaran Telah Ditutup
         </div>
       </div>
+    </section>
+
+    <section class="py-20 bg-blue-925 text-white why-join-section">
+      <div class="container mx-auto px-4">
+        <div class="text-center">
+          <h2 class="text-4xl font-bold mb-10">
+            Why Join <span class="text-yellow-400">Us?</span>
+          </h2>
+          <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <!-- Sertifikat Button -->
+            <button
+              class="p-6 bg-white text-blue-900 rounded-lg border-3 border-gray-900 shadow-lg hover:bg-yellow-400 hover:text-white transition duration-300"
+            >
+              <h3 class="text-xl font-semibold text-center">Sertifikat</h3>
+              <p class="mt-2 text-center">Mendapatkan sertifikat resmi.</p>
+            </button>
+
+            <!-- Hadiah Button -->
+            <button
+              class="p-6 bg-white text-blue-900 rounded-lg border-3 border-gray-900 shadow-lg hover:bg-yellow-400 hover:text-white transition duration-300"
+            >
+              <h3 class="text-xl font-semibold text-center">Hadiah</h3>
+              <p class="mt-2 text-center">
+                Hadiah uang tunai untuk para pemenang.
+              </p>
+            </button>
+
+            <!-- Networking Button -->
+            <button
+              class="p-6 bg-white text-blue-900 rounded-lg border-3 border-gray-900 shadow-lg hover:bg-yellow-400 hover:text-white transition duration-300"
+            >
+              <h3 class="text-xl font-semibold text-center">Networking</h3>
+              <p class="mt-2 text-center">
+                Bertemu dengan desainer UI/UX lainnya.
+              </p>
+            </button>
+
+            <!-- Pengalaman Button -->
+            <button
+              class="p-6 bg-white text-blue-900 rounded-lg border-3 border-gray-900 shadow-lg hover:bg-yellow-400 hover:text-white transition duration-300"
+            >
+              <h3 class="text-xl font-semibold text-center">Pengalaman</h3>
+              <p class="mt-2 text-center">
+                Tantangan nyata dalam dunia desain UI/UX.
+              </p>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <style>
+      /* Apply styles only to the .why-join-section */
+      .why-join-section button h3,
+      .why-join-section button p {
+        text-align: center;
+      }
+
+      /* Add border and spacing for button within the section */
+      .why-join-section button {
+        border: 3px solid gray;
+      }
+
+      /* Styling for hover effect */
+      .why-join-section button:hover {
+        background-color: #fbbf24; /* Yellow background on hover */
+        color: white;
+      }
+
+      /* Ensure the layout of the section is centered and properly spaced */
+      .why-join-section .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    </style>
+
+    <section
+      class="flex items-center justify-center min-h-screen space-x-4 bg-cover"
+      style="
+        background-image: url('bg-workshop3.png');
+        font-family: 'Poppins', sans-serif;
+      "
+    >
+      <div
+        class="w-full max-w-xl p-6 bg-blue-900 bg-opacity-80 rounded-lg shadow-lg"
+      >
+        <!-- Question 1 -->
+        <div class="pb-3 border-b border-gray-200">
+          <button
+            class="w-full text-left py-4 font-semibold text-2xl text-white hover:text-yellow-400 focus:outline-none"
+            onclick="toggleAnswer(1)"
+          >
+            Apa itu Lomba UI/UX Designing?
+          </button>
+          <div
+            id="answer1"
+            class="answer hidden text-blue-50 text-base overflow-hidden"
+          >
+            Lomba UI/UX Designing adalah ajang kompetisi yang menantang peserta
+            untuk merancang antarmuka dan pengalaman pengguna yang inovatif,
+            estetis, dan fungsional. Kompetisi ini bertujuan untuk mengasah
+            kemampuan peserta dalam menciptakan desain yang menarik, intuitif,
+            responsif, dan berpusat pada kebutuhan pengguna.
+          </div>
+        </div>
+
+        <!-- Question 2 -->
+        <div class="pb-3 border-b border-gray-200">
+          <button
+            class="w-full text-left py-4 font-semibold text-2xl text-white hover:text-yellow-400 focus:outline-none"
+            onclick="toggleAnswer(2)"
+          >
+            Bagaimana cara mendaftar untuk lomba ini?
+          </button>
+          <div
+            id="answer2"
+            class="answer hidden text-blue-50 text-base overflow-hidden"
+          >
+            Anda bisa mendaftar dengan mengklik tombol Register pada halaman ini
+            selama pendaftaran masih dibuka. Anda akan diarahkan ke halaman
+            pendaftaran untuk mengisi formulir yang diperlukan.
+          </div>
+        </div>
+
+        <!-- Question 3 -->
+        <div>
+          <button
+            class="w-full text-left py-4 font-semibold text-2xl text-white hover:text-yellow-400 focus:outline-none"
+            onclick="toggleAnswer(3)"
+          >
+            Apakah saya bisa mendaftar setelah pendaftaran ditutup?
+          </button>
+          <div
+            id="answer3"
+            class="answer hidden text-blue-50 text-base overflow-hidden"
+          >
+            Tidak. Setelah pendaftaran ditutup, Anda tidak akan bisa mendaftar
+            untuk lomba ini. Jika pendaftaran sudah ditutup, tombol Register
+            akan menampilkan pesan bahwa pendaftaran telah ditutup.
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="w-full max-w-xl p-6 bg-blue-900 bg-opacity-80 rounded-lg shadow-lg"
+      >
+        <!-- Question 4 -->
+        <div class="pb-3 border-b border-gray-200">
+          <button
+            class="w-full text-left py-4 font-semibold text-2xl text-white hover:text-yellow-400 focus:outline-none"
+            onclick="toggleAnswer(4)"
+          >
+            Apa saja yang bisa saya persiapkan sebelum mengikuti lomba?
+          </button>
+          <div
+            id="answer4"
+            class="answer hidden text-blue-50 text-base overflow-hidden"
+          >
+            Anda bisa mempersiapkan portfolio desain Anda, membaca materi
+            panduan lomba yang tersedia, dan mempersiapkan ide-ide desain
+            kreatif untuk lomba UI/UX Designing.
+          </div>
+        </div>
+
+        <!-- Question 5 -->
+        <div class="pb-3 border-b border-gray-200">
+          <button
+            class="w-full text-left py-4 font-semibold text-2xl text-white hover:text-yellow-400 focus:outline-none"
+            onclick="toggleAnswer(5)"
+          >
+            Bagaimana saya bisa menghubungi panitia lomba jika ada pertanyaan
+            lebih lanjut?
+          </button>
+          <div
+            id="answer5"
+            class="answer hidden text-blue-50 text-base overflow-hidden"
+          >
+            Jika Anda memiliki pertanyaan lebih lanjut, Anda bisa menghubungi
+            panitia lomba melalui email yang tertera pada halaman kontak atau
+            melalui media sosial resmi lomba.
+          </div>
+        </div>
+
+        <!-- Question 6 -->
+        <div>
+          <button
+            class="w-full text-left py-4 font-semibold text-2xl text-white hover:text-yellow-400 focus:outline-none"
+            onclick="toggleAnswer(6)"
+          >
+            Di mana saya bisa menemukan panduan lomba?
+          </button>
+          <div
+            id="answer6"
+            class="answer hidden text-blue-50 text-base overflow-hidden"
+          >
+            Anda bisa mengakses buku panduan lomba dengan mengklik tombol
+            Guidebook pada halaman ini.
+          </div>
+        </div>
+      </div>
+
+      <script>
+        function toggleAnswer(id) {
+          const answer = document.getElementById(`answer${id}`);
+          if (answer.classList.contains("hidden")) {
+            answer.classList.remove("hidden");
+            answer.style.maxHeight = answer.scrollHeight + "px";
+            answer.style.opacity = "1";
+          } else {
+            answer.classList.add("hidden");
+            answer.style.maxHeight = "0";
+            answer.style.opacity = "0";
+          }
+        }
+      </script>
+
+      <style>
+        /* Initial state for the answer */
+        .answer {
+          max-height: 0;
+          opacity: 0;
+          transition: all 0.4s ease;
+        }
+
+        /* Hidden class for display control */
+        .hidden {
+          overflow: hidden;
+        }
+      </style>
     </section>
 
     <section
