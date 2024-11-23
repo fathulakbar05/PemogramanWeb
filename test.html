@@ -1,95 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Smooth Draggable Notes</title>
-  <style>
-    body {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      background-color: #4CAF50; /* Green background */
-      overflow: hidden;
-      position: relative;
-    }
-
-    .note {
-      width: 200px;
-      padding: 20px;
-      color: #fff;
-      border-radius: 8px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-      cursor: grab;
-      position: absolute;
-      transition: transform 0.2s ease, left 0.2s ease, top 0.2s ease;
-      will-change: transform; /* Optimize for performance */
-    }
-
-    /* Different colors for each note */
-    #note1 { background-color: #0096FF; }
-    #note2 { background-color: #FF5733; }
-    #note3 { background-color: #FFC300; color: #000; }
-    #note4 { background-color: #8E44AD; }
-    #note5 { background-color: #28B463; }
-    #note6 { background-color: #FF5733; }
-    .hide {
-      display: none;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pricing Plans</title>
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
+<body class="flex items-center justify-center min-h-screen bg-gradient-to-r from-purple-100 to-purple-200">
 
-  <!-- Notes with draggable attribute -->
-  <div id="note1" class="note" draggable="true">“Even after finishing my course I still receive support from the community at SuperHi”</div>
-  <div id="note2" class="note" draggable="true">“I keep coming back to SuperHi even when I’m not taking a course. SuperHi has a genuine community that is active and involved.”</div>
-  <div id="note3" class="note" draggable="true">“SuperHi not only jumpstarted my career in design but also provided me with a community that supports me every day.”</div>
-  <div id="note4" class="note" draggable="true">“The biggest plus has been the community and the fact that I can get help quickly if I’m stuck.”</div>
-  <div id="note5" class="note" draggable="true">“SuperHi removes the barrier of how to start, and what to build with amazing projects through the learning process.”</div>
-  <div id="note6" class="note" draggable="true">“I will be starting as a software engineer intern next week! I owe so much to SuperHi and everyone in this community!”</div>
+    <div class="flex space-x-8">
+        <!-- Personal Plan Card -->
+        <div class="bg-white shadow-lg rounded-lg p-6 w-80">
+            <h3 class="text-xl font-semibold text-purple-600">Personal</h3>
+            <p class="text-4xl font-bold mt-4">$29 <span class="text-lg font-normal">/month</span></p>
+            <p class="text-gray-600 mt-2">The perfect plan if you're just getting started with our product.</p>
+            <ul class="mt-4 space-y-2 text-gray-700">
+                <li class="flex items-center"><span class="text-purple-600 mr-2">✔</span> 25 products</li>
+                <li class="flex items-center"><span class="text-purple-600 mr-2">✔</span> Up to 10,000 subscribers</li>
+                <li class="flex items-center"><span class="text-purple-600 mr-2">✔</span> Audience segmentation</li>
+                <li class="flex items-center"><span class="text-purple-600 mr-2">✔</span> Advanced analytics</li>
+                <li class="flex items-center"><span class="text-purple-600 mr-2">✔</span> Email support</li>
+                <li class="flex items-center"><span class="text-purple-600 mr-2">✔</span> Marketing automations</li>
+            </ul>
+            <button class="mt-6 w-full bg-purple-600 text-white py-2 rounded-lg font-semibold hover:bg-purple-700">Get started today</button>
+        </div>
 
-  <script>
-    // Slightly scatter notes within a smaller area on initial load
-    const scatterNotes = () => {
-      const notes = document.querySelectorAll('.note');
-      notes.forEach(note => {
-        const randomX = Math.floor(Math.random() * 100) - 50; // Randomly position within a 100px range horizontally
-        const randomY = Math.floor(Math.random() * 100) - 50; // Randomly position within a 100px range vertically
-        note.style.left = `calc(50% + ${randomX}px)`; // Centered with slight offset
-        note.style.top = `calc(50% + ${randomY}px)`;
+        <!-- Team Plan Card -->
+        <div class="bg-white shadow-lg rounded-lg p-6 w-80">
+            <h3 class="text-xl font-semibold text-purple-600">Team</h3>
+            <p class="text-4xl font-bold mt-4">$99 <span class="text-lg font-normal">/month</span></p>
+            <p class="text-gray-600 mt-2">A plan that scales with your rapidly growing business.</p>
+            <ul class="mt-4 space-y-2 text-gray-700">
+                <li class="flex items-center"><span class="text-purple-600 mr-2">✔</span> Priority support</li>
+                <li class="flex items-center"><span class="text-purple-600 mr-2">✔</span> Single sign-on</li>
+                <li class="flex items-center"><span class="text-purple-600 mr-2">✔</span> Enterprise integrations</li>
+                <li class="flex items-center"><span class="text-purple-600 mr-2">✔</span> Custom reporting tools</li>
+            </ul>
+            <button class="mt-6 w-full bg-white text-purple-600 border border-purple-600 py-2 rounded-lg font-semibold hover:bg-purple-100">Get started today</button>
+        </div>
+    </div>
+
+    <script>
+      document.querySelectorAll('button').forEach(button => {
+          button.addEventListener('click', () => {
+              alert('Button clicked! Start your subscription.');
+          });
       });
-    };
-
-    // Make notes draggable
-    const notes = document.querySelectorAll('.note');
-    notes.forEach(note => {
-      note.addEventListener('dragstart', (e) => {
-        e.dataTransfer.setData('text/plain', e.target.id);
-        setTimeout(() => e.target.classList.add('hide'), 0); // Hide while dragging
-      });
-
-      note.addEventListener('dragend', (e) => {
-        e.target.classList.remove('hide'); // Show after dropping
-      });
-    });
-
-    document.body.addEventListener('dragover', (e) => {
-      e.preventDefault(); // Allow drop
-    });
-
-    document.body.addEventListener('drop', (e) => {
-      e.preventDefault();
-      const id = e.dataTransfer.getData('text');
-      const draggable = document.getElementById(id);
-      draggable.style.position = 'absolute';
-      draggable.style.left = `${e.clientX - draggable.offsetWidth / 2}px`;
-      draggable.style.top = `${e.clientY - draggable.offsetHeight / 2}px`;
-    });
-
-    // Scatter notes on initial load
-    window.onload = scatterNotes;
-  </script>
-
+      </script>
+      
 </body>
 </html>
