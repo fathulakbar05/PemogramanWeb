@@ -30,7 +30,8 @@
       .aquarium {
         position: relative;
         width: 90%;
-        height: 500px;
+       max-width: 1200px; /* Limits width for larger screens */
+       height: 400px;
         margin: 0 auto;
         background-image: url(Underwater\ Scene\ \(Pixel\ Animation\)\,\ Csilla\ Rödönyi.gif);
         border: 5px solid #03A9F4; 
@@ -43,6 +44,12 @@
         padding: 20px;
         animation: waterMove 4s infinite alternate;
       }
+      @media (min-width: 768px) {
+        .aquarium {
+          height: 500px;
+        }
+      }
+
 
       @keyframes waterMove {
         0% { box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); }
@@ -63,6 +70,16 @@
         will-change: transform;
         animation: float 5s infinite alternate;
       }
+
+      .user-photo {
+      width: 50px;  /* Adjust the size of the image */
+      height: 50px; /* Make the height equal to the width to keep it circular */
+      border-radius: 50%;  /* Make the image circular */
+      object-fit: cover;   /* Ensure the image fits well inside the circle */
+      margin-right: 5px;  /* Add some space between the image and the text */
+      }
+
+
 
       /* Different colors for each note */
       #note1 { background-color: #124c76; }
@@ -146,10 +163,9 @@
       </div>
   </nav>
 
-    <div
-      class="h-screen bg-cover bg-center flex items-center justify-center pt-24"
-      style="background-image: url('bg-workshop.png')"
-    >
+  <div class="h-auto sm:h-screen bg-cover bg-center flex items-center justify-center pt-24 px-4 sm:px-8" 
+  style="background-image: url('bg-workshop.png')">
+
       <div class="text-center text-white">
         <h1 class="text-8xl mb-4">WORKSHOP</h1>
         <p class="text-3xl mb-8">
@@ -175,11 +191,7 @@
           <div class="flex justify-center items-center pl-28">
             <div class="flex items-center space-x-10">
               <div class="flex-shrink-0">
-                <img
-                  src="two-fish.gif"
-                  alt="Workshop Image"
-                  class="w-96 h-auto"
-                />
+                <img src="two-fish.gif" alt="Workshop Image" class="w-full sm:w-96 h-auto mx-auto">
               </div>
               <div class="flex flex-col justify-center">
                 <h1 class="text-5xl text-left text-white mb-4">
@@ -231,7 +243,7 @@
 
     <section class="pt-44 h-screen bg-cover bg-center text-center justify-items-center text-white">
       <h1 class="text-5xl mb-4">Timeline</h1>
-      <img class="w-screen" src="timeline-workshop.png" alt="">
+      <img class="w-full h-auto" src="timeline-workshop.png" alt="Timeline">
   </section>
 
     <section>
@@ -291,11 +303,10 @@
                   Mark Zuckerberg
                 </h2>
                 <p class="text-gray-700 text-sm mb-2">Programmer</p>
-                <p class="text-gray-700 text-sm">
-                  
-Mark Zuckerberg, pendiri Facebook dan Meta, adalah seorang programmer yang mendorong pentingnya literasi digital 
-di era modern. Ia percaya bahwa "Digital Education for Digital Thinking" adalah kunci mempersiapkan generasi mendatang 
-menghadapi dunia yang semakin terhubung secara teknologi.
+                <p class="text-gray-700 text-sm">                 
+                Mark Zuckerberg, pendiri Facebook dan Meta, adalah seorang programmer yang mendorong pentingnya literasi digital 
+                di era modern. Ia percaya bahwa "Digital Education for Digital Thinking" adalah kunci mempersiapkan generasi mendatang 
+                menghadapi dunia yang semakin terhubung secara teknologi.
                 </p>
               </div>
             </div>
@@ -339,98 +350,181 @@ menghadapi dunia yang semakin terhubung secara teknologi.
         </div>
       </div>
 
-<section style="padding-top: 12%;">
-  <h1 style="color: #fff; font-size: xx-large; text-align: center;">What people said about 
-    Techvolution's Workshop</h1>
+      <section class="flex items-center justify-center min-h-screen">
+
+        <div class="flex space-x-12">
+            <div class="bg-white shadow-lg rounded-lg p-8 w-[350px] transition-transform transform hover:scale-105 hover:shadow-2xl ">
+                <h3 class="text-2xl font-semibold text-yellow-400">Online</h3>
+                <p class="text-5xl font-bold mt-4">Rp 25.000</p>
+                <ul class="mt-4 space-y-3 text-gray-700">
+                  <li class="flex items-center"><span class="text-green-500 mr-2">✔</span> E-Sertifikat</li>
+                  <li class="flex items-center"><span class="text-green-500 mr-2">✔</span> Dorprize dan Relasi</li>
+                  <li class="flex items-center"><span class="text-green-500 mr-2">✔</span> Free Basic Class Dicoding</li>
+                  <li class="flex items-center"><span class="text-gray-400 mr-2">✘</span> Snack dan Makan Siang</li>
+                </ul>
+                <button class="mt-6 w-full bg-blue-800 text-white py-3 rounded-lg font-semibold hover:bg-blue-900 transition duration-300">Daftar Sekarang</button>
+            </div>
+    
+            <div class="bg-white shadow-lg rounded-lg p-8 w-[350px] transition-transform transform hover:scale-105 hover:shadow-2xl">
+                <h3 class="text-2xl font-semibold text-yellow-400">Offline</h3>
+                <p class="text-5xl font-bold mt-4">Rp 40.000</p>
+                <ul class="mt-4 space-y-3 text-gray-700">
+                  <li class="flex items-center"><span class="text-green-500 mr-2">✔</span> E-Sertifikat</li>
+                  <li class="flex items-center"><span class="text-green-500 mr-2">✔</span> Dorprize dan Relasi</li>
+                  <li class="flex items-center"><span class="text-green-500 mr-2">✔</span> Free Basic Class Dicoding</li>
+                  <li class="flex items-center"><span class="text-green-500 mr-2">✔</span> Snack dan Makan Siang</li>
+                </ul>
+                <button class="mt-6 w-full bg-blue-800 text-white py-3 rounded-lg font-semibold hover:bg-blue-900 transition duration-300">Daftar Sekarang</button>
+            </div>
+        </div>
+        
+    </section>  
+    
+
+<section style="padding-top: 12%; padding-bottom: 20px;">
+  <div  class=" flex items-center justify-center mx-16 space-x-5" >
+    <div style="max-width: 500px; margin: 0 auto;">
+      <h1 style="color: #fff; text-align: left;" class="text-4xl">
+        What people said about <span class="text-yellow-400">Techvolution's Workshop</span>
+      </h1>
+    </div>
   <div class="aquarium">
     <div id="note1" class="note">
       <div style="display: flex;">
-        <img src="mar" alt="User Photo 1" class="user-photo">
-        <p class="user-name">Nama Pengguna 1</p> </div><br>
+        <img src="Designer (32).jpeg" alt="User Photo 1" class="user-photo">
+        <p class="user-name">Budi</p> </div><br>
         <p>“Even after finishing my course I still receive support from the community at Techvolution”</p>
     </div>
     <div id="note2" class="note">
-        <img src="path/to/photo2.jpg" alt="User Photo 2" class="user-photo">
-        <p class="user-name">Nama Pengguna 2</p> <br>
+      <div style="display: flex;">
+        <img src="Designer (33).jpeg" alt="User Photo 2" class="user-photo">
+        <p class="user-name">Arya</p>  </div> <br>
         <p>“I keep coming back to Techvolution every years. Genuine community that is active and involved.”</p>
     </div>
     <div id="note3" class="note">
-        <img src="path/to/photo3.jpg" alt="User Photo 3" class="user-photo">
-        <p class="user-name">Nama Pengguna 3</p> <br>
+      <div style="display: flex;">
+        <img src="Designer (34).jpeg" alt="User Photo 3" class="user-photo">
+        <p class="user-name">Juna</p></div> <br>
         <p>“Techvolution not only jumpstarted my career in design but also provided me with a community that supports me every day.”</p>
     </div>
     <div id="note4" class="note">
-        <img src="path/to/photo4.jpg" alt="User Photo 4" class="user-photo">
-        <p class="user-name">Nama Pengguna 4</p> <br>
+      <div style="display: flex;">
+        <img src="Designer (35).jpeg" alt="User Photo 4" class="user-photo">
+        <p class="user-name">Marcella</p></div> <br>
         <p>“Techvolution is truly a unique learning experience that stays with you beyond just the classes.”</p>
     </div>
     <div id="note5" class="note">
-        <img src="path/to/photo5.jpg" alt="User Photo 5" class="user-photo">
-        <p class="user-name">Nama Pengguna 5</p> <br>
+      <div style="display: flex;">
+        <img src="Designer (36).jpeg" alt="User Photo 5" class="user-photo">
+        <p class="user-name">nurul</p> </div><br>
         <p>“I love how Techvolution is focused on community and creativity rather than just coding.”</p>
     </div>
 </div>
-
+</div>
 </section>
-    </section>
-    <section
-      class="pt-44 h-screen bg-cover bg-center text-center justify-items-center text-white"
-      style="background-image: url('bg-workshop3.png')"
-    >
-      <h1 class="text-5xl mb-4">
-        Contact <span class="text-yellow-400">Person</span>
-      </h1>
-      <div
-        class="text-3xl space-y-3 rounded-lg border inline-block bg-blue-900 bg-opacity-80 px-8 py-1 text-white mb-3 text-center"
-      >
-        <p>Jogo</p>
-        <p>0853-2123-2133</p>
-      </div>
-    </section>
 
-  <section class="bg-gray-100 flex items-center justify-center min-h-screen">
-    <div class="w-full max-w-xl p-6 bg-white rounded-lg shadow-lg">
-      <!-- Question 1 -->
-      <div class="border-b border-gray-200">
-        <button class="w-full text-left py-4 font-semibold text-2xl text-gray-800 hover:text-blue-600 focus:outline-none" onclick="toggleAnswer(1)">
-          What is ProjectX?
-        </button>
-        <div id="answer1" class="hidden text-gray-600 text-base pb-4">
-          ProjectX is an innovative platform aimed at bridging digital experiences with real-world solutions. Our goal is to create a seamless interface where users can benefit from both virtual and tangible interactions.
-        </div>
-      </div>
-  
-      <!-- Question 2 -->
-      <div class="border-b border-gray-200">
-        <button class="w-full text-left py-4 font-semibold text-2xl text-gray-800 hover:text-blue-600 focus:outline-none" onclick="toggleAnswer(2)">
-          What is the roadmap for ProjectX?
-        </button>
-        <div id="answer2" class="hidden text-gray-600 text-base pb-4">
-          ProjectX is structured as a multi-phase journey. Phase 1 launches immediately, with a duration of 6 months. In Phase 2, new features and experiences will be introduced based on community feedback. We aim to grow ProjectX into a sustainable brand that integrates digital and physical services for a holistic user experience.
-        </div>
-      </div>
-  
-      <!-- Question 3 -->
-      <div>
-        <button class="w-full text-left py-4 font-semibold text-2xl text-gray-800 hover:text-blue-600 focus:outline-none" onclick="toggleAnswer(3)">
-          What are the core features?
-        </button>
-        <div id="answer3" class="hidden text-gray-600 text-base pb-4">
-          ProjectX offers several key features, including real-time data analytics, interactive user profiles, and personalized content recommendations. Our platform is designed to evolve, with new features added regularly based on user needs and technological advancements.
-        </div>
+<section
+class="pt-44 h-screen bg-cover bg-center text-center justify-items-center text-white""
+>
+<h1 class="text-5xl mb-4">
+  Contact <span class="text-yellow-400">Person</span>
+</h1>
+<div
+  class="text-3xl space-y-3 rounded-lg border inline-block bg-blue-900 bg-opacity-80 px-8 py-1 text-white mb-3 text-center"
+>
+  <p>Jogo</p>
+  <p>0853-2123-2133</p>
+</div>
+</section>
+
+
+<section class="bg-gray-100 flex items-center justify-center min-h-screen space-x-4" style="background-image: url('bg-workshop3.png')" >
+  <div class="w-full max-w-xl p-6 bg-white rounded-lg shadow-lg">
+    <!-- Question 1 -->
+    <div class="border-b border-gray-200">
+      <button class="w-full text-left py-4 font-semibold text-2xl text-gray-800 hover:text-blue-600 focus:outline-none" onclick="toggleAnswer(1)">
+        Apa itu workshop Techvolution?
+      </button>
+      <div id="answer1" class="answer hidden text-gray-600 text-base overflow-hidden">
+        Workshop Techvolution adalah program pelatihan interaktif yang dirancang untuk meningkatkan keterampilan dan pengetahuan peserta di bidang teknologi dan inovasi. Dengan mengundang para ahli dan praktisi industri, workshop ini memberikan wawasan terkini tentang tren teknologi, pengembangan produk, dan strategi bisnis.      </div>
+    </div>
+
+    <!-- Question 2 -->
+    <div class="border-b border-gray-200">
+      <button class="w-full text-left py-4 font-semibold text-2xl text-gray-800 hover:text-blue-600 focus:outline-none" onclick="toggleAnswer(2)">
+        Siapa saja yang bisa mengikuti workshop Techvolution?
+      </button>
+      <div id="answer2" class="answer hidden text-gray-600 text-base overflow-hidden">
+        Workshop ini terbuka untuk siapa saja yang tertarik untuk mengembangkan keterampilan di bidang teknologi, mulai dari pelajar, mahasiswa, hingga profesional yang ingin meningkatkan kemampuan mereka dalam menghadapi tantangan dunia digital.
+
       </div>
     </div>
-  
-    <script>
-      function toggleAnswer(id) {
-        const answer = document.getElementById(`answer${id}`);
-        answer.classList.toggle('hidden');
+
+    <!-- Question 3 -->
+    <div>
+      <button class="w-full text-left py-4 font-semibold text-2xl text-gray-800 hover:text-blue-600 focus:outline-none" onclick="toggleAnswer(3)">
+        Apa saja yang akan dipelajari selama workshop Techvolution?      </button>
+      <div id="answer3" class="answer hidden text-gray-600 text-base overflow-hidden">
+        Peserta akan mempelajari keterampilan praktis dalam berbagai bidang teknologi seperti pengembangan perangkat lunak, inovasi produk, dan strategi bisnis. Workshop ini juga akan mencakup sesi tentang tren terbaru di industri teknologi dan cara mengimplementasikan inovasi di dunia digital.      </div>
+    </div>
+</div>
+<div class="w-full max-w-xl p-6 bg-white rounded-lg shadow-lg">
+    <!-- Question 4 -->
+    <div class="border-b border-gray-200">
+      <button class="w-full text-left py-4 font-semibold text-2xl text-gray-800 hover:text-blue-600 focus:outline-none" onclick="toggleAnswer(4)">
+        Apakah workshop ini hanya bersifat teori atau juga praktis?      </button>
+      <div id="answer4" class="answer hidden text-gray-600 text-base overflow-hidden">
+        Workshop Techvolution menekankan pada pembelajaran praktis. Peserta akan terlibat dalam sesi pelatihan yang mengutamakan penerapan langsung, studi kasus, dan diskusi interaktif dengan para praktisi industri, sehingga mereka dapat langsung mengimplementasikan ilmu yang didapat.      </div>
+    </div>
+
+    <!-- Question 5 -->
+    <div class="border-b border-gray-200">
+      <button class="w-full text-left py-4 font-semibold text-2xl text-gray-800 hover:text-blue-600 focus:outline-none" onclick="toggleAnswer(5)">
+        Apakah ada kesempatan untuk berjejaring dengan profesional industri selama workshop?      </button>
+      <div id="answer5" class="answer hidden text-gray-600 text-base overflow-hidden">
+        Ya, salah satu tujuan utama workshop ini adalah membangun jaringan yang kuat di antara peserta dan profesional industri. Peserta akan memiliki kesempatan untuk berinteraksi langsung dengan ahli dan praktisi di bidang teknologi, yang dapat membuka peluang kolaborasi dan karir di masa depan.      </div>
+    </div>
+
+    <!-- Question 6 -->
+    <div>
+      <button class="w-full text-left py-4 font-semibold text-2xl text-gray-800 hover:text-blue-600 focus:outline-none" onclick="toggleAnswer(6)">
+        Bagaimana cara mendaftar untuk mengikuti workshop Techvolution?
+      </button>
+      <div id="answer6" class="answer hidden text-gray-600 text-base overflow-hidden">
+        Untuk mendaftar, peserta dapat mengunjungi halaman pendaftaran di website Techvolution. Di sana, Anda akan menemukan formulir pendaftaran online serta informasi lebih lanjut mengenai tanggal, waktu, dan biaya yang terkait dengan workshop. Pastikan untuk mengisi data dengan lengkap dan tepat waktu.      </div>
+    </div>
+  </div>
+</div>
+  <script>
+    function toggleAnswer(id) {
+      const answer = document.getElementById(`answer${id}`);
+      if (answer.classList.contains('hidden')) {
+        answer.classList.remove('hidden');
+        answer.style.maxHeight = answer.scrollHeight + "px";
+        answer.style.opacity = "1";
+      } else {
+        answer.classList.add('hidden');
+        answer.style.maxHeight = "0";
+        answer.style.opacity = "0";
       }
-    </script>
+    }
+  </script>
 
+  <style>
+    /* Initial state for the answer */
+    .answer {
+      max-height: 0;
+      opacity: 0;
+      transition: all 0.4s ease;
+    }
+
+    /* Hidden class for display control */
+    .hidden {
+      overflow: hidden;
+    }
+  </style>
+</section>
   </section>
-
-
 
         
 <!-- Footer Section -->
