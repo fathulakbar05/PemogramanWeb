@@ -159,7 +159,7 @@
     <section class="bg-[#0e236b] h-screen bg-center bg-cover flex items-center p-20" style="background-image: url('Desain\ tanpa\ judul\.png');">
 
         <div class="container mx-auto">
-            <h3 class="text-3xl font-bold text-center mb-10 text-white">Dokumentasi</h3>
+            <h3 class="text-3xl font-bold text-center mb-10 text-white">HIGHLIGHTS FROM <span class="text-yellow-400">2023</span></h3>
             <div class="carousel w-full h-auto overflow-hidden relative rounded-full border-4 border-[#0850dc]">
                 <div class="carousel-track">
                     <img src="img1.jpeg" class="carousel-item" alt="Image 1">
@@ -178,14 +178,14 @@
     
     <section class="bg-[#0e236b] text-white py-20">
         
-        <div class="flex items-center justify-center">
+        <div id="pemenangcp" class="flex items-center justify-center transition-all duration-1000 opacity-0 transform translate-x-full">
             <div class="w-4/12">
                 <img src="Podium.png">
             </div>
 
             <div class="w-6/12">
                 <h3 class="text-3xl font-bold mb-10">
-                    Pemenang Lomba<br><span class="text-yellow-400">Competitive Programming</span>
+                    The Winners of<br><span class="text-yellow-400">Competitive Programming</span>
                 </h3>
                 <table class="table-auto w-full border-collapse border-4 border-black text-white">
                     <thead class="bg-black">
@@ -220,11 +220,11 @@
 
     <section class="bg-[#0e236b] text-white py-20 bg-cover bg-center">
         
-        <div class="flex items-center justify-center">
+        <div id="pemenanguiux" class="flex items-center justify-center transition-all duration-1000 opacity-0 transform -translate-x-full">
             
             <div class="w-6/12">
                 <h3 class="text-3xl font-bold mb-10">
-                    Pemenang Lomba<br><span class="text-yellow-400">UI/UX</span>
+                    The Winners of<br><span class="text-yellow-400">UI/UX</span>
                 </h3>
                 <table class="table-auto w-full border-collapse border-4 border-black text-white">
                     <thead>
@@ -262,6 +262,46 @@
 
     </section>
 
+    <script>
+        // JavaScript untuk animasi masuk dari kanan dan kiri
+        window.addEventListener('scroll', function() {
+            const pemenangcp = document.getElementById('pemenangcp');
+            const pemenanguiux = document.getElementById('pemenanguiux');
+            const sectionPemenangCP = pemenangcp.getBoundingClientRect().top;
+            const sectionPemenangUIUX = pemenanguiux.getBoundingClientRect().top;
+            const screenPosition = window.innerHeight / 1.2; // Memeriksa posisi di layar
+    
+            // Cek untuk card Competition
+            if (sectionPemenangCP < screenPosition) {
+                pemenangcp.classList.remove('opacity-0', 'translate-x-full');
+                pemenangcp.classList.add('opacity-100', 'translate-x-0');
+            } else {
+                pemenangcp.classList.add('opacity-0', 'translate-x-full');
+                pemenangcp.classList.remove('opacity-100', 'translate-x-0');
+            }
+    
+            // Cek untuk card Workshop
+            if (sectionPemenangUIUX < screenPosition) {
+                pemenanguiux.classList.remove('opacity-0', '-translate-x-full');
+                pemenanguiux.classList.add('opacity-100', 'translate-x-0');
+            } else {
+                pemenanguiux.classList.add('opacity-0', '-translate-x-full');
+                pemenanguiux.classList.remove('opacity-100', 'translate-x-0');
+            }
+        });
+    </script>
+
+    <section class="bg-cover bg-center h-screen px-10 py-20" style="background-image: url('Desain\ tanpa\ judul\ \(4\).png');">
+        <h3 class="text-3xl font-bold mb-10 flex items-center justify-center text-white">
+            <span class="text-yellow-400">Evaluations</span>
+            <span class="text-[#0e236b]">.</span>of Past Event
+        </h3>
+        <div id="komentar" class="bg-blue-900 bg-opacity-80 p-8 rounded-lg border shadow-md w-full h-full relative overflow-hidden">
+
+            <div id="bubble-container"></div>
+
+        </div>
+    </section>
 
     <section class="bg-cover bg-center h-screen px-10 py-20" style="background-image: url('Desain\ tanpa\ judul\ \(4\).png');">
         <div class="bg-blue-900 bg-opacity-80 p-8 rounded-lg border shadow-md w-full h-full relative overflow-hidden">
@@ -307,6 +347,10 @@
             "Sesi desainnya sangat inspiratif, dan persaingannya membuat saya semakin bersemangat untuk berkarya!",
             "Senang bisa mendukung acara ini, karena ini adalah wadah penting bagi talenta muda untuk berkembang.",
             "Teknologi keren, kan?",
+            "Materi workshopnya langsung bisa diterapkan dan sangat bermanfaat bagi pengembangan diri di bidang teknologi.",
+            "Sesi desainnya sangat inspiratif, dan persaingannya membuat saya semakin bersemangat untuk berkarya!",
+            "Senang bisa mendukung acara ini, karena ini adalah wadah penting bagi talenta muda untuk berkembang.",
+            "Teknologi keren, kan?",
             "Bubble chat seperti di komik!",
             "Tantangannya seru dan menambah banyak wawasan baru dalam coding, senang bisa ikut berkompetisi di sini!",
             "Suasana di sini penuh antusiasme, semua peserta dan pengunjung sangat bersemangat!",
@@ -318,9 +362,22 @@
             "Acara ini luar biasa, senang bisa berkontribusi dan melihat banyak ide-ide cemerlang dari para peserta.",
         ];
     
-        // Menambah bubble chat satu per satu dengan jeda
-        messages.forEach((message, index) => {
-            createBubbleChat(message, index * 500); // Jeda 500ms antar bubble
+        
+        // JavaScript untuk animasi masuk dari kanan dan kiri
+        let hasAnimated = false;
+        window.addEventListener('scroll', function() {
+            const komentar = document.getElementById('komentar');
+            const sectionPositionKomentar = komentar.getBoundingClientRect().top;
+            const screenPosition = window.innerHeight / 1.2; // Memeriksa posisi di layar
+
+            // cek lokasi sectionnya
+            if (sectionPositionKomentar < screenPosition & !hasAnimated) {
+                // Menambah bubble chat satu per satu dengan jeda
+                messages.forEach((message, index) => {
+                    createBubbleChat(message, index * 200); // Jeda 200ms antar bubble
+                });
+                hasAnimated = true;
+            }
         });
     </script>
 
